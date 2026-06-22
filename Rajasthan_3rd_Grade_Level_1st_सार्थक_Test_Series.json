@@ -1,0 +1,31 @@
+[
+    {
+        "subject_name": "Rajasthan_3rd_Grade_Level_1st_सार्थक_Test_Series",
+        "videos": [
+            {
+                "title": "supports HTML5 video",
+                "url": "https://videojs.com/html5-video-support/"
+            },
+            {
+                "title": "(Course Information and Syllabus) उत्कर्ष एप में टेस्ट की रेटिंग(Rating) कैसे दे?",
+                "url": "#"
+            },
+            {
+                "title": "batch thumbnail",
+                "url": "https://apps-s3-prod.utkarshapp.com/admin_v1/bundle_management/course/429940717811_856.jpeg"
+            }
+        ],
+        "pdfs": [
+            {
+                "title": "(Course Information and Syllabus) Exam Syllabus || 3rd Grade Level-I",
+                "url": "https://apps-s3-prod.utkarshapp.com/admin_v1/file_manager/pdf/558458244221153800_PDF.pdf"
+            },
+            {
+                "title": "(Course Information and Syllabus) Index (Test Information)",
+                "url": "https://apps-s3-prod.utkarshapp.com/admin_v1/file_manager/pdf/796148493272163200_PDF.pdf"
+            }
+        ],
+        "video_count": 5,
+        "pdf_count": 2
+    }
+]

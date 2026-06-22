@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    <title>SZX • Reasoning VOD 2.0</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #ffcc00;
+            --gold2: #ffaa00;
+            --cyan: #38bdf8;
+            --blue: #6366f1;
+            --pink: #ec4899;
+            --bg: #050505;
+            --panel: rgba(255,255,255,0.045);
+            --panel2: rgba(255,255,255,0.075);
+            --border: rgba(255,255,255,0.09);
+            --muted: #94a3b8;
+            --white: #ffffff;
+            --danger: #ff4d4d;
+            --success: #22c55e;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            color: var(--white);
+            background:
+                radial-gradient(circle at 12% 8%, rgba(56,189,248,.18), transparent 28%),
+                radial-gradient(circle at 88% 18%, rgba(255,204,0,.15), transparent 30%),
+                radial-gradient(circle at 50% 100%, rgba(99,102,241,.18), transparent 35%),
+                linear-gradient(135deg, #030303 0%, #0a0a12 55%, #050505 100%);
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: -2;
+            background-image:
+                linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+            background-size: 46px 46px;
+            mask-image: radial-gradient(circle at center, black, transparent 78%);
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            width: 420px;
+            height: 420px;
+            right: -160px;
+            top: 170px;
+            border-radius: 50%;
+            background: rgba(255,204,0,.12);
+            filter: blur(110px);
+            z-index: -1;
+            animation: floatGlow 7s ease-in-out infinite alternate;
+        }
+
+        @keyframes floatGlow {
+            from { transform: translateY(0) scale(1); opacity: .7; }
+            to { transform: translateY(70px) scale(1.15); opacity: 1; }
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 14px 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border);
+            background: rgba(5,5,5,.68);
+            backdrop-filter: blur(22px);
+            -webkit-backdrop-filter: blur(22px);
+        }
+
+        .header-left, .header-right {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .icon-btn {
+            width: 42px;
+            height: 42px;
+            border-radius: 14px;
+            display: grid;
+            place-items: center;
+            color: #fff;
+            text-decoration: none;
+            border: 1px solid var(--border);
+            background: rgba(255,255,255,.045);
+            transition: .3s ease;
+        }
+
+        .icon-btn:hover {
+            color: var(--gold);
+            border-color: rgba(255,204,0,.55);
+            background: rgba(255,204,0,.08);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 24px rgba(255,204,0,.11);
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .brand-badge {
+            width: 42px;
+            height: 42px;
+            border-radius: 14px;
+            display: grid;
+            place-items: center;
+            background: linear-gradient(135deg, var(--gold), var(--gold2));
+            color: #050505;
+            font-weight: 900;
+            box-shadow: 0 0 25px rgba(255,204,0,.35);
+        }
+
+        .brand-title {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.05;
+        }
+
+        .brand-title strong {
+            font-size: 17px;
+            letter-spacing: .8px;
+        }
+
+        .brand-title span {
+            margin-top: 4px;
+            font-size: 10px;
+            color: var(--muted);
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+        }
+
+        .hero {
+            max-width: 1220px;
+            margin: 0 auto;
+            padding: 56px 5% 22px;
+        }
+
+        .hero-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 30px;
+            border: 1px solid var(--border);
+            background: linear-gradient(135deg, rgba(255,255,255,.08), rgba(255,255,255,.025));
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 34px;
+            box-shadow: 0 30px 80px rgba(0,0,0,.38);
+        }
+
+        .hero-card::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            background: radial-gradient(circle at top right, rgba(255,204,0,.22), transparent 35%), radial-gradient(circle at bottom left, rgba(56,189,248,.18), transparent 36%);
+            pointer-events: none;
+        }
+
+        .hero-content { position: relative; z-index: 1; }
+
+        .premium-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 14px;
+            border-radius: 999px;
+            border: 1px solid rgba(255,204,0,.35);
+            background: rgba(255,204,0,.08);
+            color: var(--gold);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            margin-top: 18px;
+            font-size: clamp(34px, 6vw, 70px);
+            line-height: .98;
+            font-weight: 900;
+            letter-spacing: -2px;
+            background: linear-gradient(90deg, #fff 0%, #dbeafe 42%, var(--gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            margin-top: 14px;
+            color: var(--muted);
+            font-size: 15px;
+            letter-spacing: .4px;
+            max-width: 650px;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 14px;
+            margin-top: 26px;
+            max-width: 680px;
+        }
+
+        .stat-box {
+            border: 1px solid var(--border);
+            background: rgba(0,0,0,.22);
+            border-radius: 18px;
+            padding: 15px;
+        }
+
+        .stat-box strong {
+            display: block;
+            font-size: 24px;
+            color: #fff;
+        }
+
+        .stat-box span {
+            display: block;
+            margin-top: 2px;
+            color: var(--muted);
+            font-size: 11px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .tool-area {
+            max-width: 1220px;
+            margin: 0 auto;
+            padding: 18px 5% 10px;
+            display: flex;
+            gap: 14px;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .search-wrap {
+            flex: 1;
+            min-width: 240px;
+            position: relative;
+        }
+
+        .search-wrap i {
+            position: absolute;
+            top: 50%;
+            left: 18px;
+            transform: translateY(-50%);
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        #searchInput {
+            width: 100%;
+            border: 1px solid var(--border);
+            outline: none;
+            color: #fff;
+            font-size: 15px;
+            padding: 15px 18px 15px 46px;
+            border-radius: 18px;
+            background: rgba(255,255,255,.045);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            transition: .3s ease;
+        }
+
+        #searchInput:focus {
+            border-color: rgba(255,204,0,.55);
+            box-shadow: 0 0 0 4px rgba(255,204,0,.08);
+        }
+
+        .filter-actions {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .pill-btn {
+            border: 1px solid var(--border);
+            background: rgba(255,255,255,.045);
+            color: #dbeafe;
+            border-radius: 999px;
+            padding: 12px 16px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 12px;
+            letter-spacing: .7px;
+            transition: .3s ease;
+        }
+
+        .pill-btn:hover, .pill-btn.active {
+            color: #050505;
+            background: linear-gradient(135deg, var(--gold), var(--gold2));
+            border-color: transparent;
+            box-shadow: 0 14px 26px rgba(255,204,0,.16);
+            transform: translateY(-2px);
+        }
+
+        .container {
+            max-width: 1220px;
+            margin: 0 auto;
+            padding: 18px 5% 80px;
+        }
+
+        #grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
+            gap: 18px;
+        }
+
+        .card {
+            min-height: 168px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            background: linear-gradient(145deg, rgba(255,255,255,.07), rgba(255,255,255,.025));
+            padding: 22px;
+            cursor: pointer;
+            transition: .35s cubic-bezier(.2,.8,.2,1);
+            box-shadow: 0 18px 45px rgba(0,0,0,.28);
+        }
+
+        .card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -120%;
+            width: 70%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,.10), transparent);
+            transform: skewX(-22deg);
+            transition: .75s ease;
+        }
+
+        .card:hover::after { left: 150%; }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(255,204,0,.55);
+            background: linear-gradient(145deg, rgba(255,204,0,.10), rgba(255,255,255,.04));
+            box-shadow: 0 28px 60px rgba(0,0,0,.44), 0 0 30px rgba(255,204,0,.10);
+        }
+
+        .card-top {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 14px;
+            margin-bottom: 18px;
+        }
+
+        .play-icon {
+            flex: 0 0 auto;
+            width: 50px;
+            height: 50px;
+            border-radius: 18px;
+            display: grid;
+            place-items: center;
+            background: linear-gradient(135deg, rgba(56,189,248,.20), rgba(99,102,241,.20));
+            border: 1px solid rgba(56,189,248,.20);
+            color: var(--cyan);
+            transition: .3s ease;
+        }
+
+        .card:hover .play-icon {
+            color: #050505;
+            background: linear-gradient(135deg, var(--gold), var(--gold2));
+            box-shadow: 0 0 22px rgba(255,204,0,.22);
+            transform: scale(1.06) rotate(-4deg);
+        }
+
+        .class-number {
+            font-size: 11px;
+            font-weight: 800;
+            color: rgba(255,255,255,.55);
+            letter-spacing: 1.3px;
+            text-transform: uppercase;
+        }
+
+        .title {
+            color: #fff;
+            font-size: 16px;
+            line-height: 1.35;
+            font-weight: 700;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-meta {
+            margin-top: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        .watch {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            color: #a7b7cf;
+        }
+
+        .tap {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--gold);
+            font-weight: 800;
+            letter-spacing: .7px;
+            font-size: 11px;
+            text-transform: uppercase;
+        }
+
+        .empty, .loading, .error-box {
+            grid-column: 1 / -1;
+            border-radius: 22px;
+            border: 1px solid var(--border);
+            background: rgba(255,255,255,.045);
+            text-align: center;
+            padding: 34px 20px;
+            color: var(--muted);
+        }
+
+        .error-box strong { color: var(--danger); display: block; margin-bottom: 8px; }
+
+        .skeleton {
+            min-height: 168px;
+            border-radius: 24px;
+            border: 1px solid var(--border);
+            background: linear-gradient(90deg, rgba(255,255,255,.04), rgba(255,255,255,.09), rgba(255,255,255,.04));
+            background-size: 200% 100%;
+            animation: shimmer 1.2s infinite;
+        }
+
+        @keyframes shimmer {
+            from { background-position: 200% 0; }
+            to { background-position: -200% 0; }
+        }
+
+        .footer-note {
+            max-width: 1220px;
+            margin: -50px auto 30px;
+            padding: 0 5%;
+            color: rgba(255,255,255,.38);
+            font-size: 12px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            header { padding: 12px 4%; }
+            .brand-title strong { font-size: 14px; }
+            .brand-title span { display: none; }
+            .hero { padding: 34px 4% 14px; }
+            .hero-card { padding: 24px 18px; border-radius: 24px; }
+            .hero h1 { letter-spacing: -1px; }
+            .stats { grid-template-columns: repeat(3, 1fr); gap: 9px; }
+            .stat-box { padding: 11px 9px; border-radius: 15px; }
+            .stat-box strong { font-size: 18px; }
+            .stat-box span { font-size: 9px; }
+            .tool-area, .container { padding-left: 4%; padding-right: 4%; }
+            #grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+            .card { min-height: 158px; padding: 16px; border-radius: 19px; }
+            .play-icon { width: 42px; height: 42px; border-radius: 15px; }
+            .title { font-size: 13px; }
+            .card-meta { flex-direction: column; align-items: flex-start; gap: 6px; }
+            .icon-btn { width: 38px; height: 38px; border-radius: 13px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <a href="selection_way.html" class="icon-btn" title="Go Back"><i class="fa-solid fa-arrow-left"></i></a>
+            <a href="index.html" class="brand" title="SZX Home">
+                <div class="brand-badge">SZX</div>
+                <div class="brand-title">
+                    <strong>Reasoning VOD</strong>
+                    <span>Premium Learning Portal</span>
+                </div>
+            </a>
+        </div>
+        <div class="header-right">
+            <a href="https://t.me/szxmock" target="_blank" class="icon-btn" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-card">
+            <div class="hero-content">
+                <div class="premium-chip"><i class="fa-solid fa-crown"></i> SZX Premium Batch</div>
+                <h1>Reasoning VOD 2.0</h1>
+                <p>Balram Sir complete reasoning classes with clean premium layout, fast search and smart watched counter.</p>
+                <div class="stats">
+                    <div class="stat-box"><strong id="totalCount">0</strong><span>Total Classes</span></div>
+                    <div class="stat-box"><strong id="shownCount">0</strong><span>Showing</span></div>
+                    <div class="stat-box"><strong id="watchedCount">0</strong><span>Watched</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tool-area">
+        <div class="search-wrap">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="searchInput" placeholder="Search class name...">
+        </div>
+        <div class="filter-actions">
+            <button class="pill-btn active" id="allBtn" onclick="setFilter('all')">All Classes</button>
+            <button class="pill-btn" id="watchedBtn" onclick="setFilter('watched')">Watched</button>
+            <button class="pill-btn" id="unwatchedBtn" onclick="setFilter('unwatched')">Unwatched</button>
+        </div>
+    </section>
+
+    <main class="container">
+        <div id="grid">
+            <div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div>
+        </div>
+    </main>
+
+    <div class="footer-note">Made for SZX premium learning experience.</div>
+
+    <script>
+        let allClasses = [];
+        let currentFilter = 'all';
+        const grid = document.getElementById('grid');
+        const searchInput = document.getElementById('searchInput');
+
+        function safeText(text) {
+            return String(text || '').replace(/[&<>"]/g, function(ch) {
+                return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch]);
+            });
+        }
+
+        function getWatchKey(index) {
+            return 'reasoning_watch_' + index;
+        }
+
+        function getWatchCount(index) {
+            return Number(localStorage.getItem(getWatchKey(index)) || 0);
+        }
+
+        function updateStats(list) {
+            const watchedTotal = allClasses.reduce((sum, _, i) => sum + (getWatchCount(i) > 0 ? 1 : 0), 0);
+            document.getElementById('totalCount').textContent = allClasses.length;
+            document.getElementById('shownCount').textContent = list.length;
+            document.getElementById('watchedCount').textContent = watchedTotal;
+        }
+
+        function setFilter(filter) {
+            currentFilter = filter;
+            document.querySelectorAll('.pill-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById(filter + 'Btn').classList.add('active');
+            renderClasses();
+        }
+
+        function renderClasses() {
+            const query = searchInput.value.trim().toLowerCase();
+            let filtered = allClasses
+                .map((item, originalIndex) => ({ item, originalIndex }))
+                .filter(({ item, originalIndex }) => {
+                    const title = (item.name || item.title || item.chapter || 'Class ' + (originalIndex + 1)).toLowerCase();
+                    const watch = getWatchCount(originalIndex);
+                    const matchesSearch = !query || title.includes(query);
+                    const matchesFilter = currentFilter === 'all' || (currentFilter === 'watched' && watch > 0) || (currentFilter === 'unwatched' && watch === 0);
+                    return matchesSearch && matchesFilter;
+                });
+
+            updateStats(filtered);
+
+            if (!filtered.length) {
+                grid.innerHTML = `<div class="empty"><i class="fa-regular fa-face-frown" style="font-size:28px;color:var(--gold);"></i><br><br>No class found. Search text change karke try karo.</div>`;
+                return;
+            }
+
+            grid.innerHTML = filtered.map(({ item, originalIndex }) => {
+                const title = item.name || item.title || item.chapter || `Class ${originalIndex + 1}`;
+                const watch = getWatchCount(originalIndex);
+                return `
+                    <div class="card" onclick="playClass(${originalIndex})">
+                        <div class="card-top">
+                            <div>
+                                <div class="class-number">Class ${originalIndex + 1}</div>
+                            </div>
+                            <div class="play-icon"><i class="fa-solid fa-play"></i></div>
+                        </div>
+                        <div class="title">${safeText(title)}</div>
+                        <div class="card-meta">
+                            <span class="watch"><i class="fa-regular fa-eye"></i> Watched ${watch} ${watch === 1 ? 'time' : 'times'}</span>
+                            <span class="tap">Play <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function playClass(index) {
+            const item = allClasses[index] || {};
+            const title = item.name || item.title || item.chapter || `Reasoning Class ${index + 1}`;
+            const count = getWatchCount(index) + 1;
+            localStorage.setItem(getWatchKey(index), count);
+            window.location.href = `player.html?subject=reasoning&id=${index}&title=${encodeURIComponent(title)}`;
+        }
+
+        async function loadData() {
+            try {
+                const res = await fetch('reasoning.json');
+                if (!res.ok) throw new Error('reasoning.json not found');
+                allClasses = await res.json();
+                if (!Array.isArray(allClasses)) throw new Error('Invalid JSON format');
+                renderClasses();
+            } catch (error) {
+                grid.innerHTML = `
+                    <div class="error-box">
+                        <strong><i class="fa-solid fa-triangle-exclamation"></i> Data load nahi hua</strong>
+                        <span>Same folder me <b>reasoning.json</b> file hona chahiye.</span>
+                    </div>
+                `;
+                updateStats([]);
+            }
+        }
+
+        searchInput.addEventListener('input', renderClasses);
+
+        window.addEventListener('load', function() {
+            if (window.location.pathname.endsWith('.html') && window.location.pathname !== '/index.html') {
+                const cleanUrl = window.location.pathname.replace('.html', '');
+                window.history.replaceState(null, '', cleanUrl);
+            }
+            loadData();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SZX • SSC VOD Complete</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --p-gold: #ffcc00;
+            --p-gold-glow: rgba(255, 204, 0, 0.5);
+            --dark: #080808;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.06);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: radial-gradient(circle at top left, #16161a, var(--dark) 80%);
+            color: white;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* --- Premium Header --- */
+        header { 
+            padding: 20px 5%; 
+            display: flex; justify-content: space-between; align-items: center;
+            background: rgba(8, 8, 8, 0.75); 
+            backdrop-filter: blur(25px); 
+            -webkit-backdrop-filter: blur(25px);
+            position: sticky; top: 0; 
+            border-bottom: 1px solid var(--glass-border);
+            z-index: 100;
+        }
+
+        .header-left { display: flex; align-items: center; gap: 20px; }
+        .back-icon { color: #fff; font-size: 22px; text-decoration: none; opacity: 0.7; transition: 0.3s; }
+        .back-icon:hover { opacity: 1; color: var(--p-gold); transform: translateX(-3px); }
+        .logo { background: linear-gradient(45deg, var(--p-gold), #ffaa00); color: #000; padding: 6px 18px; border-radius: 12px; font-weight: 800; font-size: 22px; box-shadow: 0 0 20px var(--p-gold-glow); }
+
+        .social-icons a { color: #fff; font-size: 24px; transition: 0.3s; opacity: 0.6; }
+        .social-icons a:hover { opacity: 1; color: #0088cc; filter: drop-shadow(0 0 10px #0088cc); }
+
+        /* --- Title --- */
+        .hero-title { text-align: center; padding: 40px 20px 10px; font-size: 32px; font-weight: 800; color: white; letter-spacing: 1px; }
+
+        /* --- Grid & Cards --- */
+        .grid { 
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 25px; padding: 30px 5% 100px; max-width: 1200px; margin: 0 auto;
+        }
+
+        .brand-card { 
+            background: var(--card-bg); border: 1px solid var(--glass-border); border-radius: 20px; 
+            padding: 35px 25px; text-align: center; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+            cursor: pointer; backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
+            position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center;
+        }
+
+        .brand-card::after {
+            content: ''; position: absolute; top: 0; left: -100%; width: 50%; height: 100%;
+            background: linear-gradient(to right, transparent, rgba(255,255,255,0.05), transparent);
+            transform: skewX(-25deg); transition: 0.7s;
+        }
+
+        .brand-card:hover::after { left: 150%; }
+
+        .brand-card:hover { 
+            transform: translateY(-8px); border-color: var(--p-gold); background: rgba(255, 204, 0, 0.05); 
+            box-shadow: 0 15px 30px rgba(0,0,0,0.6), 0 0 20px rgba(255,204,0,0.15); 
+        }
+
+        .brand-card i { font-size: 45px; margin-bottom: 15px; transition: 0.4s; }
+        
+        /* Video Card Icons */
+        .vid-card i { background: linear-gradient(45deg, #38bdf8, #6366f1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 5px 15px rgba(56,189,248,0.2)); }
+        .vid-card:hover i { background: linear-gradient(45deg, var(--p-gold), #ffaa00); -webkit-background-clip: text; -webkit-text-fill-color: transparent; transform: scale(1.1); }
+
+        /* Notes Card Icons (Special Red/Orange theme for PDFs) */
+        .notes-card { border-color: rgba(244, 63, 94, 0.3); }
+        .notes-card i { background: linear-gradient(45deg, #f43f5e, #fb923c); -webkit-background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 5px 15px rgba(244,63,94,0.3)); }
+        .notes-card:hover { border-color: #f43f5e; box-shadow: 0 15px 30px rgba(0,0,0,0.6), 0 0 20px rgba(244,63,94,0.2); }
+        .notes-card:hover i { transform: scale(1.1); }
+
+        .brand-card h2 { font-size: 20px; letter-spacing: 0.5px; margin-bottom: 5px; font-weight: 600; color: white; text-transform: capitalize;}
+        .brand-card p { color: #94a3b8; font-size: 13px; font-weight: 300; }
+
+        @media (max-width: 768px) {
+            .hero-title { font-size: 26px; padding-top: 30px; }
+            .grid { gap: 15px; padding-bottom: 60px; }
+            .brand-card { padding: 25px 20px; }
+            .brand-card h2 { font-size: 18px; }
+            .brand-card i { font-size: 35px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-left">
+            <a href="selection_way.html" class="back-icon" title="Go Back"><i class="fa-solid fa-arrow-left"></i></a>
+            <div class="logo">SZX</div>
+        </div>
+        <div class="social-icons">
+            <a href="https://t.me/szxmock" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+        </div>
+    </header>
+
+    <div class="hero-title">SSC VOD BATCH</div>
+
+    <div class="grid" id="mainContainer">
+        </div>
+
+    <script>
+        async function loadData() {
+            const container = document.getElementById("mainContainer");
+            
+            // 1. Load PDFs first (sabse upar dikhane ke liye)
+            try {
+                const pdfRes = await fetch("sscvodp.json");
+                const pdfData = await pdfRes.json();
+                
+                // All PDF Folder Add kar raha hai
+                container.innerHTML += `
+                    <div class="brand-card notes-card" onclick="window.location.href='notes_list.html'">
+                        <i class="fa-solid fa-file-pdf"></i>
+                        <h2>All PDF Notes</h2>
+                        <p>${pdfData.length} Total PDFs</p>
+                    </div>
+                `;
+            } catch (error) {
+                console.log("PDF data load nahi hua ya file missing hai.");
+            }
+
+            // 2. Load Video Classes (PDF ke baad dikhane ke liye)
+            try {
+                const vidRes = await fetch("data.json");
+                const vidData = await vidRes.json();
+                
+                const subjects = {};
+                vidData.forEach(item => {
+                    const sub = item.subject || "Other";
+                    subjects[sub] = (subjects[sub] || 0) + 1;
+                });
+                
+                // Baki bache hue Subjects ke Folders
+                Object.keys(subjects).forEach(sub => {
+                    container.innerHTML += `
+                        <div class="brand-card vid-card" onclick="window.location.href='list.html?sub=${encodeURIComponent(sub)}'">
+                            <i class="fa-solid fa-play-circle"></i>
+                            <h2>${sub}</h2>
+                            <p>${subjects[sub]} Classes</p>
+                        </div>
+                    `;
+                });
+            } catch (error) {
+                console.log("Video data load nahi hua.");
+            }
+        }
+
+        // Data Load Call
+        loadData();
+
+        // Premium URL Masking Script
+        window.addEventListener("load", function() {
+            if (window.location.pathname.endsWith('.html') && window.location.pathname !== '/index.html') {
+                let cleanUrl = window.location.pathname.replace('.html', '');
+                window.history.replaceState(null, '', cleanUrl);
+            }
+        });
+    </script>
+</body>
+</html>

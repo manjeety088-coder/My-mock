@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SZX • Railway Foundation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --p-gold: #ffcc00;
+            --p-gold-glow: rgba(255, 204, 0, 0.5);
+            --dark: #080808;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.06);
+            --p-blue: #38bdf8;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: radial-gradient(circle at top left, #16161a, var(--dark) 80%);
+            color: white;
+            min-height: 100vh;
+        }
+
+        /* --- Premium Header --- */
+        header { 
+            padding: 15px 5%; 
+            display: flex; justify-content: space-between; align-items: center;
+            background: rgba(8, 8, 8, 0.75); 
+            backdrop-filter: blur(25px); 
+            -webkit-backdrop-filter: blur(25px);
+            position: sticky; top: 0; 
+            border-bottom: 1px solid var(--glass-border);
+            z-index: 100;
+        }
+
+        .header-left { display: flex; align-items: center; gap: 15px; }
+        .back-icon { color: #fff; font-size: 20px; text-decoration: none; opacity: 0.7; transition: 0.3s; }
+        .back-icon:hover { opacity: 1; color: var(--p-gold); transform: translateX(-3px); }
+        .logo-text { font-size: 20px; font-weight: 700; color: white; letter-spacing: 1px; }
+
+        .social-icons a { color: #fff; font-size: 20px; transition: 0.3s; opacity: 0.6; }
+        .social-icons a:hover { opacity: 1; color: #0088cc; filter: drop-shadow(0 0 10px #0088cc); }
+
+        /* --- Subject Buttons --- */
+        .subjects {
+            display: flex; justify-content: center; gap: 12px;
+            padding: 30px 15px 20px; flex-wrap: wrap;
+            max-width: 1100px; margin: 0 auto;
+        }
+
+        .subject-card {
+            background: var(--card-bg); border: 1px solid var(--glass-border);
+            padding: 10px 20px; border-radius: 30px; cursor: pointer; font-size: 13px;
+            transition: .3s ease; color: #ccc; font-weight: 400; text-transform: uppercase; letter-spacing: 1px;
+            backdrop-filter: blur(5px);
+        }
+
+        .subject-card:hover, .subject-card.active {
+            border-color: var(--p-gold); background: rgba(255,204,0,0.1); color: var(--p-gold);
+            transform: translateY(-2px); box-shadow: 0 5px 15px rgba(255,204,0,0.1);
+        }
+
+        /* --- Grid Classes --- */
+        #classContainer {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px; padding: 15px 5% 50px; max-width: 1200px; margin: 0 auto;
+        }
+
+        .class-card {
+            background: var(--card-bg); border: 1px solid var(--glass-border); border-radius: 16px;
+            padding: 20px; cursor: pointer; backdrop-filter: blur(10px);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex; flex-direction: column; align-items: center; text-align: center;
+            height: 100%; position: relative; overflow: hidden;
+        }
+
+        .class-card::after {
+            content: ''; position: absolute; top: 0; left: -100%; width: 50%; height: 100%;
+            background: linear-gradient(to right, transparent, rgba(255,255,255,0.03), transparent);
+            transform: skewX(-25deg); transition: 0.7s;
+        }
+
+        .class-card:hover::after { left: 150%; }
+
+        .class-card:hover {
+            transform: translateY(-8px); border-color: var(--p-gold);
+            background: rgba(255, 204, 0, 0.04);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.5), 0 0 15px rgba(255,204,0,0.1);
+        }
+
+        .icon {
+            font-size: 30px; margin-bottom: 15px; transition: 0.4s;
+            background: linear-gradient(45deg, var(--p-blue), #6366f1);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 5px 10px rgba(56,189,248,0.2));
+        }
+
+        .class-card:hover .icon {
+            background: linear-gradient(45deg, var(--p-gold), #ffaa00);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            transform: scale(1.1);
+        }
+
+        .class-title { font-size: 13px; font-weight: 500; line-height: 1.4; color: white; flex-grow: 1; }
+        .small { font-size: 10px; color: #888; margin-top: 10px; text-transform: uppercase; letter-spacing: 1px; }
+
+        @media (max-width: 600px) {
+            #classContainer { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+            .subject-card { font-size: 11px; padding: 8px 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-left">
+            <a href="selection_way.html" class="back-icon"><i class="fa-solid fa-arrow-left"></i></a>
+            <div class="logo-text">SZX • Railway Foundation</div>
+        </div>
+        <div class="social-icons">
+            <a href="https://t.me/szxmock" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+        </div>
+    </header>
+
+    <div class="subjects">
+        <div class="subject-card" id="btn-Introduction" onclick="loadSubject('Introduction')">Intro</div>
+        <div class="subject-card" id="btn-Arithmetic" onclick="loadSubject('Arithmetic')">Arithmetic</div>
+        <div class="subject-card" id="btn-Advance Math" onclick="loadSubject('Advance Math')">Adv Math</div>
+        <div class="subject-card" id="btn-Reasoning" onclick="loadSubject('Reasoning')">Reasoning</div>
+        <div class="subject-card" id="btn-Physics" onclick="loadSubject('Physics')">Physics</div>
+        <div class="subject-card" id="btn-Chemistry" onclick="loadSubject('Chemistry')">Chemistry</div>
+        <div class="subject-card" id="btn-Biology" onclick="loadSubject('Biology')">Biology</div>
+        <div class="subject-card" id="btn-Science Practice" onclick="loadSubject('Science Practice')">Science Practice</div>
+        <div class="subject-card" id="btn-Polity" onclick="loadSubject('Polity')">Polity</div>
+        <div class="subject-card" id="btn-Ancient History" onclick="loadSubject('Ancient History')">Ancient History</div>
+        <div class="subject-card" id="btn-Medieval History" onclick="loadSubject('Medieval History')">Medieval History</div>
+        <div class="subject-card" id="btn-Modern History" onclick="loadSubject('Modern History')">Modern History</div>
+        <div class="subject-card" id="btn-Geography" onclick="loadSubject('Geography')">Geography</div>
+        <div class="subject-card" id="btn-Static" onclick="loadSubject('Static')">Static</div>
+    </div>
+
+    <div id="classContainer"></div>
+
+    <script>
+        let allVideos = [];
+
+        async function fetchVideoData() {
+            try {
+                const res = await fetch("rf.json");
+                allVideos = await res.json();
+                
+                // Indexing for player.html
+                allVideos = allVideos.map((item, index) => {
+                    item.originalId = index;
+                    return item;
+                });
+
+                // Default load
+                loadSubject('Introduction');
+            } catch (error) {
+                console.error("Data load error:", error);
+                document.getElementById("classContainer").innerHTML = "<p style='text-align:center; color:red; margin-top:20px;'>rf.json not found.</p>";
+            }
+        }
+
+        function loadSubject(subjectName) {
+            const container = document.getElementById("classContainer");
+            container.innerHTML = "";
+
+            document.querySelectorAll('.subject-card').forEach(btn => btn.classList.remove('active'));
+            const activeBtn = document.getElementById('btn-' + subjectName);
+            if(activeBtn) activeBtn.classList.add('active');
+
+            const filteredData = allVideos.filter(c => c.subject === subjectName);
+
+            if(filteredData.length === 0) {
+                container.innerHTML = "<p style='text-align:center; grid-column: 1/-1; opacity:0.5; margin-top:20px;'>No classes found for " + subjectName + "</p>";
+                return;
+            }
+
+            filteredData.forEach(c => {
+                const div = document.createElement("div");
+                div.className = "class-card";
+                div.innerHTML = `
+                    <div class="icon"><i class="fa-solid fa-play"></i></div>
+                    <div class="class-title">${c.chapter}</div>
+                    <div class="small">Class ${c.class_no} • Tap to Play</div>
+                `;
+                
+                div.onclick = () => {
+                    // Redirect to player with rf identifier
+                    window.location = "player.html?subject=rf&id=" + c.originalId;
+                };
+                
+                container.appendChild(div);
+            });
+        }
+
+        window.addEventListener("load", function() {
+            if (window.location.pathname.endsWith('.html') && window.location.pathname !== '/index.html') {
+                let cleanUrl = window.location.pathname.replace('.html', '');
+                window.history.replaceState(null, '', cleanUrl);
+            }
+            fetchVideoData();
+        });
+    </script>
+
+</body>
+</html>

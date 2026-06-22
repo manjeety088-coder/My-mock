@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="no-referrer" />
+  <title>SZX • Aman Sir English Premium</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --gold: #ffcc00;
+      --gold-2: #ff9f0a;
+      --blue: #38bdf8;
+      --violet: #8b5cf6;
+      --bg: #050508;
+      --panel: rgba(255, 255, 255, 0.055);
+      --panel-2: rgba(255, 255, 255, 0.035);
+      --border: rgba(255, 255, 255, 0.10);
+      --muted: #a1a1aa;
+      --white: #ffffff;
+      --danger: #fb7185;
+      --success: #22c55e;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      min-height: 100vh;
+      font-family: 'Outfit', sans-serif;
+      color: var(--white);
+      background:
+        radial-gradient(circle at 10% -10%, rgba(56, 189, 248, 0.22), transparent 32%),
+        radial-gradient(circle at 90% 5%, rgba(255, 204, 0, 0.16), transparent 30%),
+        radial-gradient(circle at 50% 110%, rgba(139, 92, 246, 0.20), transparent 32%),
+        linear-gradient(135deg, #050508 0%, #09090f 55%, #040404 100%);
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.026) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.026) 1px, transparent 1px);
+      background-size: 42px 42px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,0.85), transparent 78%);
+      z-index: -2;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      width: 420px;
+      height: 420px;
+      left: -170px;
+      bottom: -170px;
+      background: rgba(255, 204, 0, 0.12);
+      filter: blur(90px);
+      border-radius: 50%;
+      z-index: -1;
+      animation: floatGlow 8s ease-in-out infinite alternate;
+    }
+
+    @keyframes floatGlow {
+      from { transform: translate3d(0, 0, 0) scale(1); }
+      to { transform: translate3d(70px, -35px, 0) scale(1.12); }
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 14px 5%;
+      border-bottom: 1px solid var(--border);
+      background: rgba(5, 5, 8, 0.72);
+      backdrop-filter: blur(22px);
+      -webkit-backdrop-filter: blur(22px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.25);
+    }
+
+    .brand-left { display: flex; align-items: center; gap: 14px; min-width: 0; }
+
+    .back-btn {
+      width: 42px; height: 42px;
+      display: grid; place-items: center;
+      border-radius: 14px;
+      color: #fff;
+      text-decoration: none;
+      background: rgba(255,255,255,0.055);
+      border: 1px solid var(--border);
+      transition: 0.25s ease;
+      flex: 0 0 auto;
+    }
+    .back-btn:hover { color: #050505; background: linear-gradient(135deg, var(--gold), var(--gold-2)); transform: translateX(-3px); box-shadow: 0 10px 26px rgba(255,204,0,0.22); }
+
+    .brand-mark {
+      width: 42px; height: 42px;
+      display: grid; place-items: center;
+      border-radius: 15px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-2));
+      color: #050505;
+      font-weight: 900;
+      box-shadow: 0 0 30px rgba(255, 204, 0, 0.25);
+      flex: 0 0 auto;
+    }
+
+    .brand-title { min-width: 0; }
+    .brand-title h1 { font-size: 18px; line-height: 1.1; font-weight: 900; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .brand-title p { margin-top: 3px; color: var(--muted); font-size: 11px; letter-spacing: 1.6px; text-transform: uppercase; }
+
+    .tg-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      color: white;
+      text-decoration: none;
+      background: rgba(0, 136, 204, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.30);
+      font-size: 13px;
+      font-weight: 700;
+      transition: 0.25s ease;
+      white-space: nowrap;
+    }
+    .tg-btn:hover { background: rgba(0,136,204,0.22); transform: translateY(-2px); box-shadow: 0 12px 26px rgba(56,189,248,0.16); }
+
+    .hero {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 46px 5% 20px;
+      display: grid;
+      grid-template-columns: 1.35fr 0.65fr;
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .hero-card, .stats-card {
+      border: 1px solid var(--border);
+      background: linear-gradient(135deg, rgba(255,255,255,0.075), rgba(255,255,255,0.025));
+      border-radius: 30px;
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      box-shadow: 0 22px 70px rgba(0,0,0,0.30);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero-card { padding: 34px; }
+    .hero-card::after {
+      content: '';
+      position: absolute;
+      width: 170px; height: 170px;
+      right: -55px; top: -55px;
+      border-radius: 50%;
+      background: rgba(255,204,0,0.13);
+      filter: blur(18px);
+    }
+
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 7px 12px;
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      border: 1px solid rgba(255,204,0,0.26);
+      background: rgba(255,204,0,0.08);
+      border-radius: 999px;
+    }
+
+    .hero h2 {
+      margin-top: 16px;
+      font-size: clamp(34px, 5vw, 62px);
+      line-height: 0.96;
+      letter-spacing: -2px;
+      font-weight: 900;
+      background: linear-gradient(135deg, #fff 30%, #a5b4fc 68%, var(--gold) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p.desc { margin-top: 14px; color: #cbd5e1; font-size: 15px; line-height: 1.7; max-width: 680px; }
+
+    .stats-card {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 14px;
+    }
+
+    .stat-line {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.045);
+      border: 1px solid rgba(255,255,255,0.075);
+    }
+    .stat-line span:first-child { color: var(--muted); font-size: 13px; }
+    .stat-line span:last-child { font-size: 18px; font-weight: 900; color: var(--gold); }
+
+    .controls {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 16px 5% 14px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .search-box {
+      display: flex; align-items: center; gap: 12px;
+      padding: 0 16px;
+      min-height: 52px;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.055);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+    .search-box i { color: var(--gold); }
+    .search-box input {
+      width: 100%;
+      border: 0;
+      outline: 0;
+      color: white;
+      background: transparent;
+      font-size: 15px;
+      font-family: inherit;
+    }
+    .search-box input::placeholder { color: #71717a; }
+
+    .subjects {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .subject-card {
+      min-height: 52px;
+      padding: 0 18px;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      cursor: pointer;
+      color: #d4d4d8;
+      background: rgba(255,255,255,0.052);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.7px;
+      text-transform: uppercase;
+      transition: 0.25s ease;
+      font-family: inherit;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .subject-card:hover, .subject-card.active {
+      color: #050505;
+      background: linear-gradient(135deg, var(--gold), var(--gold-2));
+      border-color: rgba(255,204,0,0.5);
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(255,204,0,0.18);
+    }
+
+    #classContainer {
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 18px 5% 60px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+      gap: 16px;
+    }
+
+    .class-card {
+      min-height: 190px;
+      padding: 20px;
+      cursor: pointer;
+      border-radius: 24px;
+      border: 1px solid var(--border);
+      background: linear-gradient(145deg, rgba(255,255,255,0.065), rgba(255,255,255,0.025));
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      transition: 0.35s cubic-bezier(.2,.8,.2,1);
+    }
+
+    .class-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      background: radial-gradient(circle at top, rgba(255,204,0,0.16), transparent 55%);
+      transition: 0.35s ease;
+    }
+
+    .class-card::after {
+      content: '';
+      position: absolute;
+      top: 0; left: -80%;
+      width: 55%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.10), transparent);
+      transform: skewX(-22deg);
+      transition: 0.7s ease;
+    }
+
+    .class-card:hover { transform: translateY(-8px); border-color: rgba(255,204,0,0.55); box-shadow: 0 22px 45px rgba(0,0,0,0.35), 0 0 24px rgba(255,204,0,0.10); }
+    .class-card:hover::before { opacity: 1; }
+    .class-card:hover::after { left: 130%; }
+
+    .icon-badge {
+      width: 54px; height: 54px;
+      display: grid; place-items: center;
+      border-radius: 19px;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, rgba(56,189,248,0.20), rgba(139,92,246,0.18));
+      border: 1px solid rgba(255,255,255,0.10);
+      color: var(--blue);
+      font-size: 23px;
+      position: relative;
+      z-index: 1;
+      transition: 0.3s ease;
+    }
+    .class-card:hover .icon-badge { color: #050505; background: linear-gradient(135deg, var(--gold), var(--gold-2)); transform: scale(1.06) rotate(-3deg); }
+
+    .class-title { position: relative; z-index: 1; color: white; font-size: 13.5px; font-weight: 700; line-height: 1.45; }
+    .small { position: relative; z-index: 1; margin-top: 12px; color: #94a3b8; font-size: 10px; text-transform: uppercase; letter-spacing: 1.2px; font-weight: 800; }
+
+    .empty, .error, .loading {
+      grid-column: 1 / -1;
+      padding: 34px 20px;
+      text-align: center;
+      color: var(--muted);
+      border-radius: 24px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.04);
+    }
+    .error { color: var(--danger); }
+
+    @media (max-width: 820px) {
+      .hero { grid-template-columns: 1fr; padding-top: 28px; }
+      .hero-card { padding: 26px; border-radius: 24px; }
+      .controls { grid-template-columns: 1fr; }
+      .subjects { justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 2px; }
+      .subject-card { white-space: nowrap; }
+      .tg-btn span { display: none; }
+    }
+
+    @media (max-width: 520px) {
+      .topbar { padding: 11px 3.5%; }
+      .back-btn, .brand-mark { width: 38px; height: 38px; border-radius: 13px; }
+      .brand-title h1 { font-size: 15px; }
+      .brand-title p { display: none; }
+      .hero, .controls, #classContainer { padding-left: 3.5%; padding-right: 3.5%; }
+      #classContainer { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+      .class-card { min-height: 164px; padding: 14px; border-radius: 19px; }
+      .class-title { font-size: 12px; }
+      .icon-badge { width: 45px; height: 45px; border-radius: 15px; font-size: 19px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-left">
+      <a href="selection_way.html" class="back-btn" title="Back"><i class="fa-solid fa-arrow-left"></i></a>
+      <div class="brand-mark">SZX</div>
+      <div class="brand-title">
+        <h1>Aman Sir English</h1>
+        <p>Premium Class Library</p>
+      </div>
+    </div>
+    <a class="tg-btn" href="https://t.me/szxmock" target="_blank" rel="noopener"><i class="fa-brands fa-telegram"></i><span>Telegram</span></a>
+  </header>
+
+  <section class="hero">
+    <div class="hero-card">
+      <div class="eyebrow"><i class="fa-solid fa-crown"></i> SZX Premium</div>
+      <h2>English Batch<br>Aman Sir</h2>
+      <p class="desc">Grammar, Vocab aur Notes ko clean premium cards me access karo. Class open karte time player me class name bhi show hoga, link nahi.</p>
+    </div>
+    <div class="stats-card">
+      <div class="stat-line"><span>Current Section</span><span id="currentSubject">Grammar</span></div>
+      <div class="stat-line"><span>Total Items</span><span id="totalItems">0</span></div>
+      <div class="stat-line"><span>Status</span><span id="loadStatus">Ready</span></div>
+    </div>
+  </section>
+
+  <section class="controls">
+    <div class="search-box">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input id="searchInput" type="search" placeholder="Search classes or notes..." autocomplete="off" />
+    </div>
+    <div class="subjects">
+      <button class="subject-card active" data-subject="grammar" onclick="loadSubject('grammar')"><i class="fa-solid fa-book-open"></i> Grammar</button>
+      <button class="subject-card" data-subject="vocab" onclick="loadSubject('vocab')"><i class="fa-solid fa-spell-check"></i> Vocab</button>
+      <button class="subject-card" data-subject="notes" onclick="loadSubject('notes')"><i class="fa-solid fa-file-pdf"></i> Notes</button>
+    </div>
+  </section>
+
+  <main id="classContainer">
+    <div class="loading">Loading premium classes...</div>
+  </main>
+
+  <script>
+    const container = document.getElementById('classContainer');
+    const searchInput = document.getElementById('searchInput');
+    const currentSubjectEl = document.getElementById('currentSubject');
+    const totalItemsEl = document.getElementById('totalItems');
+    const loadStatusEl = document.getElementById('loadStatus');
+
+    let activeSubject = 'grammar';
+    let activeItems = [];
+
+    function escapeHtml(value) {
+      return String(value ?? '').replace(/[&<>'"]/g, char => ({
+        '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;'
+      }[char]));
+    }
+
+    function setActiveButton(subject) {
+      document.querySelectorAll('.subject-card').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.subject === subject);
+      });
+    }
+
+    function updateStats(subject, count, status = 'Ready') {
+      currentSubjectEl.textContent = subject === 'notes' ? 'Notes' : subject.charAt(0).toUpperCase() + subject.slice(1);
+      totalItemsEl.textContent = count;
+      loadStatusEl.textContent = status;
+    }
+
+    function openPlayer(subject, id, title) {
+      const url = `player.html?subject=${encodeURIComponent(subject)}&id=${encodeURIComponent(id)}&title=${encodeURIComponent(title)}`;
+      window.location.href = url;
+    }
+
+    function renderItems() {
+      const query = searchInput.value.trim().toLowerCase();
+      const filtered = activeItems.filter(item => item.title.toLowerCase().includes(query));
+      container.innerHTML = '';
+
+      if (!filtered.length) {
+        container.innerHTML = '<div class="empty"><i class="fa-solid fa-circle-info"></i><br><br>No class found for this search.</div>';
+        updateStats(activeSubject, activeItems.length, 'No Match');
+        return;
+      }
+
+      filtered.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'class-card';
+        card.innerHTML = `
+          <div class="icon-badge"><i class="fa-solid ${item.type === 'pdf' ? 'fa-file-pdf' : 'fa-play'}"></i></div>
+          <div class="class-title">${escapeHtml(item.title)}</div>
+          <div class="small">${item.type === 'pdf' ? 'Open Notes' : 'Tap to Play'}</div>
+        `;
+        card.addEventListener('click', () => {
+          if (item.type === 'pdf') {
+            window.open(item.url, '_blank', 'noopener');
+          } else {
+            openPlayer(item.subject, item.id, item.title);
+          }
+        });
+        container.appendChild(card);
+      });
+
+      updateStats(activeSubject, activeItems.length, 'Loaded');
+    }
+
+    async function loadSubject(subject) {
+      activeSubject = subject;
+      setActiveButton(subject);
+      searchInput.value = '';
+      container.innerHTML = '<div class="loading">Loading premium content...</div>';
+      updateStats(subject, 0, 'Loading');
+
+      try {
+        if (subject === 'grammar' || subject === 'vocab') {
+          const res = await fetch(subject + '.json');
+          if (!res.ok) throw new Error(subject + '.json not found');
+          const data = await res.json();
+          activeItems = data.map((c, i) => ({
+            type: 'video',
+            subject,
+            id: i,
+            title: c.name || c.title || `Class ${i + 1}`
+          }));
+        } else {
+          const res = await fetch('pdf_links.json');
+          if (!res.ok) throw new Error('pdf_links.json not found');
+          const data = await res.json();
+          activeItems = data
+            .filter(c => c.pdf_url && c.pdf_url !== 'about:blank')
+            .map((c, i) => ({
+              type: 'pdf',
+              id: i,
+              title: c.title || `PDF ${i + 1}`,
+              url: c.pdf_url
+            }));
+        }
+        renderItems();
+      } catch (error) {
+        container.innerHTML = `<div class="error"><i class="fa-solid fa-triangle-exclamation"></i><br><br>${escapeHtml(error.message)}<br><small>Required JSON file same folder me hona chahiye.</small></div>`;
+        updateStats(subject, 0, 'Error');
+      }
+    }
+
+    searchInput.addEventListener('input', renderItems);
+
+    window.addEventListener('load', () => {
+      if (window.location.pathname.endsWith('.html') && window.location.pathname !== '/index.html') {
+        const cleanUrl = window.location.pathname.replace('.html', '');
+        window.history.replaceState(null, '', cleanUrl);
+      }
+      loadSubject('grammar');
+    });
+  </script>
+</body>
+</html>

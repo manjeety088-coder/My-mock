@@ -1,0 +1,1964 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<title>Premium Course Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<div class="topbar">
+  <div class="nav">
+    <a class="brand" href="reasoningarunsir.html">
+      <span class="logo-dot"></span>
+      <span>SZX Studio</span>
+    </a>
+    <div class="nav-actions">
+      <a class="nav-btn" href="reasoningarunsir.html">🏠 Chapters</a>
+      <a class="nav-btn" href="reasoningpdfs.html">📄 All PDFs</a>
+    </div>
+  </div>
+</div>
+
+
+<section class="hero">
+  <div class="badge">Course Index</div>
+  <h1>All Chapters</h1>
+  <p class="subtitle">Premium dashboard: chapter card par click karo, uske andar videos aur PDFs mil jayengi. Search se chapter turant filter ho jayega.</p>
+  <div class="stats"><div class="stat"><strong>190</strong><span>Chapters</span></div><div class="stat"><strong>260</strong><span>Videos</span></div><div class="stat"><strong>319</strong><span>PDFs</span></div></div>
+</section>
+
+<main class="wrap">
+
+<div class="tools">
+  <input class="search" id="searchInput" placeholder="Search chapter name..." oninput="filterCards()">
+</div>
+<script>
+function filterCards(){
+  const q = document.getElementById('searchInput').value.toLowerCase().trim();
+  document.querySelectorAll('[data-search]').forEach(el => {
+    const ok = el.dataset.search.toLowerCase().includes(q);
+    el.style.display = ok ? '' : 'none';
+  });
+}
+</script>
+
+<div class="grid">
+
+<a class="card" data-search="Introduction Reasoning" href="Introduction.html">
+  <h2>Introduction</h2>
+  <p>Reasoning</p>
+  <div class="chips">
+    <span class="chip video">🎬 1 Videos</span>
+    <span class="chip pdf">📄 0 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Direction Reasoning, Notes" href="Direction.html">
+  <h2>Direction</h2>
+  <p>Reasoning, Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 13 Videos</span>
+    <span class="chip pdf">📄 7 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Inequalities Reasoning" href="Inequalities.html">
+  <h2>Inequalities</h2>
+  <p>Reasoning</p>
+  <div class="chips">
+    <span class="chip video">🎬 4 Videos</span>
+    <span class="chip pdf">📄 0 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Logical Venn Diagram Reasoning, Notes" href="Logical_Venn_Diagram.html">
+  <h2>Logical Venn Diagram</h2>
+  <p>Reasoning, Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 2 Videos</span>
+    <span class="chip pdf">📄 2 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Logical Venn Diagram (Caselet DI) Reasoning" href="Logical_Venn_Diagram_Caselet_DI.html">
+  <h2>Logical Venn Diagram (Caselet DI)</h2>
+  <p>Reasoning</p>
+  <div class="chips">
+    <span class="chip video">🎬 2 Videos</span>
+    <span class="chip pdf">📄 0 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Number Series Reasoning, Reas (VOD)" href="Number_Series.html">
+  <h2>Number Series</h2>
+  <p>Reasoning, Reas (VOD)</p>
+  <div class="chips">
+    <span class="chip video">🎬 7 Videos</span>
+    <span class="chip pdf">📄 0 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Alphabet Series Reasoning, Notes" href="Alphabet_Series.html">
+  <h2>Alphabet Series</h2>
+  <p>Reasoning, Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 3 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Dice Reasoning, Reas (VOD), Notes" href="Dice.html">
+  <h2>Dice</h2>
+  <p>Reasoning, Reas (VOD), Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 8 Videos</span>
+    <span class="chip pdf">📄 3 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Dice + Cube Reasoning" href="Dice_Cube.html">
+  <h2>Dice + Cube</h2>
+  <p>Reasoning</p>
+  <div class="chips">
+    <span class="chip video">🎬 1 Videos</span>
+    <span class="chip pdf">📄 0 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Cube And Cuboid Reasoning, Notes" href="Cube_And_Cuboid.html">
+  <h2>Cube And Cuboid</h2>
+  <p>Reasoning, Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 3 Videos</span>
+    <span class="chip pdf">📄 2 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Decision Making Reasoning, Reas (VOD), Notes" href="Decision_Making.html">
+  <h2>Decision Making</h2>
+  <p>Reasoning, Reas (VOD), Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 4 Videos</span>
+    <span class="chip pdf">📄 3 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Missing Number And Matrix Reasoning, Notes" href="Missing_Number_And_Matrix.html">
+  <h2>Missing Number And Matrix</h2>
+  <p>Reasoning, Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 1 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Number, Ranking And Comparison Reasoning" href="Number_Ranking_And_Comparison.html">
+  <h2>Number, Ranking And Comparison</h2>
+  <p>Reasoning</p>
+  <div class="chips">
+    <span class="chip video">🎬 5 Videos</span>
+    <span class="chip pdf">📄 0 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Mathematical Operations Reasoning, Notes" href="Mathematical_Operations.html">
+  <h2>Mathematical Operations</h2>
+  <p>Reasoning, Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 2 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Syllogism Reasoning, Reas (VOD), Notes" href="Syllogism.html">
+  <h2>Syllogism</h2>
+  <p>Reasoning, Reas (VOD), Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 16 Videos</span>
+    <span class="chip pdf">📄 2 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Analogy Reasoning, Reas (VOD), Notes" href="Analogy.html">
+  <h2>Analogy</h2>
+  <p>Reasoning, Reas (VOD), Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 4 Videos</span>
+    <span class="chip pdf">📄 3 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Odd One Out _ Classification Reasoning" href="Odd_One_Out_Classification.html">
+  <h2>Odd One Out _ Classification</h2>
+  <p>Reasoning</p>
+  <div class="chips">
+    <span class="chip video">🎬 2 Videos</span>
+    <span class="chip pdf">📄 0 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Word Arrangement _ Logical Sequence Reasoning" href="Word_Arrangement_Logical_Sequence.html">
+  <h2>Word Arrangement _ Logical Sequence</h2>
+  <p>Reasoning</p>
+  <div class="chips">
+    <span class="chip video">🎬 1 Videos</span>
+    <span class="chip pdf">📄 0 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Coding Decoding Reasoning, Reas (VOD), Notes" href="Coding_Decoding.html">
+  <h2>Coding Decoding</h2>
+  <p>Reasoning, Reas (VOD), Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 15 Videos</span>
+    <span class="chip pdf">📄 3 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Alphabet Test Reasoning, Reas (VOD), Notes" href="Alphabet_Test.html">
+  <h2>Alphabet Test</h2>
+  <p>Reasoning, Reas (VOD), Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 8 Videos</span>
+    <span class="chip pdf">📄 3 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Clock Reasoning, Reas (VOD), Notes" href="Clock.html">
+  <h2>Clock</h2>
+  <p>Reasoning, Reas (VOD), Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 8 Videos</span>
+    <span class="chip pdf">📄 3 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Incorrect Clock Reasoning, Reas (VOD), Notes" href="Incorrect_Clock.html">
+  <h2>Incorrect Clock</h2>
+  <p>Reasoning, Reas (VOD), Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 5 Videos</span>
+    <span class="chip pdf">📄 2 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Syllogism (Only A Few) Reasoning" href="Syllogism_Only_A_Few.html">
+  <h2>Syllogism (Only A Few)</h2>
+  <p>Reasoning</p>
+  <div class="chips">
+    <span class="chip video">🎬 3 Videos</span>
+    <span class="chip pdf">📄 0 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Blood Relation Reasoning, Notes" href="Blood_Relation.html">
+  <h2>Blood Relation</h2>
+  <p>Reasoning, Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 5 Videos</span>
+    <span class="chip pdf">📄 2 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Blood Relation + Counting Of Figures Reasoning, Notes" href="Blood_Relation_Counting_Of_Figures.html">
+  <h2>Blood Relation + Counting Of Figures</h2>
+  <p>Reasoning, Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 1 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Counting Of Figures Reasoning, Notes" href="Counting_Of_Figures.html">
+  <h2>Counting Of Figures</h2>
+  <p>Reasoning, Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 5 Videos</span>
+    <span class="chip pdf">📄 6 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Calendar Reasoning, Reas (VOD), Notes" href="Calendar.html">
+  <h2>Calendar</h2>
+  <p>Reasoning, Reas (VOD), Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 13 Videos</span>
+    <span class="chip pdf">📄 5 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Statement And Course Of Action Reasoning, Notes" href="Statement_And_Course_Of_Action.html">
+  <h2>Statement And Course Of Action</h2>
+  <p>Reasoning, Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 2 Videos</span>
+    <span class="chip pdf">📄 5 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Statement and Assumptions Reasoning, Notes" href="Statement_and_Assumptions.html">
+  <h2>Statement and Assumptions</h2>
+  <p>Reasoning, Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 2 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Statement, Assumptions and Conclusions Reasoning" href="Statement_Assumptions_and_Conclusions.html">
+  <h2>Statement, Assumptions and Conclusions</h2>
+  <p>Reasoning</p>
+  <div class="chips">
+    <span class="chip video">🎬 2 Videos</span>
+    <span class="chip pdf">📄 0 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Statement And Argument Reasoning, Notes" href="Statement_And_Argument.html">
+  <h2>Statement And Argument</h2>
+  <p>Reasoning, Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 2 Videos</span>
+    <span class="chip pdf">📄 2 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Situation Reaction Test Reasoning" href="Situation_Reaction_Test.html">
+  <h2>Situation Reaction Test</h2>
+  <p>Reasoning</p>
+  <div class="chips">
+    <span class="chip video">🎬 3 Videos</span>
+    <span class="chip pdf">📄 0 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Seating Arrangement Reasoning, Notes" href="Seating_Arrangement.html">
+  <h2>Seating Arrangement</h2>
+  <p>Reasoning, Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 7 Videos</span>
+    <span class="chip pdf">📄 5 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Puzzle Reasoning, Notes" href="Puzzle.html">
+  <h2>Puzzle</h2>
+  <p>Reasoning, Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 4 Videos</span>
+    <span class="chip pdf">📄 4 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Input-Output Reasoning, Reas (VOD), Notes" href="Input-Output.html">
+  <h2>Input-Output</h2>
+  <p>Reasoning, Reas (VOD), Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 7 Videos</span>
+    <span class="chip pdf">📄 3 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Inequality Reasoning, Notes" href="Inequality.html">
+  <h2>Inequality</h2>
+  <p>Reasoning, Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 7 Videos</span>
+    <span class="chip pdf">📄 9 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Mirror and Water Image Reasoning, Reas (VOD), Notes" href="Mirror_and_Water_Image.html">
+  <h2>Mirror and Water Image</h2>
+  <p>Reasoning, Reas (VOD), Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 4 Videos</span>
+    <span class="chip pdf">📄 3 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Embedded Figure + Pattern Completion Reasoning, Reas (VOD), Notes" href="Embedded_Figure_Pattern_Completion.html">
+  <h2>Embedded Figure + Pattern Completion</h2>
+  <p>Reasoning, Reas (VOD), Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 2 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Pattern Completion + Paper Cutting Reasoning" href="Pattern_Completion_Paper_Cutting.html">
+  <h2>Pattern Completion + Paper Cutting</h2>
+  <p>Reasoning</p>
+  <div class="chips">
+    <span class="chip video">🎬 1 Videos</span>
+    <span class="chip pdf">📄 0 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Paper Cutting and Folding Reasoning, Reas (VOD), Notes" href="Paper_Cutting_and_Folding.html">
+  <h2>Paper Cutting and Folding</h2>
+  <p>Reasoning, Reas (VOD), Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 3 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Non Verbal Series Reasoning, Notes" href="Non_Verbal_Series.html">
+  <h2>Non Verbal Series</h2>
+  <p>Reasoning, Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 2 Videos</span>
+    <span class="chip pdf">📄 2 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Dot Situation Reasoning, Notes" href="Dot_Situation.html">
+  <h2>Dot Situation</h2>
+  <p>Reasoning, Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 1 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Analogy and Classification Reasoning, Notes" href="Analogy_and_Classification.html">
+  <h2>Analogy and Classification</h2>
+  <p>Reasoning, Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 2 Videos</span>
+    <span class="chip pdf">📄 4 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Figure Formation &amp; Figure Matrix Reasoning" href="Figure_Formation_Figure_Matrix.html">
+  <h2>Figure Formation &amp; Figure Matrix</h2>
+  <p>Reasoning</p>
+  <div class="chips">
+    <span class="chip video">🎬 1 Videos</span>
+    <span class="chip pdf">📄 0 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Last Class Reasoning, Notes" href="Last_Class.html">
+  <h2>Last Class</h2>
+  <p>Reasoning, Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 1 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Classification Reas (VOD), Notes" href="Classification.html">
+  <h2>Classification</h2>
+  <p>Reas (VOD), Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 2 Videos</span>
+    <span class="chip pdf">📄 3 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Incorrect Clock + Blood Relationship Reas (VOD)" href="Incorrect_Clock_Blood_Relationship.html">
+  <h2>Incorrect Clock + Blood Relationship</h2>
+  <p>Reas (VOD)</p>
+  <div class="chips">
+    <span class="chip video">🎬 1 Videos</span>
+    <span class="chip pdf">📄 0 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Blood Relationship Reas (VOD)" href="Blood_Relationship.html">
+  <h2>Blood Relationship</h2>
+  <p>Reas (VOD)</p>
+  <div class="chips">
+    <span class="chip video">🎬 6 Videos</span>
+    <span class="chip pdf">📄 0 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Statements and Course of Action Reas (VOD)" href="Statements_and_Course_of_Action.html">
+  <h2>Statements and Course of Action</h2>
+  <p>Reas (VOD)</p>
+  <div class="chips">
+    <span class="chip video">🎬 2 Videos</span>
+    <span class="chip pdf">📄 0 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Statements and Assumptions Reas (VOD)" href="Statements_and_Assumptions.html">
+  <h2>Statements and Assumptions</h2>
+  <p>Reas (VOD)</p>
+  <div class="chips">
+    <span class="chip video">🎬 1 Videos</span>
+    <span class="chip pdf">📄 0 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Statements and  Arguements Reas (VOD)" href="Statements_and_Arguements.html">
+  <h2>Statements and  Arguements</h2>
+  <p>Reas (VOD)</p>
+  <div class="chips">
+    <span class="chip video">🎬 2 Videos</span>
+    <span class="chip pdf">📄 0 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Causes and Effects Reas (VOD)" href="Causes_and_Effects.html">
+  <h2>Causes and Effects</h2>
+  <p>Reas (VOD)</p>
+  <div class="chips">
+    <span class="chip video">🎬 1 Videos</span>
+    <span class="chip pdf">📄 0 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Assertion and Reason, Statements and Conclusions Reas (VOD)" href="Assertion_and_Reason_Statements_and_Conclusions.html">
+  <h2>Assertion and Reason, Statements and Conclusions</h2>
+  <p>Reas (VOD)</p>
+  <div class="chips">
+    <span class="chip video">🎬 1 Videos</span>
+    <span class="chip pdf">📄 0 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Counting of Figure Reas (VOD), Notes" href="Counting_of_Figure.html">
+  <h2>Counting of Figure</h2>
+  <p>Reas (VOD), Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 7 Videos</span>
+    <span class="chip pdf">📄 2 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Coded Inequality Reas (VOD)" href="Coded_Inequality.html">
+  <h2>Coded Inequality</h2>
+  <p>Reas (VOD)</p>
+  <div class="chips">
+    <span class="chip video">🎬 5 Videos</span>
+    <span class="chip pdf">📄 0 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Grouping of identical figures  Figure Formation Reas (VOD)" href="Grouping_of_identical_figures_Figure_Formation.html">
+  <h2>Grouping of identical figures  Figure Formation</h2>
+  <p>Reas (VOD)</p>
+  <div class="chips">
+    <span class="chip video">🎬 1 Videos</span>
+    <span class="chip pdf">📄 0 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Dot Position , Figure Based Series Reas (VOD)" href="Dot_Position_Figure_Based_Series.html">
+  <h2>Dot Position , Figure Based Series</h2>
+  <p>Reas (VOD)</p>
+  <div class="chips">
+    <span class="chip video">🎬 1 Videos</span>
+    <span class="chip pdf">📄 0 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Series + Classification (Non Verbal) Reas (VOD)" href="Series_Classification_Non_Verbal.html">
+  <h2>Series + Classification (Non Verbal)</h2>
+  <p>Reas (VOD)</p>
+  <div class="chips">
+    <span class="chip video">🎬 1 Videos</span>
+    <span class="chip pdf">📄 0 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Classification  + Analogy non verbal + Matrix Reas (VOD)" href="Classification_Analogy_non_verbal_Matrix.html">
+  <h2>Classification  + Analogy non verbal + Matrix</h2>
+  <p>Reas (VOD)</p>
+  <div class="chips">
+    <span class="chip video">🎬 1 Videos</span>
+    <span class="chip pdf">📄 0 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Directions Reas (VOD)" href="Directions.html">
+  <h2>Directions</h2>
+  <p>Reas (VOD)</p>
+  <div class="chips">
+    <span class="chip video">🎬 5 Videos</span>
+    <span class="chip pdf">📄 0 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Seating Arrangements Reas (VOD)" href="Seating_Arrangements.html">
+  <h2>Seating Arrangements</h2>
+  <p>Reas (VOD)</p>
+  <div class="chips">
+    <span class="chip video">🎬 4 Videos</span>
+    <span class="chip pdf">📄 0 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Puzzles Reas (VOD)" href="Puzzles.html">
+  <h2>Puzzles</h2>
+  <p>Reas (VOD)</p>
+  <div class="chips">
+    <span class="chip video">🎬 3 Videos</span>
+    <span class="chip pdf">📄 0 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="SRT and Mental Aptitude Reas (VOD)" href="SRT_and_Mental_Aptitude.html">
+  <h2>SRT and Mental Aptitude</h2>
+  <p>Reas (VOD)</p>
+  <div class="chips">
+    <span class="chip video">🎬 1 Videos</span>
+    <span class="chip pdf">📄 0 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Other Reas (VOD), Notes" href="Other.html">
+  <h2>Other</h2>
+  <p>Reas (VOD), Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 3 Videos</span>
+    <span class="chip pdf">📄 75 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Cube Reas (VOD)" href="Cube.html">
+  <h2>Cube</h2>
+  <p>Reas (VOD)</p>
+  <div class="chips">
+    <span class="chip video">🎬 2 Videos</span>
+    <span class="chip pdf">📄 0 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Ranking &amp; Comparison Test Reas (VOD)" href="Ranking_Comparison_Test.html">
+  <h2>Ranking &amp; Comparison Test</h2>
+  <p>Reas (VOD)</p>
+  <div class="chips">
+    <span class="chip video">🎬 5 Videos</span>
+    <span class="chip pdf">📄 0 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Ages Reas (VOD)" href="Ages.html">
+  <h2>Ages</h2>
+  <p>Reas (VOD)</p>
+  <div class="chips">
+    <span class="chip video">🎬 1 Videos</span>
+    <span class="chip pdf">📄 0 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Logical Venn Reas (VOD)" href="Logical_Venn.html">
+  <h2>Logical Venn</h2>
+  <p>Reas (VOD)</p>
+  <div class="chips">
+    <span class="chip video">🎬 3 Videos</span>
+    <span class="chip pdf">📄 0 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Caselet DI Reas (VOD), Notes" href="Caselet_DI.html">
+  <h2>Caselet DI</h2>
+  <p>Reas (VOD), Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 2 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Missing Number Reas (VOD), Notes" href="Missing_Number.html">
+  <h2>Missing Number</h2>
+  <p>Reas (VOD), Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 2 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Mathemetical Operation Reas (VOD)" href="Mathemetical_Operation.html">
+  <h2>Mathemetical Operation</h2>
+  <p>Reas (VOD)</p>
+  <div class="chips">
+    <span class="chip video">🎬 1 Videos</span>
+    <span class="chip pdf">📄 0 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Word Arrangements Reas (VOD)" href="Word_Arrangements.html">
+  <h2>Word Arrangements</h2>
+  <p>Reas (VOD)</p>
+  <div class="chips">
+    <span class="chip video">🎬 1 Videos</span>
+    <span class="chip pdf">📄 0 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Blood Relations Notes" href="Blood_Relations.html">
+  <h2>Blood Relations</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 2 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Coding &amp; Decoding Notes" href="Coding_Decoding_2.html">
+  <h2>Coding &amp; Decoding</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Sitting Arrangement Notes" href="Sitting_Arrangement.html">
+  <h2>Sitting Arrangement</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Data Sufficiency Notes" href="Data_Sufficiency.html">
+  <h2>Data Sufficiency</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Syllogism Part-1 Eng Notes" href="Syllogism_Part-1_Eng.html">
+  <h2>Syllogism Part-1 Eng</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Course of Action Notes" href="Course_of_Action.html">
+  <h2>Course of Action</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 2 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Statement &amp; Assumption Notes" href="Statement_Assumption.html">
+  <h2>Statement &amp; Assumption</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Analogy or Relationship Notes" href="Analogy_or_Relationship.html">
+  <h2>Analogy or Relationship</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Missing Number Puzzle Notes" href="Missing_Number_Puzzle.html">
+  <h2>Missing Number Puzzle</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Missing Number Series Notes" href="Missing_Number_Series.html">
+  <h2>Missing Number Series</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Ranking Notes" href="Ranking.html">
+  <h2>Ranking</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 4 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Cause &amp; Effects Notes" href="Cause_Effects.html">
+  <h2>Cause &amp; Effects</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Input &amp; Output Notes" href="Input_Output.html">
+  <h2>Input &amp; Output</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 2 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Syllogism-1 Notes" href="Syllogism-1.html">
+  <h2>Syllogism-1</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Sylloism -2 Notes" href="Sylloism_-2.html">
+  <h2>Sylloism -2</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Sylloism -3 Notes" href="Sylloism_-3.html">
+  <h2>Sylloism -3</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Sylloism -4 - ENG Notes" href="Sylloism_-4_-_ENG.html">
+  <h2>Sylloism -4 - ENG</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Sylloism - Part - II Notes" href="Sylloism_-_Part_-_II.html">
+  <h2>Sylloism - Part - II</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Assertion &amp; Reason Hindi Notes" href="Assertion_Reason_Hindi.html">
+  <h2>Assertion &amp; Reason Hindi</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Assertion and Reason (English) Notes" href="Assertion_and_Reason_English.html">
+  <h2>Assertion and Reason (English)</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Grouping of Identical Figures Notes" href="Grouping_of_Identical_Figures.html">
+  <h2>Grouping of Identical Figures</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Dot Position Notes" href="Dot_Position.html">
+  <h2>Dot Position</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Counting of Figures Que Notes" href="Counting_of_Figures_Que.html">
+  <h2>Counting of Figures Que</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Mirror &amp; Water Images Notes" href="Mirror_Water_Images.html">
+  <h2>Mirror &amp; Water Images</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Paper Cutting Notes" href="Paper_Cutting.html">
+  <h2>Paper Cutting</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Paper Folding Notes" href="Paper_Folding.html">
+  <h2>Paper Folding</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Embeded Figure Series Notes" href="Embeded_Figure_Series.html">
+  <h2>Embeded Figure Series</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Pattern Completion Notes" href="Pattern_Completion.html">
+  <h2>Pattern Completion</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Figure Based Series Notes" href="Figure_Based_Series.html">
+  <h2>Figure Based Series</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Analogy (Figure Based) Notes" href="Analogy_Figure_Based.html">
+  <h2>Analogy (Figure Based)</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="CGL19 Reasoning Combind Chapterwise By Arun Sir Notes" href="CGL19_Reasoning_Combind_Chapterwise_By_Arun_Sir.html">
+  <h2>CGL19 Reasoning Combind Chapterwise By Arun Sir</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Venn Diagram Previous Year Questions ( SSC All Exams) Notes" href="Venn_Diagram_Previous_Year_Questions_SSC_All_Exams.html">
+  <h2>Venn Diagram Previous Year Questions ( SSC All Exams)</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Coding Decoding Class Question Notes" href="Coding_Decoding_Class_Question.html">
+  <h2>Coding Decoding Class Question</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Clock Student File Notes" href="Clock_Student_File.html">
+  <h2>Clock Student File</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Alphabet Test (Student File) Notes" href="Alphabet_Test_Student_File.html">
+  <h2>Alphabet Test (Student File)</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="11 June 2024 Class (1 PM) Notes" href="11_June_2024_Class_1_PM.html">
+  <h2>11 June 2024 Class (1 PM)</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Statement &amp; Conclusion Notes" href="Statement_Conclusion.html">
+  <h2>Statement &amp; Conclusion</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 2 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Counting of Figures Previous Year Questions (SSC All Exams) Notes" href="Counting_of_Figures_Previous_Year_Questions_SSC_All_Exams.html">
+  <h2>Counting of Figures Previous Year Questions (SSC All Exams)</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="12 June 2024 Class (1 PM) Notes" href="12_June_2024_Class_1_PM.html">
+  <h2>12 June 2024 Class (1 PM)</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Age Previous Year Questions (SSC All Exams) Notes" href="Age_Previous_Year_Questions_SSC_All_Exams.html">
+  <h2>Age Previous Year Questions (SSC All Exams)</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Syllogism (Updated) Notes" href="Syllogism_Updated.html">
+  <h2>Syllogism (Updated)</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 3 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="13 June 2024 Class (1 PM) Notes" href="13_June_2024_Class_1_PM.html">
+  <h2>13 June 2024 Class (1 PM)</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Syllogism Questions Only a Few Type Part - 1 Notes" href="Syllogism_Questions_Only_a_Few_Type_Part_-_1.html">
+  <h2>Syllogism Questions Only a Few Type Part - 1</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Syllogism Part - II () Notes" href="Syllogism_Part_-_II.html">
+  <h2>Syllogism Part - II ()</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Study Material Reasoning Notes" href="Study_Material_Reasoning.html">
+  <h2>Study Material Reasoning</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="SSC 25 Sample Paper and 66 Set Link Notes" href="SSC_25_Sample_Paper_and_66_Set_Link.html">
+  <h2>SSC 25 Sample Paper and 66 Set Link</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="28 March 2022 Notes" href="28_March_2022.html">
+  <h2>28 March 2022</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Assertion and Reason Notes" href="Assertion_and_Reason.html">
+  <h2>Assertion and Reason</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 3 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Statement and Conclusions Class Notes" href="Statement_and_Conclusions_Class.html">
+  <h2>Statement and Conclusions Class</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Statement and Conclusion Syllogism Previous Year Questions Notes" href="Statement_and_Conclusion_Syllogism_Previous_Year_Questions.html">
+  <h2>Statement and Conclusion Syllogism Previous Year Questions</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 2 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Figure Formation Notes" href="Figure_Formation.html">
+  <h2>Figure Formation</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="DOT Position - 1 Notes" href="DOT_Position_-_1.html">
+  <h2>DOT Position - 1</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Dot Situation - 2 Notes" href="Dot_Situation_-_2.html">
+  <h2>Dot Situation - 2</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Matrix Figure Notes" href="Matrix_Figure.html">
+  <h2>Matrix Figure</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Figure Matrix Notes" href="Figure_Matrix.html">
+  <h2>Figure Matrix</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Causes and Effects-1 Notes" href="Causes_and_Effects-1.html">
+  <h2>Causes and Effects-1</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Dices &amp; Cubes Previous Year Questions (SSC All Exams) Notes" href="Dices_Cubes_Previous_Year_Questions_SSC_All_Exams.html">
+  <h2>Dices &amp; Cubes Previous Year Questions (SSC All Exams)</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Updated Syllogism Notes" href="Updated_Syllogism.html">
+  <h2>Updated Syllogism</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="15 July 2024 Cass Notes" href="15_July_2024_Cass.html">
+  <h2>15 July 2024 Cass</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Odd One Out Notes" href="Odd_One_Out.html">
+  <h2>Odd One Out</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Analogy Previous Year Questions Notes" href="Analogy_Previous_Year_Questions.html">
+  <h2>Analogy Previous Year Questions</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Decision Making (New) Notes" href="Decision_Making_New.html">
+  <h2>Decision Making (New)</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Assumptions Notes" href="Assumptions.html">
+  <h2>Assumptions</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Mathametical Reasoning Notes" href="Mathametical_Reasoning.html">
+  <h2>Mathametical Reasoning</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Ranking Previous Year Sheet Notes" href="Ranking_Previous_Year_Sheet.html">
+  <h2>Ranking Previous Year Sheet</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Reas Notes" href="Reas.html">
+  <h2>Reas</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 13 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Comparison Test Notes" href="Comparison_Test.html">
+  <h2>Comparison Test</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 3 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Reasoning Syllabus (Pre + Mains) Notes" href="Reasoning_Syllabus_Pre_Mains.html">
+  <h2>Reasoning Syllabus (Pre + Mains)</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Basics of Reasoning Notes" href="Basics_of_Reasoning.html">
+  <h2>Basics of Reasoning</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Seating Arrangemen Notes" href="Seating_Arrangemen.html">
+  <h2>Seating Arrangemen</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Seating Arrangment Notes" href="Seating_Arrangment.html">
+  <h2>Seating Arrangment</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 2 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="BPSC Teaching Syllabus Notes" href="BPSC_Teaching_Syllabus.html">
+  <h2>BPSC Teaching Syllabus</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="DSSSB Syllabus Notes" href="DSSSB_Syllabus.html">
+  <h2>DSSSB Syllabus</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="UP Police Syllabus Notes" href="UP_Police_Syllabus.html">
+  <h2>UP Police Syllabus</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Odd One Out Answer key Notes" href="Odd_One_Out_Answer_key.html">
+  <h2>Odd One Out Answer key</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="UPSC CSAT Syllabus Notes" href="UPSC_CSAT_Syllabus.html">
+  <h2>UPSC CSAT Syllabus</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Railway Syllabus Notes" href="Railway_Syllabus.html">
+  <h2>Railway Syllabus</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="SSC Syllabus Notes" href="SSC_Syllabus.html">
+  <h2>SSC Syllabus</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Reasoning Full Syllabus Notes" href="Reasoning_Full_Syllabus.html">
+  <h2>Reasoning Full Syllabus</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Blood-Relation (Updated) Notes" href="Blood-Relation_Updated.html">
+  <h2>Blood-Relation (Updated)</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Basics of Reasoning (Updated) Notes" href="Basics_of_Reasoning_Updated.html">
+  <h2>Basics of Reasoning (Updated)</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Course of Action (Updated) Notes" href="Course_of_Action_Updated.html">
+  <h2>Course of Action (Updated)</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Statement &amp; Assumption (Updated) Notes" href="Statement_Assumption_Updated.html">
+  <h2>Statement &amp; Assumption (Updated)</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Clock (Updated) Notes" href="Clock_Updated.html">
+  <h2>Clock (Updated)</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Mathematical Operation (Updated) Notes" href="Mathematical_Operation_Updated.html">
+  <h2>Mathematical Operation (Updated)</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Venn diagram (Updated) Notes" href="Venn_diagram_Updated.html">
+  <h2>Venn diagram (Updated)</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Statement and Argument (Updated) Notes" href="Statement_and_Argument_Updated.html">
+  <h2>Statement and Argument (Updated)</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Assumptions (Updated) Notes" href="Assumptions_Updated.html">
+  <h2>Assumptions (Updated)</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Word Formation (Updated) Notes" href="Word_Formation_Updated.html">
+  <h2>Word Formation (Updated)</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Classification (Updated) Notes" href="Classification_Updated.html">
+  <h2>Classification (Updated)</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Statement and Conclusion (Updated) Notes" href="Statement_and_Conclusion_Updated.html">
+  <h2>Statement and Conclusion (Updated)</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Number Series (Updated) Notes" href="Number_Series_Updated.html">
+  <h2>Number Series (Updated)</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Syllogism New Notes" href="Syllogism_New.html">
+  <h2>Syllogism New</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Question based on Diagram Notes" href="Question_based_on_Diagram.html">
+  <h2>Question based on Diagram</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Coding &amp; Decoding Practice Sheet Notes" href="Coding_Decoding_Practice_Sheet.html">
+  <h2>Coding &amp; Decoding Practice Sheet</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Word Arrangment Notes" href="Word_Arrangment.html">
+  <h2>Word Arrangment</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Number Series-1 Notes" href="Number_Series-1.html">
+  <h2>Number Series-1</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Number Series-2 Notes" href="Number_Series-2.html">
+  <h2>Number Series-2</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Word Arrangment-1 Notes" href="Word_Arrangment-1.html">
+  <h2>Word Arrangment-1</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Statement Arguments-1 Notes" href="Statement_Arguments-1.html">
+  <h2>Statement Arguments-1</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Statement Arguments-2 Notes" href="Statement_Arguments-2.html">
+  <h2>Statement Arguments-2</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Statement Assumption-1 Notes" href="Statement_Assumption-1.html">
+  <h2>Statement Assumption-1</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Statement Assumption-2 Notes" href="Statement_Assumption-2.html">
+  <h2>Statement Assumption-2</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Statment Consclustions Notes" href="Statment_Consclustions.html">
+  <h2>Statment Consclustions</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Data Suffiency Notes" href="Data_Suffiency.html">
+  <h2>Data Suffiency</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Inquality Notes" href="Inquality.html">
+  <h2>Inquality</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Situation Reaction Notes" href="Situation_Reaction.html">
+  <h2>Situation Reaction</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Caslet DI Notes" href="Caslet_DI.html">
+  <h2>Caslet DI</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Cause and Effect Notes" href="Cause_and_Effect.html">
+  <h2>Cause and Effect</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Cube and Cubiod Notes" href="Cube_and_Cubiod.html">
+  <h2>Cube and Cubiod</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Number &amp; Ranking Notes" href="Number_Ranking.html">
+  <h2>Number &amp; Ranking</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Anology Notes" href="Anology.html">
+  <h2>Anology</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="WORLD ARRANGEMENTS LOGICAL SEQUENCE Notes" href="WORLD_ARRANGEMENTS_LOGICAL_SEQUENCE.html">
+  <h2>WORLD ARRANGEMENTS LOGICAL SEQUENCE</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="MATHEMATICAL OPERATION Notes" href="MATHEMATICAL_OPERATION.html">
+  <h2>MATHEMATICAL OPERATION</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Statement and Courses of Action Practice Sheet Notes" href="Statement_and_Courses_of_Action_Practice_Sheet.html">
+  <h2>Statement and Courses of Action Practice Sheet</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Statement and Assumptions Practice Sheet Notes" href="Statement_and_Assumptions_Practice_Sheet.html">
+  <h2>Statement and Assumptions Practice Sheet</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="SSC CGL PRE 2024 (All Shifts) Test Notes" href="SSC_CGL_PRE_2024_All_Shifts_Test.html">
+  <h2>SSC CGL PRE 2024 (All Shifts) Test</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="Inequality Practice Sheet Notes" href="Inequality_Practice_Sheet.html">
+  <h2>Inequality Practice Sheet</h2>
+  <p>Notes</p>
+  <div class="chips">
+    <span class="chip video">🎬 0 Videos</span>
+    <span class="chip pdf">📄 1 PDFs</span>
+  </div>
+</a>
+
+
+<a class="card" data-search="all pdf notes" href="reasoningpdfs.html">
+  <h2>📄 All PDFs</h2>
+  <p>Saari PDFs / notes ek hi page par.</p>
+  <div class="chips"><span class="chip pdf">Open PDF Library</span></div>
+</a>
+
+</div></main>
+
+<div class="footer">Made with ❤️ for smooth course browsing</div>
+</body>
+</html>

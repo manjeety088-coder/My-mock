@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<title>Word Arrangements | Premium Course Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<div class="topbar">
+  <div class="nav">
+    <a class="brand" href="index.html">
+      <span class="logo-dot"></span>
+      <span>SZX Studio</span>
+    </a>
+    <div class="nav-actions">
+      <a class="nav-btn" href="index.html">🏠 Chapters</a>
+      <a class="nav-btn" href="pdfs.html">📄 All PDFs</a>
+    </div>
+  </div>
+</div>
+
+
+<section class="hero">
+  <div class="badge">Chapter Page</div>
+  <h1>Word Arrangements</h1>
+  <p class="subtitle">Is chapter ke andar JSON ke order ke hisab se saari classes aur matching PDF/notes diye gaye hain.</p>
+  <div class="stats"><div class="stat"><strong>1</strong><span>Videos</span></div><div class="stat"><strong>0</strong><span>PDFs</span></div><div class="stat"><strong>Reas (VOD)</strong><span>Section</span></div></div>
+</section>
+
+<main class="wrap">
+<h2 class="section-title">🎬 Videos</h2>
+
+<div class="tools">
+  <input class="search" id="searchInput" placeholder="Search classes in this chapter..." oninput="filterCards()">
+</div>
+<script>
+function filterCards(){
+  const q = document.getElementById('searchInput').value.toLowerCase().trim();
+  document.querySelectorAll('[data-search]').forEach(el => {
+    const ok = el.dataset.search.toLowerCase().includes(q);
+    el.style.display = ok ? '' : 'none';
+  });
+}
+</script>
+
+<div class="list">
+
+<a class="item" data-search="Class-115  Word Arrangements Reas (VOD)" href="player.html?video=https%3A%2F%2Fwww.youtube.com%2Fembed%2FUePm7wwDPsQ">
+  <div class="item-left">
+    <span class="icon">▶</span>
+    <div>
+      <div class="item-title">Class-115  Word Arrangements</div>
+      <div class="item-sub">Reas (VOD) • Class-115</div>
+    </div>
+  </div>
+  <span class="arrow">›</span>
+</a>
+
+</div>
+<h2 class="section-title">📄 PDFs / Notes</h2>
+<div class="list">
+<div class="empty">Is chapter me matching PDF nahi mili. All PDFs page bhi check kar lena.</div>
+</div>
+</main>
+
+<div class="footer">Made with ❤️ for smooth course browsing</div>
+</body>
+</html>

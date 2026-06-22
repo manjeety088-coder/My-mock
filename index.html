@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SZX EDU | Premium Hub</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+        :root {
+            --gold: #ffcc00;
+            --gold-2: #ff9f1c;
+            --cyan: #00d4ff;
+            --blue: #0088cc;
+            --green: #25d366;
+            --pink: #ff3d81;
+            --bg: #050507;
+            --text: #ffffff;
+            --muted: rgba(255,255,255,.62);
+            --glass: rgba(255,255,255,.065);
+            --glass-2: rgba(255,255,255,.105);
+            --border: rgba(255,255,255,.12);
+            --shadow: 0 30px 90px rgba(0,0,0,.55);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: "Poppins", sans-serif;
+            color: var(--text);
+            background:
+                radial-gradient(circle at 12% 8%, rgba(255,204,0,.20), transparent 28%),
+                radial-gradient(circle at 90% 12%, rgba(0,212,255,.16), transparent 30%),
+                radial-gradient(circle at 50% 92%, rgba(255,61,129,.13), transparent 34%),
+                linear-gradient(135deg, #020203 0%, #0b0b10 45%, #050507 100%);
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            opacity: .35;
+            background-image:
+                linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+            background-size: 52px 52px;
+            mask-image: radial-gradient(circle at center, black, transparent 78%);
+            z-index: -3;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            width: 520px;
+            height: 520px;
+            right: -170px;
+            bottom: -190px;
+            border-radius: 50%;
+            background: conic-gradient(from 180deg, rgba(255,204,0,.22), rgba(0,212,255,.18), rgba(255,61,129,.17), rgba(255,204,0,.22));
+            filter: blur(50px);
+            opacity: .8;
+            z-index: -4;
+            animation: orb 9s ease-in-out infinite alternate;
+        }
+
+        @keyframes orb {
+            from { transform: translate3d(0,0,0) scale(1); }
+            to { transform: translate3d(-40px,-30px,0) scale(1.12); }
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .noise {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: -2;
+            opacity: .08;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
+        }
+
+        /* Premium Community Popup */
+        #telegramPopup {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 18px;
+            background:
+                radial-gradient(circle at 20% 12%, rgba(0,212,255,.20), transparent 30%),
+                radial-gradient(circle at 84% 82%, rgba(255,204,0,.18), transparent 34%),
+                rgba(0,0,0,.84);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+
+        .popup-content {
+            width: min(520px, 94vw);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            padding: 30px 24px 24px;
+            border-radius: 34px;
+            border: 1px solid rgba(255,255,255,.14);
+            background:
+                linear-gradient(145deg, rgba(255,255,255,.13), rgba(255,255,255,.045)),
+                linear-gradient(145deg, rgba(13,13,22,.98), rgba(2,2,5,.98));
+            box-shadow:
+                0 0 0 1px rgba(255,255,255,.05) inset,
+                0 35px 110px rgba(0,0,0,.78),
+                0 0 70px rgba(0,212,255,.10),
+                0 0 80px rgba(255,204,0,.08);
+            animation: popIn .55s cubic-bezier(.18,.89,.32,1.28) both;
+        }
+
+        .popup-content::before {
+            content: "";
+            position: absolute;
+            inset: -2px;
+            background: linear-gradient(120deg, transparent, rgba(255,255,255,.20), transparent);
+            transform: translateX(-130%);
+            animation: popupShine 3.1s ease-in-out infinite;
+        }
+
+        .popup-content > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .popup-close {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            z-index: 3;
+            width: 38px;
+            height: 38px;
+            border: 1px solid rgba(255,255,255,.12);
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            cursor: pointer;
+            color: rgba(255,255,255,.72);
+            background: rgba(255,255,255,.06);
+            transition: .25s ease;
+        }
+
+        .popup-close:hover {
+            color: #fff;
+            transform: rotate(90deg) scale(1.05);
+            background: rgba(255,255,255,.11);
+        }
+
+        @keyframes popupShine {
+            0%, 55% { transform: translateX(-130%); }
+            100% { transform: translateX(130%); }
+        }
+
+        @keyframes popIn {
+            from { transform: scale(.82) translateY(18px); opacity: 0; }
+            to { transform: scale(1) translateY(0); opacity: 1; }
+        }
+
+        .popup-icon {
+            width: 92px;
+            height: 92px;
+            margin: 0 auto 18px;
+            display: grid;
+            place-items: center;
+            border-radius: 30px;
+            color: #07131a;
+            background:
+                linear-gradient(135deg, rgba(255,255,255,.85), rgba(255,255,255,.25)),
+                conic-gradient(from 180deg, var(--cyan), var(--gold), var(--green), var(--cyan));
+            box-shadow: 0 22px 58px rgba(0,212,255,.20), 0 0 45px rgba(255,204,0,.12);
+        }
+
+        .popup-icon i {
+            font-size: 48px;
+            filter: drop-shadow(0 8px 18px rgba(0,0,0,.30));
+        }
+
+        .popup-content h2 {
+            font-size: clamp(25px, 5vw, 34px);
+            line-height: 1.12;
+            font-weight: 900;
+            margin-bottom: 9px;
+            letter-spacing: -.6px;
+            background: linear-gradient(90deg, #fff, #fff0a6, #8eeeff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .popup-content p {
+            max-width: 430px;
+            margin: 0 auto 18px;
+            color: rgba(255,255,255,.67);
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .popup-badges {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 0 0 18px;
+        }
+
+        .popup-badges span {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 7px 10px;
+            border-radius: 999px;
+            color: rgba(255,255,255,.78);
+            border: 1px solid rgba(255,255,255,.10);
+            background: rgba(255,255,255,.055);
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: .25px;
+        }
+
+        .popup-actions {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 8px;
+        }
+
+        .join-card,
+        .skip-btn {
+            border: 0;
+            outline: 0;
+            cursor: pointer;
+            min-height: 74px;
+            padding: 14px 14px;
+            border-radius: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 6px;
+            color: #fff;
+            font-weight: 900;
+            letter-spacing: .15px;
+            transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+        }
+
+        .join-card i,
+        .skip-btn i {
+            font-size: 23px;
+        }
+
+        .join-card small,
+        .skip-btn small {
+            color: rgba(255,255,255,.68);
+            font-size: 10.5px;
+            font-weight: 700;
+            letter-spacing: .15px;
+        }
+
+        .join-card:hover,
+        .skip-btn:hover {
+            transform: translateY(-4px);
+        }
+
+        .tg-btn {
+            background: linear-gradient(135deg, #15bfff, #006da8);
+            box-shadow: 0 18px 44px rgba(0,136,204,.32);
+        }
+
+        .tg-btn:hover {
+            box-shadow: 0 24px 58px rgba(0,136,204,.46);
+        }
+
+        .wa-btn {
+            background: linear-gradient(135deg, #35e47a, #11884a);
+            box-shadow: 0 18px 44px rgba(37,211,102,.25);
+        }
+
+        .wa-btn:hover {
+            box-shadow: 0 24px 58px rgba(37,211,102,.38);
+        }
+
+        .skip-btn {
+            grid-column: 1 / -1;
+            min-height: 58px;
+            flex-direction: row;
+            border: 1px solid rgba(255,204,0,.45);
+            color: #090909;
+            background: linear-gradient(135deg, #fff8c8, var(--gold), var(--gold-2));
+            box-shadow: 0 18px 44px rgba(255,204,0,.20);
+        }
+
+        .skip-btn small {
+            color: rgba(0,0,0,.58);
+        }
+
+        .skip-btn:hover {
+            box-shadow: 0 24px 58px rgba(255,204,0,.31);
+        }
+
+        .popup-small-text {
+            display: block;
+            margin: 14px auto 0;
+            max-width: 390px;
+            color: rgba(255,255,255,.46);
+            font-size: 12px;
+            line-height: 1.55;
+        }
+
+        .popup-status {
+            display: none;
+            margin: 12px auto 0;
+            width: fit-content;
+            padding: 8px 12px;
+            border-radius: 999px;
+            color: #b8ffdc;
+            border: 1px solid rgba(37,211,102,.22);
+            background: rgba(37,211,102,.08);
+            font-size: 12px;
+            font-weight: 800;
+        }
+
+        #telegramPopup.joined-user .popup-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        @media (max-width: 480px) {
+            .popup-content {
+                padding: 28px 18px 20px;
+                border-radius: 28px;
+            }
+
+            .popup-actions {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .join-card,
+            .skip-btn {
+                min-height: 62px;
+                border-radius: 18px;
+                flex-direction: row;
+            }
+
+            .join-card small,
+            .skip-btn small {
+                display: none;
+            }
+
+            .skip-btn {
+                grid-column: auto;
+            }
+        }
+
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 18px;
+            padding: 16px 5.5%;
+            border-bottom: 1px solid rgba(255,255,255,.10);
+            background: rgba(5,5,7,.62);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 18px;
+            border-radius: 18px;
+            color: #070707;
+            font-size: 24px;
+            font-weight: 900;
+            letter-spacing: .8px;
+            background: linear-gradient(135deg, #fff2a8, var(--gold), var(--gold-2));
+            box-shadow: 0 16px 36px rgba(255,204,0,.20), 0 0 0 1px rgba(255,255,255,.25) inset;
+        }
+
+        .logo i {
+            font-size: 18px;
+        }
+
+        .nav-pill {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 9px 14px;
+            border-radius: 999px;
+            color: rgba(255,255,255,.75);
+            border: 1px solid rgba(255,255,255,.10);
+            background: rgba(255,255,255,.05);
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .social-icons {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .social-icons a {
+            width: 43px;
+            height: 43px;
+            display: grid;
+            place-items: center;
+            border-radius: 15px;
+            color: rgba(255,255,255,.78);
+            border: 1px solid rgba(255,255,255,.10);
+            background: rgba(255,255,255,.055);
+            transition: .25s ease;
+        }
+
+        .social-icons a:hover {
+            transform: translateY(-3px) scale(1.04);
+            color: #fff;
+            background: rgba(255,255,255,.10);
+        }
+
+        .social-icons a.tg:hover { box-shadow: 0 0 30px rgba(0,136,204,.30); border-color: rgba(0,136,204,.55); }
+        .social-icons a.wa:hover { box-shadow: 0 0 30px rgba(37,211,102,.25); border-color: rgba(37,211,102,.50); }
+
+        .donation-float {
+            position: fixed;
+            top: 88px;
+            right: 5.5%;
+            z-index: 90;
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            padding: 10px 15px;
+            border-radius: 999px;
+            color: #101010;
+            font-size: 13px;
+            font-weight: 900;
+            letter-spacing: .2px;
+            background: linear-gradient(135deg, #fff5b2, var(--gold), var(--gold-2));
+            box-shadow: 0 18px 45px rgba(255,204,0,.23), 0 0 0 1px rgba(255,255,255,.30) inset;
+            transition: transform .25s ease, box-shadow .25s ease;
+        }
+
+        .donation-float:hover {
+            transform: translateY(-3px) scale(1.03);
+            box-shadow: 0 24px 55px rgba(255,204,0,.34), 0 0 0 1px rgba(255,255,255,.35) inset;
+        }
+
+        /* Hero */
+        .hero {
+            position: relative;
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 92px 5.5% 34px;
+            text-align: center;
+        }
+
+        .premium-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            margin-bottom: 20px;
+            padding: 9px 16px;
+            border-radius: 999px;
+            border: 1px solid rgba(255,204,0,.22);
+            color: #ffe680;
+            background: rgba(255,204,0,.075);
+            box-shadow: 0 0 38px rgba(255,204,0,.09);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: .7px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 7vw, 82px);
+            line-height: .98;
+            font-weight: 900;
+            letter-spacing: -2.6px;
+            margin-bottom: 18px;
+            background: linear-gradient(90deg, #ffffff 0%, #fff0aa 36%, #8eeeff 70%, #ffffff 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 20px 80px rgba(255,204,0,.10);
+        }
+
+        .hero p {
+            max-width: 680px;
+            margin: 0 auto;
+            color: rgba(255,255,255,.66);
+            font-size: 16px;
+            line-height: 1.85;
+        }
+
+        .stats {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 28px;
+        }
+
+        .stat {
+            padding: 11px 15px;
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,.10);
+            background: rgba(255,255,255,.055);
+            color: rgba(255,255,255,.72);
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .stat strong {
+            color: #fff;
+            margin-right: 4px;
+        }
+
+        /* Cards */
+        .grid {
+            width: min(1420px, 100%);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 24px;
+            padding: 34px 5.5% 84px;
+        }
+
+        .brand-card {
+            min-height: 302px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 27px;
+            border-radius: 32px;
+            cursor: pointer;
+            border: 1px solid rgba(255,255,255,.12);
+            background:
+                linear-gradient(145deg, rgba(255,255,255,.11), rgba(255,255,255,.035)),
+                rgba(255,255,255,.045);
+            box-shadow: 0 20px 70px rgba(0,0,0,.32);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            isolation: isolate;
+            transform: translateY(0);
+            transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease, background .35s ease;
+        }
+
+        .brand-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -2;
+            opacity: .85;
+            background:
+                radial-gradient(circle at 18% 14%, rgba(255,204,0,.22), transparent 34%),
+                radial-gradient(circle at 90% 12%, rgba(255,255,255,.10), transparent 28%);
+        }
+
+        .brand-card::after {
+            content: "";
+            position: absolute;
+            top: -35%;
+            left: -80%;
+            width: 55%;
+            height: 170%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,.16), transparent);
+            transform: rotate(18deg);
+            transition: left .75s ease;
+            z-index: -1;
+        }
+
+        .brand-card:hover {
+            transform: translateY(-12px);
+            border-color: rgba(255,204,0,.58);
+            background:
+                linear-gradient(145deg, rgba(255,255,255,.15), rgba(255,255,255,.05)),
+                rgba(255,204,0,.045);
+            box-shadow: 0 34px 90px rgba(0,0,0,.62), 0 0 52px rgba(255,204,0,.13);
+        }
+
+        .brand-card:hover::after {
+            left: 128%;
+        }
+
+        .card-top {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 14px;
+        }
+
+        .icon-wrap {
+            width: 76px;
+            height: 76px;
+            display: grid;
+            place-items: center;
+            border-radius: 24px;
+            color: #070707;
+            font-size: 34px;
+            background: linear-gradient(135deg, #fff6bd, var(--gold), var(--gold-2));
+            box-shadow: 0 20px 45px rgba(255,204,0,.20), 0 0 0 1px rgba(255,255,255,.23) inset;
+        }
+
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 11px;
+            border-radius: 999px;
+            color: rgba(255,255,255,.86);
+            border: 1px solid rgba(255,255,255,.13);
+            background: rgba(0,0,0,.20);
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: .7px;
+            text-transform: uppercase;
+        }
+
+        .tag.hot {
+            color: #111;
+            background: linear-gradient(135deg, #fff3a2, var(--gold));
+            box-shadow: 0 0 28px rgba(255,204,0,.20);
+        }
+
+        .card-body {
+            margin-top: 34px;
+        }
+
+        .brand-card h2 {
+            font-size: 29px;
+            line-height: 1.12;
+            font-weight: 900;
+            letter-spacing: -.7px;
+            margin-bottom: 10px;
+        }
+
+        .brand-card p {
+            color: rgba(255,255,255,.61);
+            font-size: 14.5px;
+            line-height: 1.65;
+        }
+
+        .open-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            width: 100%;
+            margin-top: 25px;
+            padding: 14px 16px;
+            border-radius: 18px;
+            color: #fff;
+            border: 1px solid rgba(255,255,255,.11);
+            background: rgba(255,255,255,.07);
+            font-size: 14px;
+            font-weight: 800;
+            transition: .25s ease;
+        }
+
+        .brand-card:hover .open-link {
+            color: #090909;
+            background: linear-gradient(135deg, #fff4a3, var(--gold));
+            border-color: rgba(255,204,0,.58);
+        }
+
+        .card-selection::before {
+            background:
+                radial-gradient(circle at 18% 14%, rgba(255,204,0,.25), transparent 34%),
+                radial-gradient(circle at 90% 12%, rgba(255,123,0,.10), transparent 32%);
+        }
+
+        .card-cw::before {
+            background:
+                radial-gradient(circle at 18% 14%, rgba(0,212,255,.24), transparent 34%),
+                radial-gradient(circle at 90% 12%, rgba(255,255,255,.09), transparent 30%);
+        }
+
+        .card-new-cw {
+            border-color: rgba(0,212,255,.25);
+        }
+
+        .card-new-cw::before {
+            background:
+                radial-gradient(circle at 18% 14%, rgba(0,212,255,.30), transparent 34%),
+                radial-gradient(circle at 90% 12%, rgba(255,204,0,.20), transparent 31%),
+                radial-gradient(circle at 48% 100%, rgba(255,61,129,.18), transparent 32%);
+        }
+
+        .card-new-cw .icon-wrap {
+            background: linear-gradient(135deg, #a7f3ff, var(--cyan), #0077ff);
+            color: #001018;
+            box-shadow: 0 20px 45px rgba(0,212,255,.20), 0 0 0 1px rgba(255,255,255,.23) inset;
+        }
+
+        .card-new-cw:hover {
+            border-color: rgba(0,212,255,.62);
+            box-shadow: 0 34px 90px rgba(0,0,0,.62), 0 0 58px rgba(0,212,255,.13);
+        }
+
+        .card-rwa::before {
+            background:
+                radial-gradient(circle at 18% 14%, rgba(255,61,129,.22), transparent 34%),
+                radial-gradient(circle at 90% 12%, rgba(255,204,0,.12), transparent 32%);
+        }
+
+        .footer-note {
+            max-width: 1180px;
+            margin: -42px auto 42px;
+            padding: 0 5.5%;
+            text-align: center;
+            color: rgba(255,255,255,.42);
+            font-size: 12px;
+        }
+
+        @media (max-width: 860px) {
+            header {
+                padding: 13px 4.5%;
+            }
+
+            .nav-pill {
+                display: none;
+            }
+
+            .hero {
+                padding-top: 70px;
+            }
+
+            .hero h1 {
+                letter-spacing: -1.7px;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+                gap: 18px;
+                padding-inline: 4.5%;
+            }
+
+            .brand-card {
+                min-height: 260px;
+                border-radius: 26px;
+                padding: 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 20px;
+                padding: 9px 14px;
+                border-radius: 15px;
+            }
+
+            .social-icons a {
+                width: 39px;
+                height: 39px;
+                border-radius: 13px;
+            }
+
+            .donation-float {
+                top: 76px;
+                right: 12px;
+                padding: 8px 12px;
+                font-size: 12px;
+            }
+
+            .hero p {
+                font-size: 14px;
+            }
+
+            .premium-badge {
+                font-size: 11px;
+            }
+
+            .icon-wrap {
+                width: 68px;
+                height: 68px;
+                font-size: 30px;
+            }
+
+            .brand-card h2 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="noise"></div>
+
+    <div id="telegramPopup" aria-modal="true" role="dialog">
+        <div class="popup-content">
+            <button type="button" class="popup-close" onclick="skipTelegramPopup()" aria-label="Close popup">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="popup-icon">
+                <i class="fa-solid fa-bolt"></i>
+            </div>
+            <h2 id="popupTitle">Join SZX Community</h2>
+            <p id="popupText">Latest updates, notes aur batches ke alerts ke liye Telegram ya WhatsApp join karein. Chahein to Skip karke direct content bhi open kar sakte hain.</p>
+            <div class="popup-badges">
+                <span><i class="fa-solid fa-bell"></i> Fast Updates</span>
+                <span><i class="fa-solid fa-mobile-screen"></i> Mobile Friendly</span>
+                <span><i class="fa-solid fa-forward"></i> Skip Available</span>
+            </div>
+            <div class="popup-actions">
+                <a href="https://t.me/szxmocks" target="_blank" rel="noopener" class="join-card tg-btn" onclick="markTelegramJoined()">
+                    <i class="fa-brands fa-telegram"></i>
+                    <span>Join Telegram</span>
+                    <small>Official channel</small>
+                </a>
+                <a href="https://whatsapp.com/channel/0029Vb97kwQ0Qeat3WrJ9Z2m" target="_blank" rel="noopener" class="join-card wa-btn" onclick="markWhatsAppJoined()">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>Join WhatsApp</span>
+                    <small>Backup updates</small>
+                </a>
+                <button type="button" class="skip-btn" onclick="skipTelegramPopup()">
+                    <i class="fa-solid fa-forward"></i>
+                    <span>Skip / Continue</span>
+                    <small>No blocking</small>
+                </button>
+            </div>
+            <span class="popup-status" id="popupStatus"><i class="fa-solid fa-circle-check"></i> Welcome back! Buttons active hain.</span>
+            <span class="popup-small-text">Join optional hai. Dono community buttons hamesha visible rahenge, isliye user kabhi bhi join kar sakta hai.</span>
+        </div>
+    </div>
+
+    <a href="https://t.me/seetusy" target="_blank" class="donation-float" aria-label="Donation on Telegram">
+        <i class="fa-solid fa-hand-holding-heart"></i> Donation @seetusy
+    </a>
+
+    <header>
+        <a href="index.html" class="logo"><i class="fa-solid fa-crown"></i> SZX</a>
+        <div class="nav-pill"><i class="fa-solid fa-bolt"></i> Premium Study Hub</div>
+        <div class="social-icons">
+            <a href="https://t.me/szxmocks" target="_blank" class="tg" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+            <a href="https://whatsapp.com/channel/0029Vb97kwQ0Qeat3WrJ9Z2m" target="_blank" class="wa" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="premium-badge"><i class="fa-solid fa-gem"></i> Premium Course Collection</div>
+        <h1>Select Institute</h1>
+        <p>Clean premium interface ke saath apna batch/institute choose karein. Fast, responsive aur mobile-friendly design.</p>
+        <div class="stats">
+            <div class="stat"><strong>4</strong> Premium Cards</div>
+            <div class="stat"><strong>HD</strong> Glass UI</div>
+            <div class="stat"><strong>Fast</strong> Access</div>
+        </div>
+    </section>
+
+    <main class="grid">
+        <div class="brand-card card-selection" onclick="openPage('selection_way.html')" role="button" tabindex="0">
+            <div class="card-top">
+                <div class="icon-wrap"><i class="fa-solid fa-graduation-cap"></i></div>
+                <span class="tag"><i class="fa-solid fa-star"></i> Popular</span>
+            </div>
+            <div class="card-body">
+                <h2>Selection Way</h2>
+                <p>Gagan Pratap Sir ke premium batches aur study content ke liye open karein.</p>
+                <span class="open-link">Open Institute <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+        </div>
+
+        <div class="brand-card card-cw" onclick="openPage('cw.html')" role="button" tabindex="0">
+            <div class="card-top">
+                <div class="icon-wrap"><i class="fa-solid fa-book-open-reader"></i></div>
+                <span class="tag"><i class="fa-solid fa-layer-group"></i> Hub</span>
+            </div>
+            <div class="card-body">
+                <h2>Careerwill</h2>
+                <p>Top faculty classes aur organized learning material yahan se access karein.</p>
+                <span class="open-link">Open Careerwill <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+        </div>
+
+        <div class="brand-card card-new-cw" onclick="openPage('cwindex.html')" role="button" tabindex="0">
+            <div class="card-top">
+                <div class="icon-wrap"><i class="fa-solid fa-fire-flame-curved"></i></div>
+                <span class="tag hot"><i class="fa-solid fa-bolt"></i> New</span>
+            </div>
+            <div class="card-body">
+                <h2>New Careerwill</h2>
+                <p>New Careerwill batches ka fresh index. Is card se direct <b>cwindex.html</b> open hoga.</p>
+                <span class="open-link">Open New Careerwill <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+        </div>
+
+        <div class="brand-card card-rwa" onclick="openPage('rwa.html')" role="button" tabindex="0">
+            <div class="card-top">
+                <div class="icon-wrap"><i class="fa-solid fa-chalkboard-user"></i></div>
+                <span class="tag"><i class="fa-solid fa-clock"></i> Soon</span>
+            </div>
+            <div class="card-body">
+                <h2>RWA</h2>
+                <p>RWA content aur upcoming updates ke liye yahan click karein.</p>
+                <span class="open-link">Open RWA <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+        </div>
+    </main>
+
+    <p class="footer-note">SZX EDU Premium Hub • Designed for smooth mobile and desktop experience</p>
+
+    <script>
+        const TELEGRAM_JOIN_KEY = 'szxTelegramJoined';
+        const WHATSAPP_JOIN_KEY = 'szxWhatsAppJoined';
+
+        function hideTelegramPopup() {
+            const popup = document.getElementById('telegramPopup');
+            if (!popup) return;
+            popup.style.opacity = '0';
+            popup.style.pointerEvents = 'none';
+            setTimeout(() => {
+                popup.style.display = 'none';
+            }, 220);
+        }
+
+        function saveJoin(type) {
+            try {
+                if (type === 'telegram') localStorage.setItem(TELEGRAM_JOIN_KEY, 'yes');
+                if (type === 'whatsapp') localStorage.setItem(WHATSAPP_JOIN_KEY, 'yes');
+                localStorage.setItem('szxCommunityLastClick', type);
+            } catch (e) {}
+
+            const popup = document.getElementById('telegramPopup');
+            const status = document.getElementById('popupStatus');
+            const title = document.getElementById('popupTitle');
+            const text = document.getElementById('popupText');
+            if (popup) popup.classList.add('joined-user');
+            if (status) status.innerHTML = '<i class="fa-solid fa-circle-check"></i> Join click saved. Continue kar sakte hain.';
+            if (title) title.textContent = 'Thanks for Joining';
+            if (text) text.textContent = 'Telegram / WhatsApp tab open ho gaya hai. Yahan Skip / Continue dabakar direct content open kar sakte hain.';
+        }
+
+        function markTelegramJoined() {
+            saveJoin('telegram');
+        }
+
+        function markWhatsAppJoined() {
+            saveJoin('whatsapp');
+        }
+
+        function skipTelegramPopup() {
+            try {
+                sessionStorage.setItem('szxPopupSkippedThisSession', 'yes');
+            } catch (e) {}
+            hideTelegramPopup();
+        }
+
+        function setupTelegramPopup() {
+            const popup = document.getElementById('telegramPopup');
+            const title = document.getElementById('popupTitle');
+            const text = document.getElementById('popupText');
+            const status = document.getElementById('popupStatus');
+
+            let alreadyJoined = false;
+            let skippedThisSession = false;
+            try {
+                alreadyJoined = localStorage.getItem(TELEGRAM_JOIN_KEY) === 'yes' || localStorage.getItem(WHATSAPP_JOIN_KEY) === 'yes';
+                skippedThisSession = sessionStorage.getItem('szxPopupSkippedThisSession') === 'yes';
+            } catch (e) {}
+
+            if (skippedThisSession) {
+                hideTelegramPopup();
+                return;
+            }
+
+            if (alreadyJoined && popup) {
+                popup.classList.add('joined-user');
+                if (title) title.textContent = 'Welcome Back';
+                if (text) text.textContent = 'Aap pehle community join kar chuke hain. Telegram, WhatsApp aur Skip / Continue — teeno options active hain.';
+                if (status) status.innerHTML = '<i class="fa-solid fa-circle-check"></i> Already joined user detected';
+            } else {
+                if (title) title.textContent = 'Join SZX Community';
+                if (text) text.textContent = 'Latest updates, notes aur batches ke alerts ke liye Telegram ya WhatsApp join karein. Chahein to Skip karke direct content bhi open kar sakte hain.';
+            }
+        }
+
+        function openPage(url) {
+            window.location.href = url;
+        }
+
+        document.querySelectorAll('.brand-card').forEach(card => {
+            card.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    this.click();
+                }
+            });
+        });
+
+        // URL Masking Script: address bar me .html hide karne ke liye
+        window.addEventListener("load", function() {
+            setupTelegramPopup();
+
+            const path = window.location.pathname;
+            if (path.endsWith('.html') && !path.endsWith('/index.html')) {
+                const cleanUrl = path.replace('.html', '');
+                window.history.replaceState(null, '', cleanUrl);
+            } else if (path.endsWith('/index.html')) {
+                const cleanUrl = path.replace('/index.html', '/');
+                window.history.replaceState(null, '', cleanUrl);
+            }
+        });
+    </script>
+</body>
+</html>

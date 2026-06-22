@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<title>SRT and Mental Aptitude | Premium Course Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<div class="topbar">
+  <div class="nav">
+    <a class="brand" href="index.html">
+      <span class="logo-dot"></span>
+      <span>SZX Studio</span>
+    </a>
+    <div class="nav-actions">
+      <a class="nav-btn" href="index.html">🏠 Chapters</a>
+      <a class="nav-btn" href="pdfs.html">📄 All PDFs</a>
+    </div>
+  </div>
+</div>
+
+
+<section class="hero">
+  <div class="badge">Chapter Page</div>
+  <h1>SRT and Mental Aptitude</h1>
+  <p class="subtitle">Is chapter ke andar JSON ke order ke hisab se saari classes aur matching PDF/notes diye gaye hain.</p>
+  <div class="stats"><div class="stat"><strong>1</strong><span>Videos</span></div><div class="stat"><strong>0</strong><span>PDFs</span></div><div class="stat"><strong>Reas (VOD)</strong><span>Section</span></div></div>
+</section>
+
+<main class="wrap">
+<h2 class="section-title">🎬 Videos</h2>
+
+<div class="tools">
+  <input class="search" id="searchInput" placeholder="Search classes in this chapter..." oninput="filterCards()">
+</div>
+<script>
+function filterCards(){
+  const q = document.getElementById('searchInput').value.toLowerCase().trim();
+  document.querySelectorAll('[data-search]').forEach(el => {
+    const ok = el.dataset.search.toLowerCase().includes(q);
+    el.style.display = ok ? '' : 'none';
+  });
+}
+</script>
+
+<div class="list">
+
+<a class="item" data-search="Class-79  SRT and Mental Aptitude Reas (VOD)" href="player.html?video=https%3A%2F%2Fedge.api.brightcove.com%2Fplayback%2Fv1%2Faccounts%2F6206459123001%2Fvideos%2F6307341477112%2Fmaster.m3u8%3Fbcov_auth%3DeyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3NDczMDQ3MzMsImNvbiI6eyJpc0FkbWluIjpmYWxzZSwiYXVzZXIiOiJVMFZ6TkdGU2NuQlZjR3h5TkZwV09FYzBURGxOZHowOSIsImlkIjoiTW1Kb1ZEUnROVGxGYlhaelZVNVFOaXRQSzNkdWR6MDkiLCJmaXJzdF9uYW1lIjoiYm5ack9GUXJVblpJVldFNGNsRkphRlZHT1UwNVVUMDkiLCJlbWFpbCI6ImFFdHNWRUZRYjBWdE5ISlRZbU5JYTJWcU56TnhVVlZwZDAxQ1RVOHdXbm8wVTNwVGNreFJXbWRtUVQwPSIsInBob25lIjoiU0ZsdmRuSTBXbllyV0dZdmJEUkRRakJzZEVSMFVUMDkiLCJhdmF0YXIiOiJLM1ZzY1M4elMwcDBRbmxrYms4M1JEbHZla05pVVQwOSIsInJlZmVycmFsX2NvZGUiOiJaa0p0TWtOTllWVjBlbVZsVTBOVGFVVnVRM2N5VVQwOSIsImRldmljZV90eXBlIjoiYW5kcm9pZCIsImRldmljZV92ZXJzaW9uIjoiUyhBbmRyb2lkIDEyLjApIiwiZGV2aWNlX21vZGVsIjoiWGlhb21pIE1pIDEwIFBybyIsInJlbW90ZV9hZGRyIjoiNDQuMjExLjc5LjE0NCJ9fQ.AgeSw8LGTdSdAf8ldazXdbMgNPn0R7v_cgzdZvO750eF1kL_4kEObNccdlg66HSNlI4dX4dkFMHqx48j7Q5kt-bxFkJW0o1am2kcSW0FCRoNz-Y3_oE7auBxZ1YkNusecRVhOJHZynv4d4-Y-hUwzevOY8Fl3L_NGGzZ-Ztj94EPqdGR0JwGwUKjfpJvqZWz6ndqJjXp8FjkLERMPTEGdd9gigQJ-xrARND6uvW2QkIRCqIM-Lz-S-evPGUT6zKEeF3enVocSJkChyVorGCGrISH4nx8aO_8d4v1pNGRC0QhWBKaSTcpo2_n_GDs789tLKRGqS-g7ObpKFjhoHINhg">
+  <div class="item-left">
+    <span class="icon">▶</span>
+    <div>
+      <div class="item-title">Class-79  SRT and Mental Aptitude</div>
+      <div class="item-sub">Reas (VOD) • Class-79</div>
+    </div>
+  </div>
+  <span class="arrow">›</span>
+</a>
+
+</div>
+<h2 class="section-title">📄 PDFs / Notes</h2>
+<div class="list">
+<div class="empty">Is chapter me matching PDF nahi mili. All PDFs page bhi check kar lena.</div>
+</div>
+</main>
+
+<div class="footer">Made with ❤️ for smooth course browsing</div>
+</body>
+</html>

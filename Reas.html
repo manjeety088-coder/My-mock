@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<title>Reas | Premium Course Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<div class="topbar">
+  <div class="nav">
+    <a class="brand" href="index.html">
+      <span class="logo-dot"></span>
+      <span>SZX Studio</span>
+    </a>
+    <div class="nav-actions">
+      <a class="nav-btn" href="index.html">🏠 Chapters</a>
+      <a class="nav-btn" href="pdfs.html">📄 All PDFs</a>
+    </div>
+  </div>
+</div>
+
+
+<section class="hero">
+  <div class="badge">Chapter Page</div>
+  <h1>Reas</h1>
+  <p class="subtitle">Is chapter ke andar JSON ke order ke hisab se saari classes aur matching PDF/notes diye gaye hain.</p>
+  <div class="stats"><div class="stat"><strong>0</strong><span>Videos</span></div><div class="stat"><strong>13</strong><span>PDFs</span></div><div class="stat"><strong>Notes</strong><span>Section</span></div></div>
+</section>
+
+<main class="wrap">
+<h2 class="section-title">🎬 Videos</h2>
+
+<div class="tools">
+  <input class="search" id="searchInput" placeholder="Search classes in this chapter..." oninput="filterCards()">
+</div>
+<script>
+function filterCards(){
+  const q = document.getElementById('searchInput').value.toLowerCase().trim();
+  document.querySelectorAll('[data-search]').forEach(el => {
+    const ok = el.dataset.search.toLowerCase().includes(q);
+    el.style.display = ok ? '' : 'none';
+  });
+}
+</script>
+
+<div class="list">
+<div class="empty">Is chapter me video nahi mili.</div>
+</div>
+<h2 class="section-title">📄 PDFs / Notes</h2>
+<div class="list">
+
+<a class="item" data-search="Reas | Calender | 12 August Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/66bacb376649e_12 Aug 03 Pm.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">Reas | Calender | 12 August Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="Reas | Calendar | 13 August Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/66bb524477710_Arun Sir Reasoning 3 PM 13 Aug_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">Reas | Calendar | 13 August Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="Reas | Calendar | 16 August Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/66c02d71c8d2a_16 Aug 2.45pm (1)_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">Reas | Calendar | 16 August Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="Reas | Calendar | 20  August Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/66c4782e350da_20 Aug 03 Pm.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">Reas | Calendar | 20  August Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="Reas | Calendar | 21 August Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/66c5cbf55072f_21 Aug 03 Pm_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">Reas | Calendar | 21 August Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="Reas |  Statement, Assumptions and Conclusions | 29 August Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/66d126e035862_29 aug 5 pm_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">Reas |  Statement, Assumptions and Conclusions | 29 August Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="Reas | Statement, Assumptions and Conclusions | 30 August Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/66d1a8866ee7a_30 Aug 03 Pm_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">Reas | Statement, Assumptions and Conclusions | 30 August Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="Reas | Statement And Argument | 31 August Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/66d55caaba057_Arun Sir Reasoning 09.30 AM 31 Aug_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">Reas | Statement And Argument | 31 August Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="Reas | Statement And Argument | 03 September  Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/66d7c678288da_Arun Sir Reasoning 03.00 PM 3 Sep_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">Reas | Statement And Argument | 03 September  Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="Reas | Situation Reaction Test | 04 September Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/66d84d1c62b7d_Arun Sir Reasoning 03.00 PM 4 Sep_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">Reas | Situation Reaction Test | 04 September Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="Reas | Situation Reaction Test | 05 September Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/66da953a3cb9f_Arun Sir Reasoning 03.00 PM 5 Sep.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">Reas | Situation Reaction Test | 05 September Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="Reas | Seating Arrangement | 09 September Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/66dee820ee174_20240909162854081_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">Reas | Seating Arrangement | 09 September Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="Reas | Situation Reaction Test | 09 September Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/66dfc7249f64b_20240909162854081_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">Reas | Situation Reaction Test | 09 September Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+</div>
+</main>
+
+<div class="footer">Made with ❤️ for smooth course browsing</div>
+</body>
+</html>

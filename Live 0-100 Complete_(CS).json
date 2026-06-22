@@ -1,0 +1,1890 @@
+[
+    {
+        "subject_name": "Live 0-100 Complete_(CS)",
+        "videos": [
+            {
+                "title": "you",
+                "url": "https://linktr.ee/Skillcourses"
+            },
+            {
+                "title": "click here",
+                "url": "https://linktr.ee/Skillcourses"
+            },
+            {
+                "title": "supports HTML5 video",
+                "url": "https://videojs.com/html5-video-support/"
+            },
+            {
+                "title": "How to join discord",
+                "url": "#"
+            },
+            {
+                "title": "Neovim Setup",
+                "url": "#"
+            },
+            {
+                "title": "Mumbai meetup",
+                "url": "#"
+            },
+            {
+                "title": "Mumbai meetup (Enhanced audio)",
+                "url": "#"
+            },
+            {
+                "title": "Week 8.1 | Custom hooks, Generics and zod (29-7-2023)",
+                "url": "#"
+            },
+            {
+                "title": "Week 10.2 | NextJS",
+                "url": "#"
+            },
+            {
+                "title": "A beginners guide to contribute to CMS",
+                "url": "#"
+            },
+            {
+                "title": "React Interview Questions",
+                "url": "#"
+            },
+            {
+                "title": "ESLInt, Prettier",
+                "url": "#"
+            },
+            {
+                "title": "Week 14.1 | Trpc Intro",
+                "url": "#"
+            },
+            {
+                "title": "Week 14.2 | TRpc Part 2",
+                "url": "#"
+            },
+            {
+                "title": "Week 9.2 | Github CI/CD",
+                "url": "#"
+            },
+            {
+                "title": "Week 19.1 | Real time communication, Distributed computing (Zoom upload) (22 oct 2023)",
+                "url": "#"
+            },
+            {
+                "title": "Week 16.1 | GraphQL",
+                "url": "#"
+            },
+            {
+                "title": "Week 16.2 | graphql and setting up project locally",
+                "url": "#"
+            },
+            {
+                "title": "How to solve assignments",
+                "url": "#"
+            },
+            {
+                "title": "35.2 | AMA on ZOOM",
+                "url": "#"
+            },
+            {
+                "title": "15.3 | docker-compose, exec command, docker push command",
+                "url": "#"
+            },
+            {
+                "title": "Orientation",
+                "url": "#"
+            },
+            {
+                "title": "Week 1.2 | JS Foundations",
+                "url": "#"
+            },
+            {
+                "title": "How to solve assignments",
+                "url": "#"
+            },
+            {
+                "title": "Week 1.3 | Offline class | Basic JS APIs",
+                "url": "#"
+            },
+            {
+                "title": "Week 1.4 | Loops, Functions, Callback functions",
+                "url": "#"
+            },
+            {
+                "title": "Week 1.5 | Async functions, Promises and async await",
+                "url": "#"
+            },
+            {
+                "title": "Week 2.1 | Promises and async JS revision, doubt session (Zoom upload)",
+                "url": "#"
+            },
+            {
+                "title": "Week 2.2 | Express and Backend (Zoom upload)",
+                "url": "#"
+            },
+            {
+                "title": "2.3 | Bash and terminal",
+                "url": "#"
+            },
+            {
+                "title": "Week 2.4 | Bash and Terminal (Advance)",
+                "url": "#"
+            },
+            {
+                "title": "Week 2.5 | Express basics",
+                "url": "#"
+            },
+            {
+                "title": "2.6 | map, filter, arrow fns",
+                "url": "#"
+            },
+            {
+                "title": "2.7 | Git basics to advance",
+                "url": "#"
+            },
+            {
+                "title": "Week 3.1 | Middlewares, global catches and zod",
+                "url": "#"
+            },
+            {
+                "title": "Week 3.2 | Dynamic backend Authentication using Express, JWT and monogodb",
+                "url": "#"
+            },
+            {
+                "title": "3.3 | Middleware recap and assignments",
+                "url": "#"
+            },
+            {
+                "title": "3.4 | JWT recap and assignment",
+                "url": "#"
+            },
+            {
+                "title": "4.0.1 | DOM Introduction",
+                "url": "#"
+            },
+            {
+                "title": "week 4.1 | DOM",
+                "url": "#"
+            },
+            {
+                "title": "4.2 | Foundation for React",
+                "url": "#"
+            },
+            {
+                "title": "4.3 | Mongo offline",
+                "url": "#"
+            },
+            {
+                "title": "5.1 | Diving into React",
+                "url": "#"
+            },
+            {
+                "title": "Week 5.1 | React (Local recording)",
+                "url": "#"
+            },
+            {
+                "title": "week 5.2 | Creating a To-Do App",
+                "url": "#"
+            },
+            {
+                "title": "week 5.2 | Creating a To-Do App (Re-upload)",
+                "url": "#"
+            },
+            {
+                "title": "Week 6.1 | Popular react hooks, React deep dive",
+                "url": "#"
+            },
+            {
+                "title": "Week 6.2 | useEffect, useMemo, useCallback",
+                "url": "#"
+            },
+            {
+                "title": "6.3 | Recap of everything in react, Intro to useRef",
+                "url": "#"
+            },
+            {
+                "title": "6.4 | Assignment solutions",
+                "url": "#"
+            },
+            {
+                "title": "7.1 | Context, prop drilling",
+                "url": "#"
+            },
+            {
+                "title": "7.2 | Recoil",
+                "url": "#"
+            },
+            {
+                "title": "7.3 | Recoil Deep dive",
+                "url": "#"
+            },
+            {
+                "title": "Week 12.2 | Tailwind, flex, grids , react recap (27th Aug)",
+                "url": "#"
+            },
+            {
+                "title": "8.2 | Building PayTM Project",
+                "url": "#"
+            },
+            {
+                "title": "8.3 | axios vs fetch",
+                "url": "#"
+            },
+            {
+                "title": "8.4 | PayTM Frontend",
+                "url": "#"
+            },
+            {
+                "title": "9.1 | Custom hooks",
+                "url": "#"
+            },
+            {
+                "title": "9.2 | Typescript Intro",
+                "url": "#"
+            },
+            {
+                "title": "9.3 | Generics, enums, imports, exports",
+                "url": "#"
+            },
+            {
+                "title": "Week 13.1 | SQL",
+                "url": "#"
+            },
+            {
+                "title": "16.1 | Websockets | Cohort-3",
+                "url": "#"
+            },
+            {
+                "title": "Week 13.2 | Prisma ORM",
+                "url": "#"
+            },
+            {
+                "title": "week 10.1 | Postgres",
+                "url": "#"
+            },
+            {
+                "title": "Week 30.2 | Exchange Project Part 2",
+                "url": "#"
+            },
+            {
+                "title": "week 10.2 | Prisma",
+                "url": "#"
+            },
+            {
+                "title": "11.1 | Serverless Fns",
+                "url": "#"
+            },
+            {
+                "title": "11.2 | Deploying to AWS",
+                "url": "#"
+            },
+            {
+                "title": "Week 11.3 | Certificate Management",
+                "url": "#"
+            },
+            {
+                "title": "Week 12.1 | Deploying Frontends on AWS",
+                "url": "#"
+            },
+            {
+                "title": "12.2 | Typescript Advance APIs",
+                "url": "#"
+            },
+            {
+                "title": "Week 8.2 | Deploying npm packages, intro to mono repos",
+                "url": "#"
+            },
+            {
+                "title": "12.3 | Actionable Docker to start packages",
+                "url": "#"
+            },
+            {
+                "title": "12.4 | SQL Joins and Relationships",
+                "url": "#"
+            },
+            {
+                "title": "12.5 | Prisma Recap, Relationships in Prisma",
+                "url": "#"
+            },
+            {
+                "title": "Week 12.6 | Connection pooling in serverless envs",
+                "url": "#"
+            },
+            {
+                "title": "Week 13.1 | Project (Local recording)",
+                "url": "#"
+            },
+            {
+                "title": "13.2 | AMA Session",
+                "url": "#"
+            },
+            {
+                "title": "13.4 | Frontend of Blogging app",
+                "url": "#"
+            },
+            {
+                "title": "13.4 | Frontend of the blogging app",
+                "url": "#"
+            },
+            {
+                "title": "Week 14.1 | NextJS Intro",
+                "url": "#"
+            },
+            {
+                "title": "14.2 | Next Backend",
+                "url": "#"
+            },
+            {
+                "title": "14.3 | NextJS Backend (Offline video)",
+                "url": "#"
+            },
+            {
+                "title": "15.1 | Docker part 1",
+                "url": "#"
+            },
+            {
+                "title": "15.2 | Docker part 2",
+                "url": "#"
+            },
+            {
+                "title": "15.2 | Docker part 2 (Reuploaded)",
+                "url": "#"
+            },
+            {
+                "title": "15.4 | Bind mounts",
+                "url": "#"
+            },
+            {
+                "title": "16.1 | Monorepo part 1",
+                "url": "#"
+            },
+            {
+                "title": "16.2 | Monorepo part 2",
+                "url": "#"
+            },
+            {
+                "title": "16.3 | Authentication using cookies",
+                "url": "#"
+            },
+            {
+                "title": "16.4 | NextAuth",
+                "url": "#"
+            },
+            {
+                "title": "17.1 | PayTM part 1",
+                "url": "#"
+            },
+            {
+                "title": "17.2 | PayTM Part 2",
+                "url": "#"
+            },
+            {
+                "title": "Week 18.1 | PayTM Part 3",
+                "url": "#"
+            },
+            {
+                "title": "18.1.2 | PayTM Part 3 (continued)",
+                "url": "#"
+            },
+            {
+                "title": "18.2 | CI/CD",
+                "url": "#"
+            },
+            {
+                "title": "19.1 | Middlewares in Next.js",
+                "url": "#"
+            },
+            {
+                "title": "19.2 | CSR vs SSR vs Static Site Generation",
+                "url": "#"
+            },
+            {
+                "title": "19.3 | Advance backend comm/Websockets",
+                "url": "#"
+            },
+            {
+                "title": "19.4 | Redis, Pub subs and Queues",
+                "url": "#"
+            },
+            {
+                "title": "1-100 orientation, setting up cms/daily | 13/04",
+                "url": "#"
+            },
+            {
+                "title": "20.1 | OpenAPI Spec (Offline)",
+                "url": "#"
+            },
+            {
+                "title": "Week 12.1 | OpenAPI Spec (26 August 2023)",
+                "url": "#"
+            },
+            {
+                "title": "21.1 | Rate limitting, DDoS and Captchas",
+                "url": "#"
+            },
+            {
+                "title": "Week 21.2 | Singleton pattern + Pub subs",
+                "url": "#"
+            },
+            {
+                "title": "Week 22.1 | Capacity estimation, Horizontal and vertical scaling, Scaling Node.js and ASGs (1/2)",
+                "url": "#"
+            },
+            {
+                "title": "Week 22.2 | Auto Scaling Groups",
+                "url": "#"
+            },
+            {
+                "title": "Week 22.3 | Indexing in databases",
+                "url": "#"
+            },
+            {
+                "title": "Week 22.4 | Normalization in DBs",
+                "url": "#"
+            },
+            {
+                "title": "23.1 | WebRTC",
+                "url": "#"
+            },
+            {
+                "title": "Week 23.2 | Webrtc, setting up projects, 0-1 farewell",
+                "url": "#"
+            },
+            {
+                "title": "Week 24.1 | GRPC",
+                "url": "#"
+            },
+            {
+                "title": "Week 24.2 | Testing in the MERN stack",
+                "url": "#"
+            },
+            {
+                "title": "24.3 | Testing from start (Offline video)",
+                "url": "#"
+            },
+            {
+                "title": "Week 25.1 | Integration and end to end tests",
+                "url": "#"
+            },
+            {
+                "title": "Week 26.1 | Monitoring, Logging and Newrelic",
+                "url": "#"
+            },
+            {
+                "title": "Week 26.2 | Prometheus and Grafana",
+                "url": "#"
+            },
+            {
+                "title": "27.1 | Kubernetes Part 1",
+                "url": "#"
+            },
+            {
+                "title": "28.1 | Kubernetes Part 3",
+                "url": "#"
+            },
+            {
+                "title": "Week 28.2 | Kubernetes Part 4",
+                "url": "#"
+            },
+            {
+                "title": "29.1 | Kubernetes Part 5 (Volumes, PV, PVCs)",
+                "url": "#"
+            },
+            {
+                "title": "Week 29.2 | Kubernetes Part 6 (HPA, Node Autoscaling)",
+                "url": "#"
+            },
+            {
+                "title": "Week 30.2 | Exchange Project Part 2",
+                "url": "#"
+            },
+            {
+                "title": "31.1 | Exchange Part 3 (Backend)",
+                "url": "#"
+            },
+            {
+                "title": "Week 32.1 | Kafka",
+                "url": "#"
+            },
+            {
+                "title": "32.2 | Docker swarm, container orchestration",
+                "url": "#"
+            },
+            {
+                "title": "33.1 | Zapier part 1",
+                "url": "#"
+            },
+            {
+                "title": "33.2 | Zapier part 2",
+                "url": "#"
+            },
+            {
+                "title": "33.3 | Zapier Part 3 (Primary Backend)",
+                "url": "#"
+            },
+            {
+                "title": "33.4 | Zapier frontend (Auth and landing page)",
+                "url": "#"
+            },
+            {
+                "title": "33.5 | Zapier frontend Continued (Zaps and zap page)",
+                "url": "#"
+            },
+            {
+                "title": "34.1 | Zapier Setup, AMA (Live)",
+                "url": "#"
+            },
+            {
+                "title": "34.2 | Zapier finishing Frontend and Backend",
+                "url": "#"
+            },
+            {
+                "title": "34.3 | Live Open source contributions",
+                "url": "#"
+            },
+            {
+                "title": "1. Say Hi to Ayush!",
+                "url": "#"
+            },
+            {
+                "title": "2.What to expect from the course",
+                "url": "#"
+            },
+            {
+                "title": "3.What things not to do while doing the course",
+                "url": "#"
+            },
+            {
+                "title": "4.Study Tips from Ayush",
+                "url": "#"
+            },
+            {
+                "title": "Lecture 1",
+                "url": "#"
+            },
+            {
+                "title": "Lecture 2",
+                "url": "#"
+            },
+            {
+                "title": "Lecture 3",
+                "url": "#"
+            },
+            {
+                "title": "Lecture 4",
+                "url": "#"
+            },
+            {
+                "title": "Lecture 17",
+                "url": "#"
+            },
+            {
+                "title": "Lecture 18",
+                "url": "#"
+            },
+            {
+                "title": "Lecture 19",
+                "url": "#"
+            },
+            {
+                "title": "Lecture 20",
+                "url": "#"
+            },
+            {
+                "title": "1.1 What is NumPy",
+                "url": "#"
+            },
+            {
+                "title": "1.2 NumPy Arrays and Python List",
+                "url": "#"
+            },
+            {
+                "title": "2.1 Creation of Arrays",
+                "url": "#"
+            },
+            {
+                "title": "2.2 Basic Operations",
+                "url": "#"
+            },
+            {
+                "title": "2.3 Concept of Slicing and Indexing",
+                "url": "#"
+            },
+            {
+                "title": "2.4 Reshaping, Splitting, Stacking Arrays",
+                "url": "#"
+            },
+            {
+                "title": "2.5 Broadcasting",
+                "url": "#"
+            },
+            {
+                "title": "Plotting Numpy Arrays",
+                "url": "#"
+            },
+            {
+                "title": "IO Handling with Numpy",
+                "url": "#"
+            },
+            {
+                "title": "5.1 Masking of Arrays",
+                "url": "#"
+            },
+            {
+                "title": "5.2 Structured Arrays",
+                "url": "#"
+            },
+            {
+                "title": "1. Introduction to Pandas",
+                "url": "#"
+            },
+            {
+                "title": "1.2 Pandas Data Structures",
+                "url": "#"
+            },
+            {
+                "title": "2.3 Sorting, Filtering, Mapping of Data",
+                "url": "#"
+            },
+            {
+                "title": "2.2 Indexing Slicing",
+                "url": "#"
+            },
+            {
+                "title": "Data Cleaning",
+                "url": "#"
+            },
+            {
+                "title": "Data Exploration",
+                "url": "#"
+            },
+            {
+                "title": "Time Series Analysis with Pandas",
+                "url": "#"
+            },
+            {
+                "title": "Lecture 01 What_is_Calculus",
+                "url": "#"
+            },
+            {
+                "title": "Lecture _- 02 ( Reviewing Functions For Calculus)",
+                "url": "#"
+            },
+            {
+                "title": "Lecture _- 03 ( Reviewing Trigonometry )",
+                "url": "#"
+            },
+            {
+                "title": "Lecture _- 04 ( Introduction to Limits & Continuity )",
+                "url": "#"
+            },
+            {
+                "title": "Lecture _- 05 ( Evaluating Limits )",
+                "url": "#"
+            },
+            {
+                "title": "Lecture _- 06 ( Differentiation Part-1 )",
+                "url": "#"
+            },
+            {
+                "title": "Lecture _- 07 ( Basic Differentiation Rules ) __ Chapter- Calculus",
+                "url": "#"
+            },
+            {
+                "title": "Lecture- 09 ( Chain Rule of Differentiation )",
+                "url": "#"
+            },
+            {
+                "title": "Module 01 Introduction to Databases.izsGLrm4",
+                "url": "#"
+            },
+            {
+                "title": "Module 02 Introduction to SQL",
+                "url": "#"
+            },
+            {
+                "title": "Module 03 SQL Core",
+                "url": "#"
+            },
+            {
+                "title": "Module 04 SQL Operators",
+                "url": "#"
+            },
+            {
+                "title": "Lecture 01 Comprehensive Intro to ML",
+                "url": "#"
+            },
+            {
+                "title": "Lecture 02 Comprehensive Intro to ML",
+                "url": "#"
+            },
+            {
+                "title": "Lecture 03 Comprehensive Intro to ML",
+                "url": "#"
+            },
+            {
+                "title": "Lecture 04 Comprehensive Intro to ML",
+                "url": "#"
+            },
+            {
+                "title": "Lecture 05 Comprehensive Intro to ML",
+                "url": "#"
+            },
+            {
+                "title": "Logistic Regression Practicals",
+                "url": "#"
+            },
+            {
+                "title": "MLOps Fundamentals Lecture-01",
+                "url": "#"
+            },
+            {
+                "title": "MLOps Fundamentals Lecture-02",
+                "url": "#"
+            },
+            {
+                "title": "MLOps Fundamentals Lecture-03",
+                "url": "#"
+            },
+            {
+                "title": "MLOps Fundamentals Lecture-04",
+                "url": "#"
+            },
+            {
+                "title": "MLOps Fundamentals Lecture-05",
+                "url": "#"
+            },
+            {
+                "title": "MLOps Fundamentals Lecture-06",
+                "url": "#"
+            },
+            {
+                "title": "MLOps Fundamentals Lecture-07",
+                "url": "#"
+            },
+            {
+                "title": "MLOps Fundamentals Lecture-08",
+                "url": "#"
+            },
+            {
+                "title": "Lecture1",
+                "url": "#"
+            },
+            {
+                "title": "Lecture2",
+                "url": "#"
+            },
+            {
+                "title": "Lecture3",
+                "url": "#"
+            },
+            {
+                "title": "Lecture4",
+                "url": "#"
+            },
+            {
+                "title": "Lecture5",
+                "url": "#"
+            },
+            {
+                "title": "Lecture6",
+                "url": "#"
+            },
+            {
+                "title": "Lecture7",
+                "url": "#"
+            },
+            {
+                "title": "Lecture8",
+                "url": "#"
+            },
+            {
+                "title": "Lecture1",
+                "url": "#"
+            },
+            {
+                "title": "Lecture2",
+                "url": "#"
+            },
+            {
+                "title": "Lecture3",
+                "url": "#"
+            },
+            {
+                "title": "Lecture4",
+                "url": "#"
+            },
+            {
+                "title": "Lecture5",
+                "url": "#"
+            },
+            {
+                "title": "Lecture6",
+                "url": "#"
+            },
+            {
+                "title": "Lecture7",
+                "url": "#"
+            },
+            {
+                "title": "Lecture8",
+                "url": "#"
+            },
+            {
+                "title": "Lecture9",
+                "url": "#"
+            },
+            {
+                "title": "Lecture2",
+                "url": "#"
+            },
+            {
+                "title": "Lecture3",
+                "url": "#"
+            },
+            {
+                "title": "Classification Measures Lecture-04",
+                "url": "#"
+            },
+            {
+                "title": "Lecture1",
+                "url": "#"
+            },
+            {
+                "title": "Lecture2",
+                "url": "#"
+            },
+            {
+                "title": "4.Stacking Ensemble Learning",
+                "url": "#"
+            },
+            {
+                "title": "Bias & Variance Tradeoff, Expectation Minimization",
+                "url": "#"
+            },
+            {
+                "title": "Lecture1",
+                "url": "#"
+            },
+            {
+                "title": "Lecture2",
+                "url": "#"
+            },
+            {
+                "title": "Lecture3",
+                "url": "#"
+            },
+            {
+                "title": "Lecture1",
+                "url": "#"
+            },
+            {
+                "title": "Lecture2",
+                "url": "#"
+            },
+            {
+                "title": "Lecture3",
+                "url": "#"
+            },
+            {
+                "title": "Lecture4",
+                "url": "#"
+            },
+            {
+                "title": "Lecture5",
+                "url": "#"
+            },
+            {
+                "title": "Lecture6",
+                "url": "#"
+            },
+            {
+                "title": "Lecture7",
+                "url": "#"
+            },
+            {
+                "title": "Lecture8",
+                "url": "#"
+            },
+            {
+                "title": "Lecture9",
+                "url": "#"
+            },
+            {
+                "title": "1.0 Introduction",
+                "url": "#"
+            },
+            {
+                "title": "1.1 Exploring Data",
+                "url": "#"
+            },
+            {
+                "title": "1.2 Processing Data",
+                "url": "#"
+            },
+            {
+                "title": "1.3 Training of Model",
+                "url": "#"
+            },
+            {
+                "title": "1.4 Model Tuning",
+                "url": "#"
+            },
+            {
+                "title": "Week 1 Intro to App Development + Android + GitHub gitignore setup",
+                "url": "#"
+            },
+            {
+                "title": "Week 1 Intro to App Development + Android + GitHub gitignore setup",
+                "url": "#"
+            },
+            {
+                "title": "Week 1 Intro to App Development + Android + GitHub gitignore setup Part2",
+                "url": "#"
+            },
+            {
+                "title": "Week 2 | Programming 101",
+                "url": "#"
+            },
+            {
+                "title": "Week 2 | OOPS continued",
+                "url": "#"
+            },
+            {
+                "title": "Open Source Challenge",
+                "url": "#"
+            },
+            {
+                "title": "Q. What is args in main method",
+                "url": "#"
+            },
+            {
+                "title": "Recap so far Week 1 & Week 2",
+                "url": "#"
+            },
+            {
+                "title": "Week3 | Android Nullables-Glide Library-First App Completion",
+                "url": "#"
+            },
+            {
+                "title": "Week 3 | Nullables + Glide Library + Image Button handle + Error handling",
+                "url": "#"
+            },
+            {
+                "title": "MVVM Intro Data passing between pages using Fragments",
+                "url": "#"
+            },
+            {
+                "title": "Passing data in fragments using ViewModel, Interfaces, Lamda function",
+                "url": "#"
+            },
+            {
+                "title": "Intro to App Lifecycle, Fragments Sharing data using ViewModel, Mutables",
+                "url": "#"
+            },
+            {
+                "title": "Week 5 | What is a server, RestAPI, ChatGPT Api Flask + Retrofit",
+                "url": "#"
+            },
+            {
+                "title": "Converting Python server to Docker",
+                "url": "#"
+            },
+            {
+                "title": "Intro to Networking Python + Flask + Azure",
+                "url": "#"
+            },
+            {
+                "title": "Dependency injection + Recycler View + HW",
+                "url": "#"
+            },
+            {
+                "title": "OCR Project completion",
+                "url": "#"
+            },
+            {
+                "title": "Clean code principles + Moneitzing your Android Skills",
+                "url": "#"
+            },
+            {
+                "title": "HW RecyclerView Solve",
+                "url": "#"
+            },
+            {
+                "title": "Debugging our Wallpaper App Project",
+                "url": "#"
+            },
+            {
+                "title": "wallpaper app final",
+                "url": "#"
+            },
+            {
+                "title": "wallpaper project end week 9",
+                "url": "#"
+            },
+            {
+                "title": "Git Tricks and Tips",
+                "url": "#"
+            },
+            {
+                "title": "Mocking Network Calls",
+                "url": "#"
+            },
+            {
+                "title": "DSA | Trial Class | Introduction | 02/04/24",
+                "url": "#"
+            },
+            {
+                "title": "DSA 2 | Array | 05/04 (Zoom Recording)",
+                "url": "#"
+            },
+            {
+                "title": "DSA 3 | Complexity Analysis | 10/05",
+                "url": "#"
+            },
+            {
+                "title": "DSA 5 | C++ (part 1/2)",
+                "url": "#"
+            },
+            {
+                "title": "DSA 6 | C++ (part 2/2) | 18/04",
+                "url": "#"
+            },
+            {
+                "title": "DSA 9 | Binary Search",
+                "url": "#"
+            },
+            {
+                "title": "DSA 11 | Linked List",
+                "url": "#"
+            },
+            {
+                "title": "DSA 0 | by Riddhi | 11/05",
+                "url": "#"
+            },
+            {
+                "title": "DSA (1) | Problem solving on Recursion (1/2) | 13/05",
+                "url": "#"
+            },
+            {
+                "title": "DSA (1) | Problem solving on Recursion (2/2) | 13/05",
+                "url": "#"
+            },
+            {
+                "title": "DSA 2 | Basics of java | 16/05",
+                "url": "#"
+            },
+            {
+                "title": "DSA 3 | Problem Solving on Arrays | 20/05",
+                "url": "#"
+            },
+            {
+                "title": "DSA 4 | Basics of DSA | 22/05",
+                "url": "#"
+            },
+            {
+                "title": "DSA 5 | Strings and ArrayList | 27/05",
+                "url": "#"
+            },
+            {
+                "title": "DSA 6 | Strings and ArrayList (Part-2) | 29/05",
+                "url": "#"
+            },
+            {
+                "title": "DSA 7 | Hashing and HashMaps | 03/06",
+                "url": "#"
+            },
+            {
+                "title": "DSA 9 | Hashing and HashMaps (Problem solving) | 10/06",
+                "url": "#"
+            },
+            {
+                "title": "DSA 10 | Two Pointers | 12/06",
+                "url": "#"
+            },
+            {
+                "title": "DSA (12) | Bit Manipulation",
+                "url": "#"
+            },
+            {
+                "title": "DSA 13 | Problems on Bit Manipulation |",
+                "url": "#"
+            },
+            {
+                "title": "DSA 14 | Recursion and Backtracking",
+                "url": "#"
+            },
+            {
+                "title": "DSA 16 | Sorting-1 Problems (Merge)",
+                "url": "#"
+            },
+            {
+                "title": "DSA 17 | Linked List Problems",
+                "url": "#"
+            },
+            {
+                "title": "DSA 18 | Sorting-III Cyclic Sort & Problems",
+                "url": "#"
+            },
+            {
+                "title": "DSA 19 | Stacks and Queues",
+                "url": "#"
+            },
+            {
+                "title": "DSA 20 | Stacks",
+                "url": "#"
+            },
+            {
+                "title": "DSA 21 | Stacks -2",
+                "url": "#"
+            },
+            {
+                "title": "DSA 23 | Heaps & Priority Queues-2",
+                "url": "#"
+            },
+            {
+                "title": "DSA 26 | Trees 3",
+                "url": "#"
+            },
+            {
+                "title": "DSA 29  | Tress Problem Solving",
+                "url": "#"
+            },
+            {
+                "title": "DSA 30 | Tries",
+                "url": "#"
+            },
+            {
+                "title": "DSA 31 | Introduction to Dynamic Programming",
+                "url": "#"
+            },
+            {
+                "title": "DSA 32 | Dynamic Programming Problems",
+                "url": "#"
+            },
+            {
+                "title": "DSA 34 | DP on Grids",
+                "url": "#"
+            },
+            {
+                "title": "DSA 35 | 2D Dynamic Programming",
+                "url": "#"
+            },
+            {
+                "title": "DSA 36 | Knapsack & DP",
+                "url": "#"
+            },
+            {
+                "title": "DSA 37 | paritition DP",
+                "url": "#"
+            },
+            {
+                "title": "DSA 38 | Dynamic Programming | Miscellaneous",
+                "url": "#"
+            },
+            {
+                "title": "DSA 39 | Binary Search Problems",
+                "url": "#"
+            },
+            {
+                "title": "DSA 40 | Binary Search 2",
+                "url": "#"
+            },
+            {
+                "title": "DSA 41 | Binary Search 3",
+                "url": "#"
+            },
+            {
+                "title": "DSA 40 | Binary Search 2",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 300,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "Week 7.2 | Intro to Typescript",
+        "videos": [
+            {
+                "title": "23/07/23",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 1,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "Week 7.3 (26 July, 2023)",
+        "videos": [
+            {
+                "title": "Assignment on Typescript",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 1,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "13.3 | Offline video",
+        "videos": [
+            {
+                "title": "Backend of Blogging app",
+                "url": "#"
+            },
+            {
+                "title": "Backend of blogging app (improved audio))",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 2,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "8.1 | Tailwind class",
+        "videos": [
+            {
+                "title": "Cohort 2",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 1,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "16.2 | WebSockets Project",
+        "videos": [
+            {
+                "title": "Chat app | Cohort-3",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 1,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "Week 26.3 | Monitoring using Prometheus and Grafana",
+        "videos": [
+            {
+                "title": "Part 1",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 1,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "Week 26.4 | Monitoring using Prometheus and Grafana",
+        "videos": [
+            {
+                "title": "Part 2",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 1,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "Week 27.2 | Kubernetes Part",
+        "videos": [
+            {
+                "title": "2",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 1,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "Week 30.1 | Exchange Project",
+        "videos": [
+            {
+                "title": "Part 1",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 1,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "31.2 | Exchange Part 4",
+        "videos": [
+            {
+                "title": "Scalable Websocket app",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 1,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "34.4 | Zapier",
+        "videos": [
+            {
+                "title": "Sending emails and Solana via workers",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 1,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "35.1 | Adhoc coding",
+        "videos": [
+            {
+                "title": "PayTM Merchant app",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 1,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "Week 12 | Ui/Ux Primitives by Keshav",
+        "videos": [
+            {
+                "title": "Part 1 (C3)",
+                "url": "#"
+            },
+            {
+                "title": "Part 2 (C3)",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 2,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "Lecture 01",
+        "videos": [
+            {
+                "title": "Everything you need to know about Linear Algebra",
+                "url": "#"
+            },
+            {
+                "title": "Logistic Regression",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 2,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "Lecture",
+        "videos": [
+            {
+                "title": "02 Linear Algebra Part-02",
+                "url": "#"
+            },
+            {
+                "title": "03 Linear Algebra Part-03",
+                "url": "#"
+            },
+            {
+                "title": "04 Types of Matrices",
+                "url": "#"
+            },
+            {
+                "title": "05 Determinant",
+                "url": "#"
+            },
+            {
+                "title": "06 Cofactor, Adjugate & Inverse of a Matrix",
+                "url": "#"
+            },
+            {
+                "title": "07 Trace of a Matrix, Hadamard & Kronecker product",
+                "url": "#"
+            },
+            {
+                "title": "08 Systems of Equations & Solving It",
+                "url": "#"
+            },
+            {
+                "title": "8 Input & Output Day - 02",
+                "url": "#"
+            },
+            {
+                "title": "16 Transferring State Day - 04",
+                "url": "#"
+            },
+            {
+                "title": "08 ( Product Rule and Quotient Rule )",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 10,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "Lecture 1",
+        "videos": [
+            {
+                "title": "Intro to Python Day - 01",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 1,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "Lecture 2",
+        "videos": [
+            {
+                "title": "More About to Python Day - 01",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 1,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "Lecture 3",
+        "videos": [
+            {
+                "title": "The Atoms Of Python Day - 02",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 1,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "Lecture 4",
+        "videos": [
+            {
+                "title": "Variables Day - 02",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 1,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "Lecture 5",
+        "videos": [
+            {
+                "title": "String Day - 02",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 1,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "Lecture 6",
+        "videos": [
+            {
+                "title": "Numbers Day - 02",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 1,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "Lecture 7",
+        "videos": [
+            {
+                "title": "Truthiness Day - 02",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 1,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "Lecture 9",
+        "videos": [
+            {
+                "title": "OPERATORS. the workers of python Day - 03",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 1,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "Lecture 10",
+        "videos": [
+            {
+                "title": "Conditional Flow Day- 03",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 1,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "Lecture 11",
+        "videos": [
+            {
+                "title": "Lists Day - 04",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 1,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "Lecture 12",
+        "videos": [
+            {
+                "title": "Tuples & Mutability Day - 04",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 1,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "Lecture 13",
+        "videos": [
+            {
+                "title": "Dictionaries Day - 04",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 1,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "Lecture 14",
+        "videos": [
+            {
+                "title": "Sets & Nesting Day - 04",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 1,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "Lecture 15",
+        "videos": [
+            {
+                "title": "Repetition is BAD Day - 04",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 1,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "2.1 Data Transformation with Pandas",
+        "videos": [
+            {
+                "title": "Grouping, Merging, and Concatenating",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 1,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "Time Series Analysis with Pandas",
+        "videos": [
+            {
+                "title": "Part - 02",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 1,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "Lecture_01",
+        "videos": [
+            {
+                "title": "Regression Analysis Foundations",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 1,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "Lecture_02",
+        "videos": [
+            {
+                "title": "Regression Analysis Intermediate",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 1,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "Lecture 03",
+        "videos": [
+            {
+                "title": "MLR Intermediate",
+                "url": "#"
+            },
+            {
+                "title": "Logistic Regression",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 2,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "Lecture 04",
+        "videos": [
+            {
+                "title": "Regression Advanced",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 1,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "Lecture 05",
+        "videos": [
+            {
+                "title": "Simple Linear Regression Project",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 1,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "Lecture 06",
+        "videos": [
+            {
+                "title": "End to End Linear Regression Project(1)",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 1,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "Lecture 02",
+        "videos": [
+            {
+                "title": "Logistic Regression",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 1,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "async prorgamming",
+        "videos": [
+            {
+                "title": "coroutines",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 1,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "Recording   Wallpaper App HW   Async Programmging",
+        "videos": [
+            {
+                "title": "65467b20e4b097220916207f",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 1,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "DSA 4 | Arrays",
+        "videos": [
+            {
+                "title": "Continued",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 1,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "DSA 7 | Recursion",
+        "videos": [
+            {
+                "title": "1",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 1,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "DSA 8 | Recursion",
+        "videos": [
+            {
+                "title": "2",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 1,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "DSA 10 | Binary Search",
+        "videos": [
+            {
+                "title": "2",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 1,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "DSA 8 | Hashing and HashMaps (Part",
+        "videos": [
+            {
+                "title": "2) | 05/06",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 1,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "DSA 11 | Two Pointers (Part",
+        "videos": [
+            {
+                "title": "2) | 17/06",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 1,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "DSA 15 | Back Tracking",
+        "videos": [
+            {
+                "title": "2 | 08/07",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 1,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "DSA 22 | Heaps & Priority Queues",
+        "videos": [
+            {
+                "title": "1",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 1,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "DSA 24 | Priority Queues",
+        "videos": [
+            {
+                "title": "3",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 1,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "DSA 25 | Trees",
+        "videos": [
+            {
+                "title": "2",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 1,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "DSA 27 | Binary Search Tree",
+        "videos": [
+            {
+                "title": "1",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 1,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "DSA 28 | Binary Search Trees",
+        "videos": [
+            {
+                "title": "2",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 1,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "DSA 33 | Dynamic Programming",
+        "videos": [
+            {
+                "title": "3",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 1,
+        "pdf_count": 0
+    }
+]

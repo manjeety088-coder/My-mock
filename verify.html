@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SZX Studio - Verification Required</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        :root {
+            --bg-dark: #050505;
+            --glass-bg: rgba(255, 255, 255, 0.04);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --neon-accent: #00f2fe;
+            --text-main: #ffffff;
+            --danger: #ff4b2b;
+        }
+
+        body {
+            margin: 0; padding: 0; font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-dark); color: var(--text-main);
+            height: 100vh; display: flex; justify-content: center; align-items: center;
+            overflow: hidden;
+            background-image: radial-gradient(circle at center, #161625 0%, #050505 100%);
+        }
+
+        .auth-box {
+            background: var(--glass-bg); backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border); padding: 40px;
+            border-radius: 20px; text-align: center; width: 90%; max-width: 400px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.5), inset 0 1px 1px rgba(255,255,255,0.1);
+        }
+
+        h2 { margin-bottom: 10px; letter-spacing: 1px; color: var(--neon-accent); text-shadow: 0 0 10px rgba(0, 242, 254, 0.3); }
+        p { color: #a1a1aa; font-size: 0.9rem; margin-bottom: 30px; }
+
+        input {
+            width: 100%; padding: 15px; border-radius: 12px;
+            background: rgba(0,0,0,0.5); border: 1px solid var(--glass-border);
+            color: #fff; font-size: 1rem; text-align: center; outline: none;
+            font-family: 'Outfit', sans-serif; margin-bottom: 20px;
+            transition: 0.3s;
+        }
+        input:focus { border-color: var(--neon-accent); box-shadow: 0 0 15px rgba(0, 242, 254, 0.2); }
+
+        button {
+            width: 100%; padding: 15px; border-radius: 12px; border: none;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: #000; font-weight: 800; font-size: 1rem; cursor: pointer;
+            letter-spacing: 1px; transition: 0.3s;
+        }
+        button:hover { transform: translateY(-2px); box-shadow: 0 5px 20px rgba(0, 242, 254, 0.4); }
+
+        #error-msg { color: var(--danger); font-size: 0.85rem; margin-top: 15px; font-weight: 600; opacity: 0; }
+        
+        .lock-icon { font-size: 3rem; margin-bottom: 15px; }
+    </script>
+</head>
+<body>
+
+    <div class="auth-box" id="authBox">
+        <div class="lock-icon">🔒</div>
+        <h2>SZX SECURE</h2>
+        <p>Enter your access key to unlock the player.</p>
+        
+        <input type="password" id="keyInput" placeholder="Enter Secret Key" onkeypress="handleEnter(event)">
+        <button onclick="verifyKey()">UNLOCK PLAYER</button>
+        
+        <div id="error-msg">Incorrect Key! Try again.</div>
+    </div>
+
+    <script>
+        // Entry Animation
+        gsap.from(".auth-box", { duration: 0.8, y: 50, opacity: 0, ease: "back.out(1.5)" });
+
+        // MASTER PASSWORD (Isko aap apne hisaab se change kar lena)
+        const MASTER_KEY = "SZX2026"; 
+
+        function handleEnter(e) {
+            if (e.key === 'Enter') verifyKey();
+        }
+
+        function verifyKey() {
+            const input = document.getElementById('keyInput').value;
+            const errorMsg = document.getElementById('error-msg');
+
+            if (input === MASTER_KEY) {
+                // Key Sahi Hai: 12 ghante ke liye access de do
+                const expiryTime = Date.now() + (12 * 60 * 60 * 1000); // 12 Hours in milliseconds
+                localStorage.setItem('szx_auth_token', JSON.stringify({ valid: true, expiry: expiryTime }));
+                
+                // Button effect
+                document.querySelector('button').innerText = "UNLOCKED ✓";
+                document.querySelector('button').style.background = "#10b981";
+
+                // Wapas player par bhejo (jahan se aaya tha)
+                setTimeout(() => {
+                    const redirectUrl = sessionStorage.getItem('redirect_after_auth') || 'player.html';
+                    sessionStorage.removeItem('redirect_after_auth');
+                    window.location.href = redirectUrl;
+                }, 800);
+
+            } else {
+                // Key Galat Hai
+                gsap.to(errorMsg, { opacity: 1, duration: 0.3 });
+                gsap.fromTo(".auth-box", { x: -10 }, { x: 10, duration: 0.1, yoyo: true, repeat: 3 }); // Shake effect
+                setTimeout(() => { gsap.to(errorMsg, { opacity: 0, duration: 0.3 }); }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>

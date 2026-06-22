@@ -1,0 +1,79 @@
+[
+    {
+        "subject_name": "NEET_UG_टारगेट_कोर्स_हिन्दी_माध्यम_2023_24",
+        "videos": [
+            {
+                "title": "supports HTML5 video",
+                "url": "https://videojs.com/html5-video-support/"
+            },
+            {
+                "title": "Introduction",
+                "url": "#"
+            },
+            {
+                "title": "Orientation Session",
+                "url": "#"
+            }
+        ],
+        "pdfs": [
+            {
+                "title": "Test Series Schedule and Syllabus (Planner)",
+                "url": "https://apps-s3-prod.utkarshapp.com/admin_v1/file_manager/pdf/627362773133064200_PDF.pdf"
+            }
+        ],
+        "video_count": 5,
+        "pdf_count": 1
+    },
+    {
+        "subject_name": "Part- 01",
+        "videos": [
+            {
+                "title": "सदिश 01 - सदिश - Saurabh Tiwari Sir",
+                "url": "#"
+            },
+            {
+                "title": "रसायन विज्ञान के आधारभूत सिद्धान्त 01 - मोल अवधारणा , रससमीकरण मिति - Dr. MS Bhati Sir",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 2,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "Part-01",
+        "videos": [
+            {
+                "title": "श्वसन एवं गैसों का विनिमय 01 - श्वसन, श्वासन, श्वसन अंग - Rajeev Jangid Sir",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 1,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "Part",
+        "videos": [
+            {
+                "title": "01 - कोशिका - जीवन की इकाई 01 - कोशिका व कोशिका सिद्धांत, कोशिका आकार, आकृति व प्रकार - Surendra Makwana Sir",
+                "url": "#"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 1,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "SYLLABUS FOR NEET (UG)",
+        "videos": [],
+        "pdfs": [
+            {
+                "title": "2024",
+                "url": "https://apps-s3-prod.utkarshapp.com/admin_v1/file_manager/pdf/525012998181627140_PDF.pdf"
+            }
+        ],
+        "video_count": 0,
+        "pdf_count": 1
+    }
+]

@@ -1,0 +1,353 @@
+[
+    {
+        "subject_name": "Psychology For All Teaching Exam",
+        "videos": [
+            {
+                "title": "supports HTML5 video",
+                "url": "https://videojs.com/html5-video-support/"
+            },
+            {
+                "title": "REET 2024 | REET Complete Psychology Marathon | REET महासंग्राम | Rajesh Kumawat Sir",
+                "url": "https://youtu.be/lv0X_AZjdyo"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 4,
+        "pdf_count": 0
+    },
+    {
+        "subject_name": "Psychology #1",
+        "videos": [
+            {
+                "title": "पाठ्यक्रम परिचर्चा",
+                "url": "https://youtu.be/YY0HryfkKFs"
+            }
+        ],
+        "pdfs": [
+            {
+                "title": "पाठ्यक्रम परिचर्चा",
+                "url": "https://apps-s3-prod.utkarshapp.com/admin_v1/file_manager/pdf/526236669452925950_PDF.pdf"
+            }
+        ],
+        "video_count": 1,
+        "pdf_count": 1
+    },
+    {
+        "subject_name": "Psychology #2",
+        "videos": [
+            {
+                "title": "अधिगम की  विधियां",
+                "url": "https://youtu.be/l0SiSge3kAE"
+            }
+        ],
+        "pdfs": [
+            {
+                "title": "अधिगम की  विधियां",
+                "url": "https://apps-s3-prod.utkarshapp.com/admin_v1/file_manager/pdf/271879247121830370_PDF.pdf"
+            }
+        ],
+        "video_count": 1,
+        "pdf_count": 1
+    },
+    {
+        "subject_name": "Psychology #3",
+        "videos": [
+            {
+                "title": "अधिगम के पठार",
+                "url": "https://youtu.be/x9gqlsktK0g"
+            }
+        ],
+        "pdfs": [
+            {
+                "title": "अधिगम के पठार",
+                "url": "https://apps-s3-prod.utkarshapp.com/admin_v1/file_manager/pdf/166184558066020770_PDF.pdf"
+            }
+        ],
+        "video_count": 1,
+        "pdf_count": 1
+    },
+    {
+        "subject_name": "Psychology #4",
+        "videos": [
+            {
+                "title": "सीखने का अधिगम सेट",
+                "url": "https://youtu.be/kdaMBTWzC5o"
+            }
+        ],
+        "pdfs": [
+            {
+                "title": "सीखने का अधिगम सेट",
+                "url": "https://apps-s3-prod.utkarshapp.com/admin_v1/file_manager/pdf/721414967658748400_PDF.pdf"
+            }
+        ],
+        "video_count": 1,
+        "pdf_count": 1
+    },
+    {
+        "subject_name": "Psychology #5",
+        "videos": [
+            {
+                "title": "अधिगम अंतरण",
+                "url": "https://youtu.be/SBqpl0r9iLM"
+            }
+        ],
+        "pdfs": [
+            {
+                "title": "अधिगम अंतरण",
+                "url": "https://apps-s3-prod.utkarshapp.com/admin_v1/file_manager/pdf/737817283180676600_PDF.pdf"
+            }
+        ],
+        "video_count": 1,
+        "pdf_count": 1
+    },
+    {
+        "subject_name": "Psychology #6",
+        "videos": [
+            {
+                "title": "अधिगम के प्रकार",
+                "url": "https://youtu.be/ytkPLHG_MVU"
+            }
+        ],
+        "pdfs": [
+            {
+                "title": "अधिगम के प्रकार",
+                "url": "https://apps-s3-prod.utkarshapp.com/admin_v1/file_manager/pdf/329941425793818240_PDF.pdf"
+            }
+        ],
+        "video_count": 1,
+        "pdf_count": 1
+    },
+    {
+        "subject_name": "Psychology #7",
+        "videos": [
+            {
+                "title": "अधिगम के सोपान",
+                "url": "https://youtu.be/U5ag3p_j6fU"
+            }
+        ],
+        "pdfs": [
+            {
+                "title": "अधिगम के सोपान",
+                "url": "https://apps-s3-prod.utkarshapp.com/admin_v1/file_manager/pdf/305058681753730000_PDF.pdf"
+            }
+        ],
+        "video_count": 1,
+        "pdf_count": 1
+    },
+    {
+        "subject_name": "Psychology #8",
+        "videos": [
+            {
+                "title": "अधिगम के सोपान",
+                "url": "https://youtu.be/EHEjrDRFizk"
+            }
+        ],
+        "pdfs": [
+            {
+                "title": "अधिगम के सोपान",
+                "url": "https://apps-s3-prod.utkarshapp.com/admin_v1/file_manager/pdf/683315081929075800_PDF.pdf"
+            }
+        ],
+        "video_count": 1,
+        "pdf_count": 1
+    },
+    {
+        "subject_name": "Psychology #10",
+        "videos": [
+            {
+                "title": "पॉवलव का सिद्धांत भाग-1",
+                "url": "https://youtu.be/4q26ay3FcmI"
+            }
+        ],
+        "pdfs": [
+            {
+                "title": "पॉवलव का सिद्धांत भाग-1",
+                "url": "https://apps-s3-prod.utkarshapp.com/admin_v1/file_manager/pdf/525576127139903100_PDF.pdf"
+            }
+        ],
+        "video_count": 1,
+        "pdf_count": 1
+    },
+    {
+        "subject_name": "Psychology #11",
+        "videos": [
+            {
+                "title": "पॉवलव का सिद्धांत भाग - 2",
+                "url": "https://youtu.be/2dUXo8NMG7c"
+            }
+        ],
+        "pdfs": [
+            {
+                "title": "पॉवलव का सिद्धांत भाग - 2",
+                "url": "https://apps-s3-prod.utkarshapp.com/admin_v1/file_manager/pdf/307453608133475400_PDF.pdf"
+            }
+        ],
+        "video_count": 1,
+        "pdf_count": 1
+    },
+    {
+        "subject_name": "Psychology #12",
+        "videos": [
+            {
+                "title": "स्किनर का सिद्धांत भाग - 1",
+                "url": "https://youtu.be/7qxdTZhuBao"
+            }
+        ],
+        "pdfs": [
+            {
+                "title": "स्किनर का सिद्धांत भाग - 1",
+                "url": "https://apps-s3-prod.utkarshapp.com/admin_v1/file_manager/pdf/453861262556149570_PDF.pdf"
+            }
+        ],
+        "video_count": 1,
+        "pdf_count": 1
+    },
+    {
+        "subject_name": "Psychology #13",
+        "videos": [
+            {
+                "title": "स्किनर का सिद्धांत भाग - 2",
+                "url": "https://youtu.be/iiRON5sCsOQ"
+            }
+        ],
+        "pdfs": [
+            {
+                "title": "स्किनर का सिद्धांत भाग - 2",
+                "url": "https://apps-s3-prod.utkarshapp.com/admin_v1/file_manager/pdf/575122318508651200_PDF.pdf"
+            }
+        ],
+        "video_count": 1,
+        "pdf_count": 1
+    },
+    {
+        "subject_name": "Psychology #14",
+        "videos": [
+            {
+                "title": "गेस्टाल्ट सिद्धांत",
+                "url": "https://youtu.be/HkNcX4JRAc8"
+            }
+        ],
+        "pdfs": [
+            {
+                "title": "गेस्टाल्ट सिद्धांत",
+                "url": "https://apps-s3-prod.utkarshapp.com/admin_v1/file_manager/pdf/659151224591934100_PDF.pdf"
+            }
+        ],
+        "video_count": 1,
+        "pdf_count": 1
+    },
+    {
+        "subject_name": "Psychology #15",
+        "videos": [
+            {
+                "title": "गेस्टाल्ट सिद्धांत",
+                "url": "https://youtu.be/R4r4Hs1D8cM"
+            }
+        ],
+        "pdfs": [
+            {
+                "title": "गेस्टाल्ट सिद्धांत",
+                "url": "https://apps-s3-prod.utkarshapp.com/admin_v1/file_manager/pdf/477505389822247600_PDF.pdf"
+            }
+        ],
+        "video_count": 1,
+        "pdf_count": 1
+    },
+    {
+        "subject_name": "Psychology #16",
+        "videos": [
+            {
+                "title": "सामाजिक अधिगम अल्बर्ट बान्डूरा सिद्धांत",
+                "url": "https://youtu.be/RmVA1hd_5bM"
+            }
+        ],
+        "pdfs": [
+            {
+                "title": "सामाजिक अधिगम अल्बर्ट बान्डूरा सिद्धांत",
+                "url": "https://apps-s3-prod.utkarshapp.com/admin_v1/file_manager/pdf/259879544189205200_PDF.pdf"
+            }
+        ],
+        "video_count": 1,
+        "pdf_count": 1
+    },
+    {
+        "subject_name": "Psychology #17",
+        "videos": [
+            {
+                "title": "लेव वाइगोत्सकी निर्मितवाद सिद्धान्त",
+                "url": "https://youtu.be/rjxpMjq9rKo"
+            }
+        ],
+        "pdfs": [
+            {
+                "title": "लेव वाइगोत्सकी निर्मितवाद सिद्धान्त",
+                "url": "https://apps-s3-prod.utkarshapp.com/admin_v1/file_manager/pdf/255299287930434340_PDF.pdf"
+            }
+        ],
+        "video_count": 1,
+        "pdf_count": 1
+    },
+    {
+        "subject_name": "Psychology #9",
+        "videos": [
+            {
+                "title": "थोर्नडाइक का सिद्धांत",
+                "url": "https://youtu.be/nxJBuThKEZM"
+            }
+        ],
+        "pdfs": [
+            {
+                "title": "थोर्नडाइक का सिद्धांत",
+                "url": "https://apps-s3-prod.utkarshapp.com/admin_v1/file_manager/pdf/424339500964700700_PDF.pdf"
+            }
+        ],
+        "video_count": 1,
+        "pdf_count": 1
+    },
+    {
+        "subject_name": "Psychology #18",
+        "videos": [
+            {
+                "title": "जैरोम बूर्नर सिद्धान्त",
+                "url": "https://youtu.be/6xqi3Xwsjnk"
+            }
+        ],
+        "pdfs": [
+            {
+                "title": "जैरोम बूर्नर सिद्धान्त",
+                "url": "https://apps-s3-prod.utkarshapp.com/admin_v1/file_manager/pdf/191926555421238370_PDF.pdf"
+            }
+        ],
+        "video_count": 1,
+        "pdf_count": 1
+    },
+    {
+        "subject_name": "Psychology #19",
+        "videos": [
+            {
+                "title": "कार्ल रोजर्स एवं डेविड कोल्ब सिद्धान्त",
+                "url": "https://youtu.be/7qETricHQcE"
+            }
+        ],
+        "pdfs": [
+            {
+                "title": "कार्ल रोजर्स एवं डेविड कोल्ब सिद्धान्त",
+                "url": "https://apps-s3-prod.utkarshapp.com/admin_v1/file_manager/pdf/230286803216946800_PDF.pdf"
+            }
+        ],
+        "video_count": 1,
+        "pdf_count": 1
+    },
+    {
+        "subject_name": "Psychology",
+        "videos": [
+            {
+                "title": "Most Impt Questions",
+                "url": "https://youtu.be/uSP9RJN8lZM"
+            }
+        ],
+        "pdfs": [],
+        "video_count": 1,
+        "pdf_count": 0
+    }
+]

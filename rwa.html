@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RWA | Coming Soon - SZX EDU</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --p-gold: #ffcc00;
+            --p-gold-glow: rgba(255, 204, 0, 0.5);
+            --dark: #080808;
+            --glass-border: rgba(255, 255, 255, 0.06);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: radial-gradient(circle at top left, #16161a, var(--dark) 80%);
+            color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden; /* Prevents scrolling on this page */
+        }
+
+        /* --- Premium Header --- */
+        header { 
+            padding: 20px 5%; 
+            display: flex; justify-content: space-between; align-items: center;
+            background: rgba(8, 8, 8, 0.75); 
+            backdrop-filter: blur(25px); 
+            -webkit-backdrop-filter: blur(25px);
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .logo { 
+            background: linear-gradient(45deg, var(--p-gold), #ffaa00); 
+            color: #000; padding: 8px 22px; border-radius: 12px; 
+            font-weight: 800; font-size: 26px; letter-spacing: 1px;
+            box-shadow: 0 0 25px var(--p-gold-glow); 
+            text-decoration: none;
+        }
+
+        .social-icons a { color: #fff; font-size: 24px; transition: 0.3s; opacity: 0.6; }
+        .social-icons a:hover { opacity: 1; transform: scale(1.15); color: #0088cc; filter: drop-shadow(0 0 10px #0088cc); }
+
+        /* --- Main Content --- */
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 5%;
+        }
+
+        .coaching-title {
+            font-size: 20px;
+            color: var(--p-gold);
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            text-shadow: 0 0 10px rgba(255,204,0,0.3);
+        }
+
+        /* Responsive Huge Text */
+        .coming-soon-text {
+            font-size: 12vw; 
+            font-weight: 800;
+            line-height: 1.1;
+            text-transform: uppercase;
+            background: linear-gradient(to bottom, #ffffff, #555555);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 40px;
+            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
+        }
+
+        /* Premium Back Button */
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+            text-decoration: none;
+            padding: 15px 35px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 600;
+            border: 1px solid var(--glass-border);
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            border-color: var(--p-gold);
+            background: rgba(255, 204, 0, 0.05);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .back-btn i { transition: 0.3s; color: var(--p-gold); }
+        .back-btn:hover i { transform: translateX(-5px); }
+
+        /* Mobile Fixes */
+        @media (max-width: 768px) {
+            .coming-soon-text { font-size: 18vw; } /* Makes it even bigger on mobile screens */
+            .coaching-title { font-size: 16px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">SZX</a>
+        <div class="social-icons">
+            <a href="https://t.me/szxmock" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+        </div>
+    </header>
+
+    <main>
+        <div class="coaching-title"><i class="fa-solid fa-chalkboard-user"></i> RWA Hub</div>
+        <h1 class="coming-soon-text">Coming<br>Soon</h1>
+        
+        <a href="index.html" class="back-btn">
+            <i class="fa-solid fa-arrow-left"></i>
+            Go Back
+        </a>
+    </main>
+
+
+<script>
+    // URL Masking Script
+    window.addEventListener("load", function() {
+        if (window.location.pathname.endsWith('.html') && window.location.pathname !== '/index.html') {
+            let cleanUrl = window.location.pathname.replace('.html', '');
+            window.history.replaceState(null, '', cleanUrl);
+        }
+    });
+</script>
+</body>
+
+</html>

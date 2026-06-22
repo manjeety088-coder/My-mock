@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SZX • Video Classes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --p-gold: #ffcc00;
+            --dark: #080808;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.06);
+            --p-blue: #38bdf8;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: radial-gradient(circle at top left, #16161a, var(--dark) 80%);
+            color: white;
+            min-height: 100vh;
+        }
+
+        /* --- Premium Header --- */
+        header { 
+            padding: 15px 5%; 
+            display: flex; justify-content: space-between; align-items: center;
+            background: rgba(8, 8, 8, 0.75); 
+            backdrop-filter: blur(25px); 
+            -webkit-backdrop-filter: blur(25px);
+            position: sticky; top: 0; 
+            border-bottom: 1px solid var(--glass-border);
+            z-index: 100;
+        }
+
+        .header-left { display: flex; align-items: center; gap: 15px; }
+        .back-icon { color: #fff; font-size: 20px; text-decoration: none; opacity: 0.7; transition: 0.3s; }
+        .back-icon:hover { opacity: 1; color: var(--p-gold); transform: translateX(-3px); }
+        .logo-text { font-size: 18px; font-weight: 700; color: white; letter-spacing: 1px; text-transform: uppercase; }
+
+        .social-icons a { color: #fff; font-size: 20px; transition: 0.3s; opacity: 0.6; }
+        .social-icons a:hover { opacity: 1; color: #0088cc; filter: drop-shadow(0 0 10px #0088cc); }
+
+        /* --- Hero Section --- */
+        .hero { 
+            text-align: center; padding: 50px 5% 30px; 
+            border-bottom: 1px solid var(--glass-border);
+            background: linear-gradient(180deg, rgba(56, 189, 248, 0.05) 0%, transparent 100%);
+        }
+        .hero h1 { 
+            font-size: 38px; font-weight: 800; margin-bottom: 8px; 
+            background: linear-gradient(to right, #ffffff, #aaa); 
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; 
+            text-transform: capitalize;
+        }
+        .hero p { color: var(--p-blue); font-size: 14px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; }
+
+        /* --- Grid Classes --- */
+        #videoContainer {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px; padding: 30px 5% 80px; max-width: 1200px; margin: 0 auto;
+        }
+
+        /* CARD */
+        .vid-card {
+            background: var(--card-bg); border: 1px solid var(--glass-border); border-radius: 16px;
+            padding: 25px 20px; cursor: pointer; backdrop-filter: blur(10px);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex; align-items: center; gap: 15px; position: relative; overflow: hidden;
+        }
+
+        /* Shine effect */
+        .vid-card::after {
+            content: ''; position: absolute; top: 0; left: -100%; width: 50%; height: 100%;
+            background: linear-gradient(to right, transparent, rgba(255,255,255,0.03), transparent);
+            transform: skewX(-25deg); transition: 0.7s;
+        }
+
+        .vid-card:hover::after { left: 150%; }
+
+        .vid-card:hover {
+            transform: translateY(-5px); border-color: var(--p-blue);
+            background: rgba(56, 189, 248, 0.05);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.4), 0 0 15px rgba(56, 189, 248, 0.15);
+        }
+
+        /* ICON */
+        .icon {
+            font-size: 35px; transition: 0.4s;
+            background: linear-gradient(45deg, var(--p-blue), #6366f1);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 5px 10px rgba(56,189,248,0.2));
+            flex-shrink: 0;
+        }
+
+        .vid-card:hover .icon { 
+            background: linear-gradient(45deg, var(--p-gold), #ffaa00);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            transform: scale(1.1); filter: drop-shadow(0 5px 10px rgba(255,204,0,0.4)); 
+        }
+
+        /* TEXT AREA */
+        .text-area { display: flex; flex-direction: column; }
+        .vid-title { font-size: 15px; font-weight: 600; line-height: 1.3; color: white; text-transform: capitalize; margin-bottom: 5px; }
+        .small-text { font-size: 11px; color: #888; text-transform: uppercase; letter-spacing: 1px; }
+
+        .no-data { text-align: center; color: #888; font-size: 18px; padding: 50px; grid-column: 1 / -1; }
+
+        @media (max-width: 600px) {
+            .hero { padding: 40px 5% 20px; }
+            .hero h1 { font-size: 28px; }
+            #videoContainer { grid-template-columns: 1fr; gap: 15px; padding: 20px 5% 50px; }
+            .vid-card { padding: 20px 15px; }
+            .icon { font-size: 30px; }
+            .vid-title { font-size: 14px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-left">
+            <a href="sscvod.html" class="back-icon"><i class="fa-solid fa-arrow-left"></i></a>
+            <div class="logo-text">SZX • Video Hub</div>
+        </div>
+        <div class="social-icons">
+            <a href="https://t.me/szxmock" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+        </div>
+    </header>
+
+    <div class="hero">
+        <h1 id="pageTitle">Loading...</h1>
+        <p>Premium Video Classes</p>
+    </div>
+
+    <div id="videoContainer">
+        </div>
+
+    <script>
+        // 1. URL se subject ka naam nikalna (e.g., ?sub=Arithmetic)
+        const urlParams = new URLSearchParams(window.location.search);
+        let subjectName = urlParams.get('sub');
+        
+        // Agar URL me koi subject nahi hai, to 'All' set kar do
+        if(!subjectName) {
+            subjectName = "All";
+        }
+
+        // Title update karna
+        document.getElementById('pageTitle').innerText = subjectName + " Classes";
+
+        async function loadVideos() {
+            const container = document.getElementById('videoContainer');
+            
+            try {
+                // Video classes data.json se load hongi
+                const res = await fetch("data.json");
+                let data = await res.json();
+                
+                // Player.html ke liye original index ko save karna zaruri hai
+                data = data.map((item, index) => {
+                    item.originalId = index;
+                    return item;
+                });
+
+                // 2. Data Filter karna
+                let filteredData;
+                if(subjectName === "All" || subjectName === "null") {
+                    filteredData = data;
+                } else {
+                    // Sirf wahi videos dikhao jiska subject URL wale subject se match kare
+                    filteredData = data.filter(item => {
+                        const sub = item.subject || "Other";
+                        return sub === subjectName;
+                    });
+                }
+
+                // Agar koi video nahi mili
+                if(filteredData.length === 0) {
+                    container.innerHTML = `<div class="no-data">No classes found for this section.</div>`;
+                    return;
+                }
+
+                // 3. HTML Cards Banana
+                filteredData.forEach(c => {
+                    const div = document.createElement('div');
+                    div.className = 'vid-card';
+                    
+                    const chapterName = c.chapter || c.name || "Video Class";
+                    const classNoText = c.class_no ? `Class ${c.class_no} • ` : "";
+
+                    div.innerHTML = `
+                        <div class="icon"><i class="fa-solid fa-play-circle"></i></div>
+                        <div class="text-area">
+                            <div class="vid-title">${chapterName}</div>
+                            <div class="small-text">${classNoText}Tap to Play</div>
+                        </div>
+                    `;
+
+                    // Click karne par player.html me data.json aur original ID pass hoga
+                    div.onclick = () => {
+                        window.location.href = `player.html?subject=data&id=${c.originalId}`;
+                    };
+
+                    container.appendChild(div);
+                });
+
+            } catch (error) {
+                console.error("Data load error:", error);
+                container.innerHTML = `<div class="no-data" style="color:#f43f5e;">Error loading data. Check data.json file.</div>`;
+            }
+        }
+
+        // Load data on start
+        loadVideos();
+
+        // 4. URL Masking Script (Hide .html)
+        window.addEventListener("load", function() {
+            let currentUrl = window.location.href;
+            if (currentUrl.includes('.html')) {
+                let newUrl = currentUrl.replace('.html', '');
+                window.history.replaceState(null, '', newUrl);
+            }
+        });
+    </script>
+</body>
+</html>

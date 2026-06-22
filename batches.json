@@ -1,0 +1,950 @@
+[
+  {
+    "name": "10th Class VOD Hin Med",
+    "file": "10th-class-vod-hin-med.json"
+  },
+  {
+    "name": "12168 Lower Division Clerk LDC Online CourseRecorded From Jodhpur",
+    "file": "12168-lower-division-clerk-ldc-online-courserecorded-from-jodhpur.json"
+  },
+  {
+    "name": "13098 Introduction of Lab AssistantScience Section Online Course",
+    "file": "13098-introduction-of-lab-assistantscience-section-online-course.json"
+  },
+  {
+    "name": "13524 UP Super TET Primary Batch From Classroom UTKARSH",
+    "file": "13524-up-super-tet-primary-batch-from-classroom-utkarsh.json"
+  },
+  {
+    "name": "14447 Rajasthan Police Constable Batch Recorded From Jodhpur Classroom",
+    "file": "14447-rajasthan-police-constable-batch-recorded-from-jodhpur-classroom.json"
+  },
+  {
+    "name": "14856 GK GSBrahmastra Batch UTKARSH",
+    "file": "14856-gk-gsbrahmastra-batch-utkarsh.json"
+  },
+  {
+    "name": "193 ARMY 2025 GD TDN WMP",
+    "file": "193-army-2025-gd-tdn-wmp.json"
+  },
+  {
+    "name": "1st Grade 1st Paper GK Batch From Studio",
+    "file": "1st-grade-1st-paper-gk-batch-from-studio.json"
+  },
+  {
+    "name": "1st Grade 2nd Paper English Crash Course From Stu",
+    "file": "1st-grade-2nd-paper-english-crash-course-from-stu.json"
+  },
+  {
+    "name": "2nd Grade 1st Paper GK Batch From Jaipur Classro",
+    "file": "2nd-grade-1st-paper-gk-batch-from-jaipur-classro.json"
+  },
+  {
+    "name": "2nd Grade 1st Paper GK Batch Recorded From Jaipu",
+    "file": "2nd-grade-1st-paper-gk-batch-recorded-from-jaipu.json"
+  },
+  {
+    "name": "2nd Grade 1st Paper GK Batch Recorded From Jodhp",
+    "file": "2nd-grade-1st-paper-gk-batch-recorded-from-jodhp.json"
+  },
+  {
+    "name": "2nd Grade First PaperGK Recorded Batch",
+    "file": "2nd-grade-first-papergk-recorded-batch.json"
+  },
+  {
+    "name": "2nd Grade GK 2nd Paper Hindi Combo Batch",
+    "file": "2nd-grade-gk-2nd-paper-hindi-combo-batch.json"
+  },
+  {
+    "name": "2nd Grade 1st Paper G K Batch Recorded From Jodhpur Classroom",
+    "file": "2nd-grade-1st-paper-g-k-batch-recorded-from-jodhpur-classroom.json"
+  },
+  {
+    "name": "2nd Grade 1st Paper G K Batch Recorded From Jodhpur Classroom UTKARSH",
+    "file": "2nd-grade-1st-paper-g-k-batch-recorded-from-jodhpur-classroom-utkarsh.json"
+  },
+  {
+    "name": "2nd Grade 2nd Paper Hindi Batch Recorded From Jodhpur Classroom",
+    "file": "2nd-grade-2nd-paper-hindi-batch-recorded-from-jodhpur-classroom.json"
+  },
+  {
+    "name": "2nd Grade GK B-02 2023-JAIPUR",
+    "file": "2nd-grade-gk-b-02-2023-jaipur.json"
+  },
+  {
+    "name": "2nd Grade Science B-01 2023 - Jaipur",
+    "file": "2nd-grade-science-b-01-2023---jaipur.json"
+  },
+  {
+    "name": "3rd GRADE 1ST LEVELB-02 SEP2023-Jodhpur",
+    "file": "3rd-grade-1st-levelb-02-sep2023-jodhpur.json"
+  },
+  {
+    "name": "3rd Grade Teacher Level 1st Online CourseRecorded From Jodhpur Classroom",
+    "file": "3rd-grade-teacher-level-1st-online-courserecorded-from-jodhpur-classroom.json"
+  },
+  {
+    "name": "4th Grade Batch From Jaip",
+    "file": "4th-grade-batch-from-jaip.json"
+  },
+  {
+    "name": "4th Grade Batch From Jodh",
+    "file": "4th-grade-batch-from-jodh.json"
+  },
+  {
+    "name": "4th Grade Batch From Studio",
+    "file": "4th-grade-batch-from-studio.json"
+  },
+  {
+    "name": "9th Class VOD Hindi Med",
+    "file": "9th-class-vod-hindi-med.json"
+  },
+  {
+    "name": "Advance Math VOD -72",
+    "file": "advance-math-vod--72.json"
+  },
+  {
+    "name": "Aman foundation",
+    "file": "aman-foundation.json"
+  },
+  {
+    "name": "Aman Sir English Foundation By Mendax",
+    "file": "aman-sir-english-foundation-by-mendax.json"
+  },
+  {
+    "name": "Arithmetic Spl VOD -03 Rakesh sir",
+    "file": "arithmetic-spl-vod--03-rakesh-sir.json"
+  },
+  {
+    "name": "Arithmetic Spl VOD -74",
+    "file": "arithmetic-spl-vod--74.json"
+  },
+  {
+    "name": "Arithmetic Spl VOD -80 Gagan sir",
+    "file": "arithmetic-spl-vod--80-gagan-sir.json"
+  },
+  {
+    "name": "Arithmetic Spl VOD-04",
+    "file": "arithmetic-spl-vod-04.json"
+  },
+  {
+    "name": "Bank Spl-33 LiveVOD",
+    "file": "bank-spl-33-livevod.json"
+  },
+  {
+    "name": "Bank Spl -33 Live VOD",
+    "file": "bank-spl--33-live-vod.json"
+  },
+  {
+    "name": "Basic Grammar",
+    "file": "basic-grammar.json"
+  },
+  {
+    "name": "Basic Sci Engg Drawing-05",
+    "file": "basic-sci-engg-drawing-05.json"
+  },
+  {
+    "name": "Basic Grammar",
+    "file": "basic-grammar.json"
+  },
+  {
+    "name": "BATCH MINI COLLECTION",
+    "file": "batch-mini-collection.json"
+  },
+  {
+    "name": "BOARD CUET UG 2025 ARTS HINDI MEDIUM",
+    "file": "board-cuet-ug-2025-arts-hindi-medium.json"
+  },
+  {
+    "name": "E1 coaching Math Reasoning Bhutesh sir",
+    "file": "e1-coaching-math-reasoning-bhutesh-sir.json"
+  },
+  {
+    "name": "FOUNDATION BATCH COMPLETE ENGLISH",
+    "file": "foundation-batch-complete-english.json"
+  },
+  {
+    "name": "Intense Maths Revision IMR",
+    "file": "intense-maths-revision-imr.json"
+  },
+  {
+    "name": "MATHS SPL 53 GAGAN PRATAP PRE TO MAINE",
+    "file": "maths-spl-53-gagan-pratap-pre-to-maine.json"
+  },
+  {
+    "name": "Maths Spl-23 Pre Mains Gagan sir",
+    "file": "maths-spl-23-pre-mains-gagan-sir.json"
+  },
+  {
+    "name": "Maths Spl21 PreMains",
+    "file": "maths-spl21-premains.json"
+  },
+  {
+    "name": "POCKET GK BATCH",
+    "file": "pocket-gk-batch.json"
+  },
+  {
+    "name": "Rakesh CW Maths Spl-10 PreMains",
+    "file": "rakesh-cw-maths-spl-10-premains.json"
+  },
+  {
+    "name": "SBI CLERK PO TargetBatch",
+    "file": "sbi-clerk-po-targetbatch.json"
+  },
+  {
+    "name": "SUPER 100 FEB 2025",
+    "file": "super-100-feb-2025.json"
+  },
+  {
+    "name": "UP SI 2025",
+    "file": "up-si-2025.json"
+  },
+  {
+    "name": "Advance Math VOD 72",
+    "file": "advance-math-vod-72.json"
+  },
+  {
+    "name": "Advance Math VOD-72",
+    "file": "advance-math-vod-72.json"
+  },
+  {
+    "name": "CGL Mains 2024 Maths Spl Gagan sir",
+    "file": "cgl-mains-2024-maths-spl-gagan-sir.json"
+  },
+  {
+    "name": "CGL Mains Maths Practice Batch Abhinay sir",
+    "file": "cgl-mains-maths-practice-batch-abhinay-sir.json"
+  },
+  {
+    "name": "E1 coaching Complete Math Pre Mains",
+    "file": "e1-coaching-complete-math-pre-mains.json"
+  },
+  {
+    "name": "Gagan CW Maths Spl-34 PreMains",
+    "file": "gagan-cw-maths-spl-34-premains.json"
+  },
+  {
+    "name": "Maths Foundation Batch 1",
+    "file": "maths-foundation-batch-1.json"
+  },
+  {
+    "name": "Maths Spl B-12 by Gagan pratap",
+    "file": "maths-spl-b-12-by-gagan-pratap.json"
+  },
+  {
+    "name": "Maths Spl-01 Toppers Batch",
+    "file": "maths-spl-01-toppers-batch.json"
+  },
+  {
+    "name": "Maths Spl-10 PreMains",
+    "file": "maths-spl-10-premains.json"
+  },
+  {
+    "name": "Maths Spl-21 PreMains",
+    "file": "maths-spl-21-premains.json"
+  },
+  {
+    "name": "Maths Spl-28 PreMains",
+    "file": "maths-spl-28-premains.json"
+  },
+  {
+    "name": "Maths Spl-32 Pre Mains Gagan sir",
+    "file": "maths-spl-32-pre-mains-gagan-sir.json"
+  },
+  {
+    "name": "Maths Spl-33 Pre Mains Gagan sir",
+    "file": "maths-spl-33-pre-mains-gagan-sir.json"
+  },
+  {
+    "name": "Maths Spl-33 Pre Mains Gagan sir",
+    "file": "maths-spl-33-pre-mains-gagan-sir.json"
+  },
+  {
+    "name": "Maths Spl-34 PreMains 1",
+    "file": "maths-spl-34-premains-1.json"
+  },
+  {
+    "name": "Maths Spl-43 Live Batch 1",
+    "file": "maths-spl-43-live-batch-1.json"
+  },
+  {
+    "name": "Maths Spl-48",
+    "file": "maths-spl-48.json"
+  },
+  {
+    "name": "Maths VOD ArithAdv B-12 videos",
+    "file": "maths-vod-arithadv-b-12-videos.json"
+  },
+  {
+    "name": "Maths VOD Arith Adv B-04",
+    "file": "maths-vod-arith-adv-b-04.json"
+  },
+  {
+    "name": "Maths VOD Arith Adv B-14",
+    "file": "maths-vod-arith-adv-b-14.json"
+  },
+  {
+    "name": "Railway Maths Spl 2024-25 2",
+    "file": "railway-maths-spl-2024-25-2.json"
+  },
+  {
+    "name": "Railway Maths Spl 2024-25",
+    "file": "railway-maths-spl-2024-25.json"
+  },
+  {
+    "name": "Rakesh CW Maths Spl-10 PreMains",
+    "file": "rakesh-cw-maths-spl-10-premains.json"
+  },
+  {
+    "name": "Rakesh CW Railway Maths Spl 2024-25",
+    "file": "rakesh-cw-railway-maths-spl-2024-25.json"
+  },
+  {
+    "name": "CGL Mains 2024 Maths Spl Gagan sir",
+    "file": "cgl-mains-2024-maths-spl-gagan-sir.json"
+  },
+  {
+    "name": "CGL Mains Maths Practice Batch Abhinay sir",
+    "file": "cgl-mains-maths-practice-batch-abhinay-sir.json"
+  },
+  {
+    "name": "CHAMPIONS 200 Maths Special LIVE BATCH by ADITYA",
+    "file": "champions-200-maths-special-live-batch-by-aditya.json"
+  },
+  {
+    "name": "CHAMPIONS 20 0 Maths Special LIVE BATCH by ADITYA SIR Arithmetic",
+    "file": "champions-20-0-maths-special-live-batch-by-aditya-sir-arithmetic.json"
+  },
+  {
+    "name": "COMPUTER Special VOD Batch By LABH SINGH NAIN SIR UPDATED",
+    "file": "computer-special-vod-batch-by-labh-singh-nain-sir-updated.json"
+  },
+  {
+    "name": "Crash Course For English Live",
+    "file": "crash-course-for-english-live.json"
+  },
+  {
+    "name": "Current Affairs 2025",
+    "file": "current-affairs-2025.json"
+  },
+  {
+    "name": "CURRENT AFFAIRS",
+    "file": "current-affairs.json"
+  },
+  {
+    "name": "CW GS Special Live Batch-01",
+    "file": "cw-gs-special-live-batch-01.json"
+  },
+  {
+    "name": "Delhi Police Constable 2024 1",
+    "file": "delhi-police-constable-2024-1.json"
+  },
+  {
+    "name": "Delhi Police Constable 2024 2",
+    "file": "delhi-police-constable-2024-2.json"
+  },
+  {
+    "name": "Delhi Police Constable 2024",
+    "file": "delhi-police-constable-2024.json"
+  },
+  {
+    "name": "Delhi Police Constable 2024 videos",
+    "file": "delhi-police-constable-2024-videos.json"
+  },
+  {
+    "name": "Delhi Police Constable 2024",
+    "file": "delhi-police-constable-2024.json"
+  },
+  {
+    "name": "DSSSB 2024 GP B-05",
+    "file": "dsssb-2024-gp-b-05.json"
+  },
+  {
+    "name": "Economy Spl-12",
+    "file": "economy-spl-12.json"
+  },
+  {
+    "name": "Eng Spl-107 LiveVOD",
+    "file": "eng-spl-107-livevod.json"
+  },
+  {
+    "name": "Eng Spl-112 LiveVOD",
+    "file": "eng-spl-112-livevod.json"
+  },
+  {
+    "name": "Eng Spl Live VOD -32",
+    "file": "eng-spl-live-vod--32.json"
+  },
+  {
+    "name": "Eng Spl Live VOD -33",
+    "file": "eng-spl-live-vod--33.json"
+  },
+  {
+    "name": "Eng Spl Live VOD -34",
+    "file": "eng-spl-live-vod--34.json"
+  },
+  {
+    "name": "Eng Spl Live VOD -36",
+    "file": "eng-spl-live-vod--36.json"
+  },
+  {
+    "name": "English Foundation Batch 1",
+    "file": "english-foundation-batch-1.json"
+  },
+  {
+    "name": "English Foundation Batch 2",
+    "file": "english-foundation-batch-2.json"
+  },
+  {
+    "name": "English Foundation Batch",
+    "file": "english-foundation-batch.json"
+  },
+  {
+    "name": "English Spl-10 LiveVOD 1",
+    "file": "english-spl-10-livevod-1.json"
+  },
+  {
+    "name": "English Spl-10 LiveVOD",
+    "file": "english-spl-10-livevod.json"
+  },
+  {
+    "name": "English Spl-17 Live VOD",
+    "file": "english-spl-17-live-vod.json"
+  },
+  {
+    "name": "English Spl-23 LiveVOD",
+    "file": "english-spl-23-livevod.json"
+  },
+  {
+    "name": "English Spl-27 Live VOD 1",
+    "file": "english-spl-27-live-vod-1.json"
+  },
+  {
+    "name": "English Spl-27 Live VOD",
+    "file": "english-spl-27-live-vod.json"
+  },
+  {
+    "name": "English Spoken-17",
+    "file": "english-spoken-17.json"
+  },
+  {
+    "name": "English Foundation Batch",
+    "file": "english-foundation-batch.json"
+  },
+  {
+    "name": "FREE Mock Tests for NDA Exam",
+    "file": "free-mock-tests-for-nda-exam.json"
+  },
+  {
+    "name": "Gagan CW Maths Spl-34 PreMains",
+    "file": "gagan-cw-maths-spl-34-premains.json"
+  },
+  {
+    "name": "Geography Spl-07 Live VOD",
+    "file": "geography-spl-07-live-vod.json"
+  },
+  {
+    "name": "GK GSBrahmastra 30 Batch",
+    "file": "gk-gsbrahmastra-30-batch.json"
+  },
+  {
+    "name": "GS Special Live Batch-01",
+    "file": "gs-special-live-batch-01.json"
+  },
+  {
+    "name": "GS Special Live Batch -02",
+    "file": "gs-special-live-batch--02.json"
+  },
+  {
+    "name": "GS Spl-07 LiveVOD",
+    "file": "gs-spl-07-livevod.json"
+  },
+  {
+    "name": "GS Spl-08 Live VOD",
+    "file": "gs-spl-08-live-vod.json"
+  },
+  {
+    "name": "GS Spl-14 Live VOD",
+    "file": "gs-spl-14-live-vod.json"
+  },
+  {
+    "name": "GS Spl-16 Live VOD",
+    "file": "gs-spl-16-live-vod.json"
+  },
+  {
+    "name": "GS Spl-17 Live VOD",
+    "file": "gs-spl-17-live-vod.json"
+  },
+  {
+    "name": "GS-Special-22-Converted-WatchButton",
+    "file": "gs-special-22-converted-watchbutton.json"
+  },
+  {
+    "name": "GS SPECIAL BATCH START FROM 18th Dec 2024 BY DEEPAK SIRSUSHANT",
+    "file": "gs-special-batch-start-from-18th-dec-2024-by-deepak-sirsushant.json"
+  },
+  {
+    "name": "Haryana GK Special",
+    "file": "haryana-gk-special.json"
+  },
+  {
+    "name": "Hindi Special-53",
+    "file": "hindi-special-53.json"
+  },
+  {
+    "name": "History Spl-07 Live VOD",
+    "file": "history-spl-07-live-vod.json"
+  },
+  {
+    "name": "History Spl-08 Live VOD",
+    "file": "history-spl-08-live-vod.json"
+  },
+  {
+    "name": "Jaideep CW English Spl-10 LiveVOD",
+    "file": "jaideep-cw-english-spl-10-livevod.json"
+  },
+  {
+    "name": "Lab Assistant Science Paper 2 Batch Recorded From Jaipur Classroom",
+    "file": "lab-assistant-science-paper-2-batch-recorded-from-jaipur-classroom.json"
+  },
+  {
+    "name": "LDC B-06 SEPTEMBER- 2022- JODHPUR",
+    "file": "ldc-b-06-september--2022--jodhpur.json"
+  },
+  {
+    "name": "Live 0-100 Complete CS",
+    "file": "live-0-100-complete-cs.json"
+  },
+  {
+    "name": "Math Reasoning Bhutesh sir",
+    "file": "math-reasoning-bhutesh-sir.json"
+  },
+  {
+    "name": "MathematicsAll Exam Review By Kishor Sir",
+    "file": "mathematicsall-exam-review-by-kishor-sir.json"
+  },
+  {
+    "name": "Maths Special By Anuj Seth Sir - NDA2 2025",
+    "file": "maths-special-by-anuj-seth-sir---nda2-2025.json"
+  },
+  {
+    "name": "Maths Spl-10 PreMains",
+    "file": "maths-spl-10-premains.json"
+  },
+  {
+    "name": "Maths Spl-114 Arith Adv",
+    "file": "maths-spl-114-arith-adv.json"
+  },
+  {
+    "name": "Maths Spl-13 Pre Mains",
+    "file": "maths-spl-13-pre-mains.json"
+  },
+  {
+    "name": "Maths Spl-23 Pre Mains",
+    "file": "maths-spl-23-pre-mains.json"
+  },
+  {
+    "name": "Maths Spl-23 Pre Mains Gagan sir",
+    "file": "maths-spl-23-pre-mains-gagan-sir.json"
+  },
+  {
+    "name": "Maths Spl-32 Pre Mains Gagan sir",
+    "file": "maths-spl-32-pre-mains-gagan-sir.json"
+  },
+  {
+    "name": "Maths Spl-33 Pre Mains Gagan sir",
+    "file": "maths-spl-33-pre-mains-gagan-sir.json"
+  },
+  {
+    "name": "Maths Spl-34 PreMains 1 1",
+    "file": "maths-spl-34-premains-1-1.json"
+  },
+  {
+    "name": "Maths Spl-34 PreMains 1",
+    "file": "maths-spl-34-premains-1.json"
+  },
+  {
+    "name": "Maths Spl-34 PreMains 2",
+    "file": "maths-spl-34-premains-2.json"
+  },
+  {
+    "name": "Maths Spl-42 Pre Mains",
+    "file": "maths-spl-42-pre-mains.json"
+  },
+  {
+    "name": "Maths Spl-43 Live Batch 1",
+    "file": "maths-spl-43-live-batch-1.json"
+  },
+  {
+    "name": "Maths Spl-48",
+    "file": "maths-spl-48.json"
+  },
+  {
+    "name": "Maths Spl Recorded Batch B-15",
+    "file": "maths-spl-recorded-batch-b-15.json"
+  },
+  {
+    "name": "Maths Spl Recorded Batch B-17",
+    "file": "maths-spl-recorded-batch-b-17.json"
+  },
+  {
+    "name": "Maths Spl Recorded B-24",
+    "file": "maths-spl-recorded-b-24.json"
+  },
+  {
+    "name": "Maths VOD ArithAdv B-02",
+    "file": "maths-vod-arithadv-b-02.json"
+  },
+  {
+    "name": "Maths VOD ArithAdv B-12",
+    "file": "maths-vod-arithadv-b-12.json"
+  },
+  {
+    "name": "Maths VOD ArithAdv B-12 videos",
+    "file": "maths-vod-arithadv-b-12-videos.json"
+  },
+  {
+    "name": "Maths VOD Arith Adv B-04 1",
+    "file": "maths-vod-arith-adv-b-04-1.json"
+  },
+  {
+    "name": "Maths VOD Arith Adv B-04",
+    "file": "maths-vod-arith-adv-b-04.json"
+  },
+  {
+    "name": "Maths VOD Arith Adv B-06",
+    "file": "maths-vod-arith-adv-b-06.json"
+  },
+  {
+    "name": "Maths VOD Arith Adv B-11",
+    "file": "maths-vod-arith-adv-b-11.json"
+  },
+  {
+    "name": "Maths VOD Arith Adv B-12",
+    "file": "maths-vod-arith-adv-b-12.json"
+  },
+  {
+    "name": "Maths VOD Arith Adv B-14",
+    "file": "maths-vod-arith-adv-b-14.json"
+  },
+  {
+    "name": "Maths Foundation Batch 1",
+    "file": "maths-foundation-batch-1.json"
+  },
+  {
+    "name": "Maths Foundation Batch",
+    "file": "maths-foundation-batch.json"
+  },
+  {
+    "name": "Maths Foundation Batch",
+    "file": "maths-foundation-batch.json"
+  },
+  {
+    "name": "Maths Spl-21 PreMains",
+    "file": "maths-spl-21-premains.json"
+  },
+  {
+    "name": "Maths Spl-28 PreMains",
+    "file": "maths-spl-28-premains.json"
+  },
+  {
+    "name": "Maths Spl-31 PreMains",
+    "file": "maths-spl-31-premains.json"
+  },
+  {
+    "name": "MATHS FOUNDATION BATCH ARITHMETIC ADVANCE",
+    "file": "maths-foundation-batch-arithmetic-advance.json"
+  },
+  {
+    "name": "Merged GS Special Batch 01 02 with links",
+    "file": "merged-gs-special-batch-01-02-with-links.json"
+  },
+  {
+    "name": "NCERT Foundation Batch Hindi Medium 1499",
+    "file": "ncert-foundation-batch-hindi-medium-1499.json"
+  },
+  {
+    "name": "NCERT Foundation Batch UTKARSH",
+    "file": "ncert-foundation-batch-utkarsh.json"
+  },
+  {
+    "name": "NEET UG - Previous Years Paper Solution",
+    "file": "neet-ug---previous-years-paper-solution.json"
+  },
+  {
+    "name": "NEET UG 2023 24",
+    "file": "neet-ug-2023-24.json"
+  },
+  {
+    "name": "NTPC ALP Technician Kranti Batch",
+    "file": "ntpc-alp-technician-kranti-batch.json"
+  },
+  {
+    "name": "NURSING ENTRANCE 2025 BOOSTER DOSE BILINGUAL",
+    "file": "nursing-entrance-2025-booster-dose-bilingual.json"
+  },
+  {
+    "name": "Offline SSC Spl-11 2025",
+    "file": "offline-ssc-spl-11-2025.json"
+  },
+  {
+    "name": "Patwar Batch Recorded From Jodhpur Classroom",
+    "file": "patwar-batch-recorded-from-jodhpur-classroom.json"
+  },
+  {
+    "name": "Patwari B-02 Jun 2024 - Jodhpur",
+    "file": "patwari-b-02-jun-2024---jodhpur.json"
+  },
+  {
+    "name": "Patwar 10 Exam Pattern Test Series-01",
+    "file": "patwar-10-exam-pattern-test-series-01.json"
+  },
+  {
+    "name": "Patwar 10 Exam Pattern Test Series-02",
+    "file": "patwar-10-exam-pattern-test-series-02.json"
+  },
+  {
+    "name": "Patwar 10 Exam Pattern Test Series-03",
+    "file": "patwar-10-exam-pattern-test-series-03.json"
+  },
+  {
+    "name": "Patwar 10 Exam Pattern Test Series-04",
+    "file": "patwar-10-exam-pattern-test-series-04.json"
+  },
+  {
+    "name": "Patwar 10 Exam Pattern Test Series-05",
+    "file": "patwar-10-exam-pattern-test-series-05.json"
+  },
+  {
+    "name": "Patwar 10 Exam Pattern Test Series-06",
+    "file": "patwar-10-exam-pattern-test-series-06.json"
+  },
+  {
+    "name": "Patwar 10 Exam Pattern Test Series-07",
+    "file": "patwar-10-exam-pattern-test-series-07.json"
+  },
+  {
+    "name": "Patwar 10 Exam Pattern Test Series-08",
+    "file": "patwar-10-exam-pattern-test-series-08.json"
+  },
+  {
+    "name": "Patwar 10 Exam Pattern Test Series-09",
+    "file": "patwar-10-exam-pattern-test-series-09.json"
+  },
+  {
+    "name": "Patwar 10 Exam Pattern Test Series-10",
+    "file": "patwar-10-exam-pattern-test-series-10.json"
+  },
+  {
+    "name": "Piyush CW Reas Spl-26 LiveVOD",
+    "file": "piyush-cw-reas-spl-26-livevod.json"
+  },
+  {
+    "name": "Practice Batch For SSC 2025 Exams LIVE Recorded Rani Maam",
+    "file": "practice-batch-for-ssc-2025-exams-live-recorded-rani-maam.json"
+  },
+  {
+    "name": "Prime Batch For Fresher Rec-02 Rakesh sir",
+    "file": "prime-batch-for-fresher-rec-02-rakesh-sir.json"
+  },
+  {
+    "name": "Psychology For All Teaching Exam",
+    "file": "psychology-for-all-teaching-exam.json"
+  },
+  {
+    "name": "Railway Maths Spl 2024-25 2",
+    "file": "railway-maths-spl-2024-25-2.json"
+  },
+  {
+    "name": "Railway Maths Spl 2024-25",
+    "file": "railway-maths-spl-2024-25.json"
+  },
+  {
+    "name": "Rajasthan 3rd Grade Level 1st Test Series",
+    "file": "rajasthan-3rd-grade-level-1st-test-series.json"
+  },
+  {
+    "name": "Rajasthan Current Affairs 2025",
+    "file": "rajasthan-current-affairs-2025.json"
+  },
+  {
+    "name": "Rajasthan Police Constable Online CourseLive From Jodhpur Classroom",
+    "file": "rajasthan-police-constable-online-courselive-from-jodhpur-classroom.json"
+  },
+  {
+    "name": "Rakesh CW Maths Spl-10 PreMains",
+    "file": "rakesh-cw-maths-spl-10-premains.json"
+  },
+  {
+    "name": "Rakesh CW Railway Maths Spl 2024-25",
+    "file": "rakesh-cw-railway-maths-spl-2024-25.json"
+  },
+  {
+    "name": "Rankers 18 0 English Special LIVE Batch by PRASHANT SIR Pre M",
+    "file": "rankers-18-0-english-special-live-batch-by-prashant-sir-pre-m.json"
+  },
+  {
+    "name": "Reas Spl-10 LiveVOD",
+    "file": "reas-spl-10-livevod.json"
+  },
+  {
+    "name": "Reas Spl-16 Live VOD",
+    "file": "reas-spl-16-live-vod.json"
+  },
+  {
+    "name": "Reas Spl-20 Live VOD",
+    "file": "reas-spl-20-live-vod.json"
+  },
+  {
+    "name": "Reas Spl-25 Live VOD",
+    "file": "reas-spl-25-live-vod.json"
+  },
+  {
+    "name": "Reas Spl-26 LiveVOD",
+    "file": "reas-spl-26-livevod.json"
+  },
+  {
+    "name": "Reas Spl-27 Live VOD",
+    "file": "reas-spl-27-live-vod.json"
+  },
+  {
+    "name": "Reas Spl-30 LiveVOD",
+    "file": "reas-spl-30-livevod.json"
+  },
+  {
+    "name": "Reas Spl-31 Live VOD",
+    "file": "reas-spl-31-live-vod.json"
+  },
+  {
+    "name": "Reas Spl Live VOD -34",
+    "file": "reas-spl-live-vod--34.json"
+  },
+  {
+    "name": "Reasoning Spl-45",
+    "file": "reasoning-spl-45.json"
+  },
+  {
+    "name": "Reasoning Special 24 With PDFs",
+    "file": "reasoning-special-24-with-pdfs.json"
+  },
+  {
+    "name": "Reasoning Special LIVE By Vikramjeet Sir New Batch starts from 1",
+    "file": "reasoning-special-live-by-vikramjeet-sir-new-batch-starts-from-1.json"
+  },
+  {
+    "name": "REASONING Special VOD RECORDED BATCH by VIKRAMJEET SIR Pre Mai",
+    "file": "reasoning-special-vod-recorded-batch-by-vikramjeet-sir-pre-mai.json"
+  },
+  {
+    "name": "REET Level 2nd SST Test Series 2024",
+    "file": "reet-level-2nd-sst-test-series-2024.json"
+  },
+  {
+    "name": "REET Level 2nd SST BatchRecorded From Jodhpur Classroom",
+    "file": "reet-level-2nd-sst-batchrecorded-from-jodhpur-classroom.json"
+  },
+  {
+    "name": "REET Level 2nd Science Maths Test Series 2024",
+    "file": "reet-level-2nd-science-maths-test-series-2024.json"
+  },
+  {
+    "name": "RPSC Assistant Statistical Officer",
+    "file": "rpsc-assistant-statistical-officer.json"
+  },
+  {
+    "name": "RRB Group-D Express B-01",
+    "file": "rrb-group-d-express-b-01.json"
+  },
+  {
+    "name": "Sci Spl TGT Live VOD",
+    "file": "sci-spl-tgt-live-vod.json"
+  },
+  {
+    "name": "Sci Spl Railway Exam Others B-26",
+    "file": "sci-spl-railway-exam-others-b-26.json"
+  },
+  {
+    "name": "Sci Spl Railway Other Exams B-27",
+    "file": "sci-spl-railway-other-exams-b-27.json"
+  },
+  {
+    "name": "SCIENCE SPECIAL BATCH START FROM 18th Dec 2024 BY RADHIKA MA AM",
+    "file": "science-special-batch-start-from-18th-dec-2024-by-radhika-ma-am.json"
+  },
+  {
+    "name": "Sci Spl Railway Exam Others B 26",
+    "file": "sci-spl-railway-exam-others-b-26.json"
+  },
+  {
+    "name": "SSC Aarambh Recorded Batch",
+    "file": "ssc-aarambh-recorded-batch.json"
+  },
+  {
+    "name": "SSC Aarambh Batch-01 1",
+    "file": "ssc-aarambh-batch-01-1.json"
+  },
+  {
+    "name": "SSC Aarambh Batch-01",
+    "file": "ssc-aarambh-batch-01.json"
+  },
+  {
+    "name": "SSC Aarambh Batch-05",
+    "file": "ssc-aarambh-batch-05.json"
+  },
+  {
+    "name": "SSC Aarambh Recorded Batch",
+    "file": "ssc-aarambh-recorded-batch.json"
+  },
+  {
+    "name": "SSC Aarambh-06 1",
+    "file": "ssc-aarambh-06-1.json"
+  },
+  {
+    "name": "SSC Aarambh-06",
+    "file": "ssc-aarambh-06.json"
+  },
+  {
+    "name": "SSC Pratham Batch-01",
+    "file": "ssc-pratham-batch-01.json"
+  },
+  {
+    "name": "SSC Pratham Batch-04",
+    "file": "ssc-pratham-batch-04.json"
+  },
+  {
+    "name": "SSC Pratham Batch-04 videos",
+    "file": "ssc-pratham-batch-04-videos.json"
+  },
+  {
+    "name": "Super 100 Batch 2025 Feb",
+    "file": "super-100-batch-2025-feb.json"
+  },
+  {
+    "name": "UP-SI 2024 VOD Batch",
+    "file": "up-si-2024-vod-batch.json"
+  },
+  {
+    "name": "UP-SI 2025 Foundation Batch B-01",
+    "file": "up-si-2025-foundation-batch-b-01.json"
+  },
+  {
+    "name": "UP-SI 2025 Rakesh Sir Team notes and videos",
+    "file": "up-si-2025-rakesh-sir-team-notes-and-videos.json"
+  },
+  {
+    "name": "UPSC CSAT 2025 B-02",
+    "file": "upsc-csat-2025-b-02.json"
+  },
+  {
+    "name": "UPSC NDA-2 Paramveer 3 0",
+    "file": "upsc-nda-2-paramveer-3-0.json"
+  },
+  {
+    "name": "UPSC Pre Mains Batch-II English Medium 2025 decrypted",
+    "file": "upsc-pre-mains-batch-ii-english-medium-2025-decrypted.json"
+  },
+  {
+    "name": "Bruce Wayne Maths Spl 02 Toppers Batch Abhinay Sharma Sir notes",
+    "file": "bruce-wayne-maths-spl-02-toppers-batch-abhinay-sharma-sir-notes.json"
+  }
+]

@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<title>Other | Premium Course Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<div class="topbar">
+  <div class="nav">
+    <a class="brand" href="index.html">
+      <span class="logo-dot"></span>
+      <span>SZX Studio</span>
+    </a>
+    <div class="nav-actions">
+      <a class="nav-btn" href="index.html">🏠 Chapters</a>
+      <a class="nav-btn" href="pdfs.html">📄 All PDFs</a>
+    </div>
+  </div>
+</div>
+
+
+<section class="hero">
+  <div class="badge">Chapter Page</div>
+  <h1>Other</h1>
+  <p class="subtitle">Is chapter ke andar JSON ke order ke hisab se saari classes aur matching PDF/notes diye gaye hain.</p>
+  <div class="stats"><div class="stat"><strong>3</strong><span>Videos</span></div><div class="stat"><strong>75</strong><span>PDFs</span></div><div class="stat"><strong>Reas (VOD), Notes</strong><span>Section</span></div></div>
+</section>
+
+<main class="wrap">
+<h2 class="section-title">🎬 Videos</h2>
+
+<div class="tools">
+  <input class="search" id="searchInput" placeholder="Search classes in this chapter..." oninput="filterCards()">
+</div>
+<script>
+function filterCards(){
+  const q = document.getElementById('searchInput').value.toLowerCase().trim();
+  document.querySelectorAll('[data-search]').forEach(el => {
+    const ok = el.dataset.search.toLowerCase().includes(q);
+    el.style.display = ok ? '' : 'none';
+  });
+}
+</script>
+
+<div class="list">
+
+<a class="item" data-search="Reas  Class-82  Dice Reas (VOD)" href="player.html?video=https%3A%2F%2Fedge.api.brightcove.com%2Fplayback%2Fv1%2Faccounts%2F6206459123001%2Fvideos%2F6307562480112%2Fmaster.m3u8%3Fbcov_auth%3DeyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3NDczMDQ3MzMsImNvbiI6eyJpc0FkbWluIjpmYWxzZSwiYXVzZXIiOiJVMFZ6TkdGU2NuQlZjR3h5TkZwV09FYzBURGxOZHowOSIsImlkIjoiTW1Kb1ZEUnROVGxGYlhaelZVNVFOaXRQSzNkdWR6MDkiLCJmaXJzdF9uYW1lIjoiYm5ack9GUXJVblpJVldFNGNsRkphRlZHT1UwNVVUMDkiLCJlbWFpbCI6ImFFdHNWRUZRYjBWdE5ISlRZbU5JYTJWcU56TnhVVlZwZDAxQ1RVOHdXbm8wVTNwVGNreFJXbWRtUVQwPSIsInBob25lIjoiU0ZsdmRuSTBXbllyV0dZdmJEUkRRakJzZEVSMFVUMDkiLCJhdmF0YXIiOiJLM1ZzY1M4elMwcDBRbmxrYms4M1JEbHZla05pVVQwOSIsInJlZmVycmFsX2NvZGUiOiJaa0p0TWtOTllWVjBlbVZsVTBOVGFVVnVRM2N5VVQwOSIsImRldmljZV90eXBlIjoiYW5kcm9pZCIsImRldmljZV92ZXJzaW9uIjoiUyhBbmRyb2lkIDEyLjApIiwiZGV2aWNlX21vZGVsIjoiWGlhb21pIE1pIDEwIFBybyIsInJlbW90ZV9hZGRyIjoiNDQuMjExLjc5LjE0NCJ9fQ.AgeSw8LGTdSdAf8ldazXdbMgNPn0R7v_cgzdZvO750eF1kL_4kEObNccdlg66HSNlI4dX4dkFMHqx48j7Q5kt-bxFkJW0o1am2kcSW0FCRoNz-Y3_oE7auBxZ1YkNusecRVhOJHZynv4d4-Y-hUwzevOY8Fl3L_NGGzZ-Ztj94EPqdGR0JwGwUKjfpJvqZWz6ndqJjXp8FjkLERMPTEGdd9gigQJ-xrARND6uvW2QkIRCqIM-Lz-S-evPGUT6zKEeF3enVocSJkChyVorGCGrISH4nx8aO_8d4v1pNGRC0QhWBKaSTcpo2_n_GDs789tLKRGqS-g7ObpKFjhoHINhg">
+  <div class="item-left">
+    <span class="icon">▶</span>
+    <div>
+      <div class="item-title">Reas  Class-82  Dice</div>
+      <div class="item-sub">Reas (VOD) • Reas  Class-82  Dice</div>
+    </div>
+  </div>
+  <span class="arrow">›</span>
+</a>
+
+
+<a class="item" data-search="Reas  Class-83  Dice Reas (VOD)" href="player.html?video=https%3A%2F%2Fedge.api.brightcove.com%2Fplayback%2Fv1%2Faccounts%2F6206459123001%2Fvideos%2F6307619584112%2Fmaster.m3u8%3Fbcov_auth%3DeyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3NDczMDQ3MzMsImNvbiI6eyJpc0FkbWluIjpmYWxzZSwiYXVzZXIiOiJVMFZ6TkdGU2NuQlZjR3h5TkZwV09FYzBURGxOZHowOSIsImlkIjoiTW1Kb1ZEUnROVGxGYlhaelZVNVFOaXRQSzNkdWR6MDkiLCJmaXJzdF9uYW1lIjoiYm5ack9GUXJVblpJVldFNGNsRkphRlZHT1UwNVVUMDkiLCJlbWFpbCI6ImFFdHNWRUZRYjBWdE5ISlRZbU5JYTJWcU56TnhVVlZwZDAxQ1RVOHdXbm8wVTNwVGNreFJXbWRtUVQwPSIsInBob25lIjoiU0ZsdmRuSTBXbllyV0dZdmJEUkRRakJzZEVSMFVUMDkiLCJhdmF0YXIiOiJLM1ZzY1M4elMwcDBRbmxrYms4M1JEbHZla05pVVQwOSIsInJlZmVycmFsX2NvZGUiOiJaa0p0TWtOTllWVjBlbVZsVTBOVGFVVnVRM2N5VVQwOSIsImRldmljZV90eXBlIjoiYW5kcm9pZCIsImRldmljZV92ZXJzaW9uIjoiUyhBbmRyb2lkIDEyLjApIiwiZGV2aWNlX21vZGVsIjoiWGlhb21pIE1pIDEwIFBybyIsInJlbW90ZV9hZGRyIjoiNDQuMjExLjc5LjE0NCJ9fQ.AgeSw8LGTdSdAf8ldazXdbMgNPn0R7v_cgzdZvO750eF1kL_4kEObNccdlg66HSNlI4dX4dkFMHqx48j7Q5kt-bxFkJW0o1am2kcSW0FCRoNz-Y3_oE7auBxZ1YkNusecRVhOJHZynv4d4-Y-hUwzevOY8Fl3L_NGGzZ-Ztj94EPqdGR0JwGwUKjfpJvqZWz6ndqJjXp8FjkLERMPTEGdd9gigQJ-xrARND6uvW2QkIRCqIM-Lz-S-evPGUT6zKEeF3enVocSJkChyVorGCGrISH4nx8aO_8d4v1pNGRC0QhWBKaSTcpo2_n_GDs789tLKRGqS-g7ObpKFjhoHINhg">
+  <div class="item-left">
+    <span class="icon">▶</span>
+    <div>
+      <div class="item-title">Reas  Class-83  Dice</div>
+      <div class="item-sub">Reas (VOD) • Reas  Class-83  Dice</div>
+    </div>
+  </div>
+  <span class="arrow">›</span>
+</a>
+
+
+<a class="item" data-search="Reas  Class-84  Cube Reas (VOD)" href="player.html?video=https%3A%2F%2Fedge.api.brightcove.com%2Fplayback%2Fv1%2Faccounts%2F6206459123001%2Fvideos%2F6307667628112%2Fmaster.m3u8%3Fbcov_auth%3DeyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3NDczMDQ3MzMsImNvbiI6eyJpc0FkbWluIjpmYWxzZSwiYXVzZXIiOiJVMFZ6TkdGU2NuQlZjR3h5TkZwV09FYzBURGxOZHowOSIsImlkIjoiTW1Kb1ZEUnROVGxGYlhaelZVNVFOaXRQSzNkdWR6MDkiLCJmaXJzdF9uYW1lIjoiYm5ack9GUXJVblpJVldFNGNsRkphRlZHT1UwNVVUMDkiLCJlbWFpbCI6ImFFdHNWRUZRYjBWdE5ISlRZbU5JYTJWcU56TnhVVlZwZDAxQ1RVOHdXbm8wVTNwVGNreFJXbWRtUVQwPSIsInBob25lIjoiU0ZsdmRuSTBXbllyV0dZdmJEUkRRakJzZEVSMFVUMDkiLCJhdmF0YXIiOiJLM1ZzY1M4elMwcDBRbmxrYms4M1JEbHZla05pVVQwOSIsInJlZmVycmFsX2NvZGUiOiJaa0p0TWtOTllWVjBlbVZsVTBOVGFVVnVRM2N5VVQwOSIsImRldmljZV90eXBlIjoiYW5kcm9pZCIsImRldmljZV92ZXJzaW9uIjoiUyhBbmRyb2lkIDEyLjApIiwiZGV2aWNlX21vZGVsIjoiWGlhb21pIE1pIDEwIFBybyIsInJlbW90ZV9hZGRyIjoiNDQuMjExLjc5LjE0NCJ9fQ.AgeSw8LGTdSdAf8ldazXdbMgNPn0R7v_cgzdZvO750eF1kL_4kEObNccdlg66HSNlI4dX4dkFMHqx48j7Q5kt-bxFkJW0o1am2kcSW0FCRoNz-Y3_oE7auBxZ1YkNusecRVhOJHZynv4d4-Y-hUwzevOY8Fl3L_NGGzZ-Ztj94EPqdGR0JwGwUKjfpJvqZWz6ndqJjXp8FjkLERMPTEGdd9gigQJ-xrARND6uvW2QkIRCqIM-Lz-S-evPGUT6zKEeF3enVocSJkChyVorGCGrISH4nx8aO_8d4v1pNGRC0QhWBKaSTcpo2_n_GDs789tLKRGqS-g7ObpKFjhoHINhg">
+  <div class="item-left">
+    <span class="icon">▶</span>
+    <div>
+      <div class="item-title">Reas  Class-84  Cube</div>
+      <div class="item-sub">Reas (VOD) • Reas  Class-84  Cube</div>
+    </div>
+  </div>
+  <span class="arrow">›</span>
+</a>
+
+</div>
+<h2 class="section-title">📄 PDFs / Notes</h2>
+<div class="list">
+
+<a class="item" data-search="8 April 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/661381b374462_Arun sir reasoning 8th april 09.30 am_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">8 April 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="9 April 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/6614d3ee30377_Arun sir reasoning 9th april 09.30 am_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">9 April 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="10 April 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/661658d53d004_Arun sir reasoning 10th april 09.30 am (1)_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">10 April 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="11 April 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/661784664cd5e_Arun sir reasoning 11th april 09.30 am_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">11 April 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="12 April 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/6618dd5968c9e_Arun sir reasoning 12th april 09.30 am_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">12 April 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="15 April 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/661cd08488257_15 april 9 30 am_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">15 April 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="16 April 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/661e3db4c9c1f_Arun sir reasoning 16th april 09.30 am_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">16 April 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="17 April 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/661f5beacaaaf_Arun sir reasoning 17th april 09.30 am_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">17 April 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="18 April 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/6620df3ec6d0c_Arun sir reasoning 18th april 09.30 am_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">18 April 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="19 April 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/662231c7de3b4_Arun sir reasoning 19th april 09.30 am_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">19 April 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="22 April 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/66264070a90ff_Arun sir reasoning 22 April 11.00 AM (1)_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">22 April 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="24 April 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/6628c843b8816_Arun sir reasoning 24 april 09.30 am_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">24 April 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="25 April 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/662a1eac4327a_Arun sir reasoning 25 april 09.30 am_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">25 April 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="29 April 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/6630805a57609_Arun sir reasoning 29 april 09.30 am_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">29 April 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="30 April 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/66336dff3d27a_Arun sir reasoning 30 april 09.30 am_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">30 April 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="1 May 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/66332aa5af5f9_Arun Sir Reasoning 01 May 10.00 AM_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">1 May 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="2 May 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/6633301f82bd0_Arun Sir Reasoning 02 May 10.00 AM_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">2 May 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="3 May 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/6634a1925163e_Arun Sir Reasoning 03 May 10.00 AM_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">3 May 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="4 May 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/6635cf5fa8c89_Arun Sir Reasoning 04 May 09.00 AM_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">4 May 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="6 May 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/6638cde192114_Arun Sir Reasoning 06 May 10.00 AM_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">6 May 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="7 May 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/6639c4f427686_Arun Sir Reasoning 07 May 10.00 AM_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">7 May 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="8 May 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/663b3a8990f3d_Arun Sir Reasoning 08 May 10.00 AM_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">8 May 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="9 May 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/663c6917b6e93_Arun Sir Reasoning 09 May 10.00 AM_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">9 May 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="10 May 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/663dcc14140d9_Arun Sir Reasoning 10 May 10.00 AM (1)_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">10 May 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="13 May 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/6641b0f185434_Arun Sir Reasoning 11 May 10.00 AM_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">13 May 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="14 May 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/664339f821953_Arun Sir Reasoning 14 May 10.00 AM.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">14 May 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="15 May 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/664479379c1eb_Arun Sir Reasoning 15 May 10.00 AM_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">15 May 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="16 May 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/6645dd7c83a5e_Arun Sir Reasoning 16 May 10.00 AM_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">16 May 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="17 May 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/6646f46c811c7_Arun Sir Reasoning 17 May 10.00 AM_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">17 May 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="20 May 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/664ae5ccc3f76_Arun Sir Reasoning 20 May 10.00 AM_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">20 May 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="22 May 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/664d8ca576549_Arun Sir Reasoning 22 May 07.30 AM_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">22 May 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="24 May 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/665025317bfb1_Arun Sir Reasoning 24 May 06.30 AM_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">24 May 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="27 May 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/66541bb8f0d69_Arun Sir Reasoning 27 May 06.30 AM_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">27 May 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="28 May 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/66556cdc3758b_Arun Sir Reasoning 28 May 06.30 AM_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">28 May 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="27 May 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/66557190af9b1_0800am27may24_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">27 May 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="29 May 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/6656e7ac6f1b7_Arun Sir Reasoning 29 May 06.30 AM_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">29 May 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="30 May 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/665886687e19e_Arun Sir Reasoning 30 May 06.30 AM_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">30 May 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="31 May 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/6659758f9e56c_Arun Sir Reasoning 31 May 06.30 AM_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">31 May 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="3 June 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/665e6e799730d_Arun Sir Reasoning 03 June 06.30 AM_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">3 June 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="04 June 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/665fabcb1bdde_Arun Sir Reasoning 04 June 06.30 AM_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">04 June 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="6 June 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/6661b4cd04dc7_Arun Sir Reasoning 06 June 01 PM_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">6 June 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="07 June 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/66640b0ab3bf1_Arun Sir Reasoning 06.30 AM 7th June_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">07 June 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="10 June 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/66678b57ae216_Arun Sir Reasoning 06.30 AM 10 June_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">10 June 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="11 June 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/6669013aa1003_Arun Sir Reasoning 06.30 AM 11 June_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">11 June 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="12 June 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/6669177234b54_Arun Sir Reasoning 06.30 AM 12 June_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">12 June 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="13 June 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/666a7ee69ba29_Arun Sir Reasoning 06.30 AM 13 June_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">13 June 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="14 June 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/666bd1d678999_Arun Sir Reasoning 06.30 AM 14 June_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">14 June 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="17 June 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/666fd9586f427_Arun Sir Reasoning 06.30 AM 17 June_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">17 June 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="18 June 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/6671169831324_Arun Sir Reasoning 06.30 AM 18 June_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">18 June 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="19 June 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/66727209cc3a2_Arun Sir Reasoning 06.30 AM 19 June_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">19 June 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="20 June 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/6673c25e08a0c_Arun Sir Reasoning 06.30 AM 20 June.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">20 June 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="21 June 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/66751a65550e0_Arun Sir Reasoning 06.30 AM 21 June_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">21 June 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="24 June 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/66793ee62db3d_Arun Sir Reasoning 06.30 AM 24 June_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">24 June 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="25 June 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/667a28dd9c407_Arun Sir Reasoning 06.30 AM 25 June_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">25 June 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="26 June 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/667bb1100a4a8_Arun Sir Reasoning 06.30 AM 26 June_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">26 June 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="27 June 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/667d0f3eb45f1_Arun Sir Reasoning 06.30 AM 27 June_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">27 June 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="28 June 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/667e4c6b44924_Arun Sir Reasoning 06.30 AM 28 June_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">28 June 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="1 July 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/66824075eb37b_Arun Sir Reasoning 06.30 AM 01 July_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">1 July 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="2 July 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/66849ab8b996c_Arun Sir Reasoning 06.30 AM 02 July.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">2 July 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="03 July 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/6684ddab7cd05_Arun Sir Reasoning 06.30 AM 03 July_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">03 July 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="4 July 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/66863ad8ce24b_Arun Sir Reasoning 06.30 AM 04 July_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">4 July 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="5 July 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/66895159c45e9_Arun Sir Reasoning 06.30 AM 05 July.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">5 July 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="9 July 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/668cbbad957f7_Arun Sir Reasoning 06.30 AM 09 July_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">9 July 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="10 July 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/668f37e5efd5d_Arun Sir Reasoning 06.30 AM 10 July_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">10 July 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="11 July 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/6690e75174ceb_Arun Sir Reasoning 06.30 AM 11 July_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">11 July 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="12 July 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/6690e8b5b1b7a_Arun Sir Reasoning 06.30 AM 12 July.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">12 July 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="16 July 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/669733f15ece6_Arun Sir Reasoning 06.30 AM 16 July_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">16 July 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="17 July 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/6697808af1398_Arun Sir Reasoning 12.00 PM 17 July.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">17 July 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="22 July 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/669f0627c7a71_Arun Sir Reasoning 06.30 AM 22 July_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">22 July 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="23 July 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/669f4016e7d7e_Arun Sir Reasoning 06.30 AM 23 July_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">23 July 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="24 July 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/66a0a9f608d80_Arun Sir Reas 06.30 AM 24 July_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">24 July 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="25 July 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/66a240b7665d4_Arun Sir 3PM 25 July._compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">25 July 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="26 July 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/66a3877cde8d4_Arun Sir Reas 3;00 PM 26 July_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">26 July 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="27 July 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/66a4ae3a9d236_Arun Sir 11.00 AM 27-July_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">27 July 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+
+<a class="item" data-search="29 July 2024 Class Notes" href="https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/66a73d0157f0c_Arun Sir 11.00 AM 29-July_compressed.pdf" target="_blank" rel="noopener">
+  <div class="item-left">
+    <span class="icon pdf-icon">📄</span>
+    <div>
+      <div class="item-title">29 July 2024 Class</div>
+      <div class="item-sub">Notes</div>
+    </div>
+  </div>
+  <span class="arrow">↗</span>
+</a>
+
+</div>
+</main>
+
+<div class="footer">Made with ❤️ for smooth course browsing</div>
+</body>
+</html>

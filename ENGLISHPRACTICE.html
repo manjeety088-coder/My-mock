@@ -1,0 +1,1124 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/>
+<!DOCTYPE html>
+<html lang="hi">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Eng Practice-26 (Live+VOD)</title>
+        <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet"/>
+        <script src="https://cdn.jsdelivr.net/npm/videojs-quality-selector@1.1.4/dist/videojs-quality-selector.min.js"></script>
+        <style>
+            .video-controls-bar {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 20px;
+                margin-top: 5px;
+                margin-bottom: 5px;
+                font-size: 14px;
+            }
+
+            .video-quality-select {
+                margin-left: 0;
+                border-radius: 4px;
+                border: 1px solid var(--border-color);
+                padding: 3px 7px;
+                font-size: 13px;
+                background: var(--card-bg);
+                color: var(--primary-color);
+            }
+
+            .video-speed-select {
+                border-radius: 4px;
+                border: 1px solid var(--border-color);
+                padding: 3px 7px;
+                font-size: 13px;
+                background: var(--card-bg);
+                color: var(--primary-color);
+            }
+
+            .video-duration {
+                font-size: 13px;
+                color: var(--primary-color);
+                font-weight: 500;
+                opacity: 0.7;
+                min-width: 80px;
+                text-align: right;
+            }
+
+            /* Collapsible topic styles */
+            .topic-block {
+                margin-bottom: 12px;
+            }
+
+            .topic-title {
+                font-weight: 600;
+                margin-bottom: 8px;
+                font-size: 14px;
+                color: var(--accent-color);
+                border-left: 3px solid var(--accent-color);
+                padding: 12px 15px;
+                border-radius: 6px;
+                background: var(--hover-color);
+                cursor: pointer;
+                user-select: none;
+                transition: all 0.2s ease;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .topic-title:hover {
+                background: var(--primary-color);
+                color: #fff;
+                transform: translateX(3px);
+            }
+
+            .topic-arrow {
+                font-size: 12px;
+                width: 18px;
+                text-align: center;
+            }
+
+            .topic-name {
+                flex: 1;
+            }
+
+            .topic-count {
+                font-size: 12px;
+                opacity: 0.85;
+                background: rgba(0,0,0,0.08);
+                padding: 2px 8px;
+                border-radius: 999px;
+            }
+
+            .topic-content {
+                margin-top: 6px;
+            }
+
+            #pdf-modal {
+                display: none;
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,0.7);
+                z-index: 9999;
+                align-items: center;
+                justify-content: center;
+            }
+
+            #pdf-modal-content {
+                background: #fff;
+                border-radius: 8px;
+                box-shadow: 0 2px 12px #0004;
+                max-width: 95vw;
+                width: 90vw;
+                height: 80vh;
+                display: flex;
+                flex-direction: column;
+                margin: auto;
+                position: relative;
+                top: 5vh;
+            }
+
+            #pdf-frame {
+                flex: 1;
+                width: 100%;
+                border: none;
+            }
+
+            #pdf-modal-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 8px 15px 8px 15px;
+                background: #f8fafc;
+                border-bottom: 1px solid #e2e8f0;
+            }
+
+            #pdf-modal-header .close-btn {
+                color: #f00;
+                font-size: 20px;
+                background: none;
+                border: none;
+                cursor: pointer;
+            }
+
+            #pdf-modal-header .download-btn {
+                background: #3b82f6;
+                color: #fff;
+                border: none;
+                padding: 6px 14px;
+                border-radius: 6px;
+                font-size: 15px;
+                text-decoration: none;
+                margin-left: 15px;
+            }
+
+            :root {
+                --bg-color: #f8fafc;
+                --text-color: #1e293b;
+                --card-bg: #ffffff;
+                --border-color: #e2e8f0;
+                --primary-color: #3b82f6;
+                --primary-dark: #2563eb;
+                --accent-color: #8b5cf6;
+                --hover-color: #f1f5f9;
+                --header-bg: #ffffff;
+                --success-color: #10b981;
+                --info-color: #60a5fa;
+                --warning-color: #f59e0b;
+                --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            }
+
+            .dark-mode {
+                --bg-color: #0f172a;
+                --text-color: #e2e8f0;
+                --card-bg: #1e293b;
+                --border-color: #334155;
+                --primary-color: #60a5fa;
+                --primary-dark: #3b82f6;
+                --accent-color: #a78bfa;
+                --hover-color: #334155;
+                --header-bg: #1e293b;
+                --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                background: var(--bg-color);
+                color: var(--text-color);
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                line-height: 1.6;
+                padding: 0;
+                margin: 0;
+                transition: all 0.3s ease;
+                min-height: 100vh;
+            }
+
+            .container {
+                max-width: 100%;
+                padding: 15px;
+            }
+
+            .header {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                margin-bottom: 15px;
+                padding: 12px 15px;
+                background: var(--card-bg);
+                border-radius: 8px;
+                box-shadow: var(--shadow);
+                border: 1px solid var(--border-color);
+                gap: 10px;
+            }
+
+            .channel-link {
+                color: var(--primary-color);
+                text-decoration: none;
+                font-weight: 500;
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                font-size: 14px;
+            }
+
+            .theme-toggle {
+                background: none;
+                border: none;
+                cursor: pointer;
+                font-size: 18px;
+                color: var(--text-color);
+                padding: 5px;
+                border-radius: 50%;
+                width: 34px;
+                height: 34px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: var(--hover-color);
+                margin-left: auto;
+            }
+
+            .title-box {
+                background: var(--card-bg);
+                border-radius: 8px;
+                padding: 15px;
+                margin-bottom: 15px;
+                box-shadow: var(--shadow);
+                border: 1px solid var(--border-color);
+                text-align: center;
+            }
+
+            .title-box h1 {
+                font-size: 20px;
+                font-weight: 600;
+                color: var(--primary-color);
+                margin: 0;
+            }
+
+            .player-section {
+                width: 100%;
+                margin-bottom: 15px;
+                background: var(--card-bg);
+                border-radius: 8px;
+                padding: 15px;
+                box-shadow: var(--shadow);
+                border: 1px solid var(--border-color);
+            }
+
+            .video-title {
+                text-align: center;
+                margin-bottom: 10px;
+                font-weight: 500;
+                color: var(--text-color);
+                font-size: 14px;
+            }
+
+            .video-js {
+                width: 100% !important;
+                height: 250px !important;
+                border-radius: 6px;
+            }
+
+            #youtube-iframe {
+                border-radius: 6px;
+            }
+
+            .search-bar {
+                width: 100%;
+                padding: 12px 15px;
+                margin-bottom: 15px;
+                border: 1px solid var(--border-color);
+                border-radius: 8px;
+                font-size: 14px;
+                box-sizing: border-box;
+                background: var(--card-bg);
+                color: var(--text-color);
+                box-shadow: var(--shadow);
+            }
+
+            .search-bar:focus {
+                outline: none;
+                border-color: var(--primary-color);
+                box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+            }
+
+            .tabs-row {
+                display: flex;
+                justify-content: center;
+                gap: 8px;
+                margin-bottom: 15px;
+            }
+
+            .tab-btn {
+                padding: 10px 15px;
+                font-size: 14px;
+                border-radius: 6px;
+                background: var(--card-bg);
+                color: var(--text-color);
+                font-weight: 500;
+                cursor: pointer;
+                border: 1px solid var(--border-color);
+                transition: all 0.3s;
+                outline: none;
+                flex: 1;
+                text-align: center;
+                max-width: 120px;
+                box-shadow: var(--shadow);
+            }
+
+            .tab-btn.active {
+                background: var(--primary-color);
+                color: #fff;
+                border-color: var(--primary-color);
+            }
+
+            .tab-content {
+                display: none;
+                margin-bottom: 20px;
+            }
+
+            .tab-content.active {
+                display: block;
+            }
+
+            .list-box {
+                background: var(--card-bg);
+                border-radius: 8px;
+                padding: 15px;
+                box-shadow: var(--shadow);
+                border: 1px solid var(--border-color);
+                max-height: 400px;
+                overflow-y: auto;
+            }
+
+            .list-item {
+                display: block;
+                background: var(--card-bg);
+                color: var(--primary-color);
+                font-weight: 500;
+                font-size: 13px;
+                border-radius: 6px;
+                margin-bottom: 8px;
+                padding: 10px 12px;
+                text-decoration: none;
+                transition: all 0.2s;
+                border-left: 3px solid var(--primary-color);
+                cursor: pointer;
+                border: 1px solid var(--border-color);
+                margin-left: 15px;
+            }
+
+            .list-item:hover {
+                background: var(--hover-color);
+                transform: translateX(5px);
+            }
+
+            .no-items {
+                color: #999;
+                text-align: center;
+                padding: 20px;
+                font-style: italic;
+            }
+
+            @media (max-width: 600px) {
+                .container {
+                    padding: 10px;
+                }
+
+                .header {
+                    flex-direction: row;
+                    gap: 10px;
+                    text-align: center;
+                }
+
+                .tab-btn {
+                    padding: 8px 12px;
+                    font-size: 12px;
+                    max-width: 100px;
+                }
+
+                .video-js {
+                    height: 200px !important;
+                }
+
+                #youtube-iframe {
+                    height: 200px;
+                }
+
+                .list-item {
+                    font-size: 12px;
+                    padding: 8px 10px;
+                }
+
+                #pdf-modal-content {
+                    width: 99vw;
+                    height: 80vh;
+                }
+            }
+        </style>
+    </head>
+    <body class="dark-mode">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <div class="szx-wrapper">
+            <div class="title-box">
+                <div class="top-row">
+                    <h1 class="hard-bold">ENG PRACTICE- 26 </h1>
+                    <div class="socials">
+                        <a href="https://t.me/szxmocks" target="_blank" class="icon tg">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="https://whatsapp.com/channel/0029Vb97kwQ0Qeat3WrJ9Z2m" target="_blank" class="icon wa">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="line-divider"></div>
+                <div class="bottom-row">
+                    <p class="credit">
+                        Credit: <span class="vivid-red">SZX</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <style>
+            /* Fixed Dark Theme (No Toggle) */
+            .vivid-wrapper {
+                background-color: #0f172a;
+                /* Pure Dark Background */
+                padding: 20px;
+                display: flex;
+                justify-content: center;
+            }
+
+            .title-box {
+                background-color: #1e293b;
+                /* Dark Navy Box */
+                border: 1px solid #334155;
+                border-radius: 12px;
+                padding: 15px 20px;
+                width: 100%;
+                max-width: 380px;
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            }
+
+            .top-row {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .hard-bold {
+                font-family: 'Arial Black', sans-serif;
+                font-size: 1.3rem;
+                font-weight: 900;
+                color: #38bdf8;
+                /* Bright Blue Heading for contrast */
+                margin: 0;
+                letter-spacing: 0.5px;
+                text-transform: uppercase;
+            }
+
+            .socials {
+                display: flex;
+                gap: 12px;
+            }
+
+            .icon {
+                font-size: 1.6rem;
+                text-decoration: none;
+                transition: transform 0.2s;
+            }
+
+            .icon:hover {
+                transform: scale(1.1);
+            }
+
+            .tg {
+                color: #0088cc;
+            }
+
+            .wa {
+                color: #25D366;
+            }
+
+            .line-divider {
+                height: 1px;
+                background-color: #334155;
+                margin: 12px 0;
+            }
+
+            .bottom-row {
+                text-align: left;
+            }
+
+            .credit {
+                font-family: sans-serif;
+                font-size: 1rem;
+                font-weight: 800;
+                color: #94a3b8;
+                /* Slate gray text */
+                margin: 0;
+            }
+
+            .vivid-red {
+                color: #ff0000 !important;
+                text-transform: uppercase;
+                font-weight: 900;
+                text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            }
+        </style>
+        <div class="player-section">
+            <div class="video-title" id="video-title">Select a video to play</div>
+            <video id="main-video-player" class="video-js vjs-default-skin" controls preload="auto"></video>
+            <div class="video-controls-bar">
+                <select id="video-quality" class="video-quality-select" style="display:none;">
+                    <option value="">Auto</option>
+                </select>
+                <select id="video-speed" class="video-speed-select">
+                    <option value="0.25">0.25x</option>
+                    <option value="0.5">0.5x</option>
+                    <option value="0.75">0.75x</option>
+                    <option value="1" selected>1x</option>
+                    <option value="1.25">1.25x</option>
+                    <option value="1.5">1.5x</option>
+                    <option value="1.75">1.75x</option>
+                    <option value="2">2x</option>
+                </select>
+                <div class="video-duration" id="video-duration" style="display:none;">00:00 / 00:00</div>
+            </div>
+            <div id="youtube-player" style="display:none;width:100%;margin-top:10px;">
+                <iframe id="youtube-iframe" width="100%" height="250" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <div id="pdf-modal-content">
+                    <div id="pdf-modal-header">
+                        <span id="pdf-modal-title" style="font-weight:600;color:#3b82f6;">PDF</span>
+                        <div>
+                            <a id="download-pdf-btn" href="#" class="download-btn" download target="_blank">Download PDF</a>
+                            <button class="close-btn" onclick="closePDF()">&times;</button>
+                        </div>
+                    </div>
+                    <iframe id="pdf-frame"></iframe>
+                </div>
+            </div>
+            <input type="text" class="search-bar" placeholder="Search for videos, PDFs, or other resources..." onkeyup="filterItems()">
+            <div class="tabs-row">
+                <button class="tab-btn active" onclick="showTab('videos')">Videos (167)</button>
+                <button class="tab-btn" onclick="showTab('pdfs')">PDFs (90)</button>
+                <button class="tab-btn" onclick="showTab('others')">Others (0)</button>
+            </div>
+            <div id="videos-tab" class="tab-content active">
+                <div class="list-box">
+                    <div class="topic-block">
+                        <div class="topic-title" onclick="toggleTopic('videos-topic-1', this)">
+                            <span class="topic-arrow">▶</span>
+                            <span class="topic-name">English</span>
+                            <span class="topic-count">(78)</span>
+                        </div>
+                        <div class="topic-content" id="videos-topic-1" style="display:none;">
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6347718074112/6347718074112.m3u8', 'Class -01 | Introduction |');return false;">Class -01 | Introduction |</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6347797950112/6347797950112.m3u8', 'Class -02 | Tense and Mixed Practice |');return false;">Class -02 | Tense and Mixed Practice |</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6347892067112/6347892067112.m3u8', 'Class -03 | Tense and Mixed Practice |');return false;">Class -03 | Tense and Mixed Practice |</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6347974142112/6347974142112.m3u8', 'Class -04 | Comprehension Practice |');return false;">Class -04 | Comprehension Practice |</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6348180860112/6348180860112.m3u8', 'Class -05 | Comprehension Practice |');return false;">Class -05 | Comprehension Practice |</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6348244870112/6348244870112.m3u8', 'Class -06 | Comprehension /Tense Mixed Practice |');return false;">Class -06 | Comprehension /Tense Mixed Practice |</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6348304141112/6348304141112.m3u8', 'Class -07 | Tense & Mixed Practice |');return false;">Class -07 | Tense & Mixed Practice |</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6348363639112/6348363639112.m3u8', 'Class -08 | Comprehension & Tense/Mixed Practice');return false;">Class -08 | Comprehension & Tense/Mixed Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6348441537112/6348441537112.m3u8', 'Class -09 | Comprehension And Tense/Mixed Practice');return false;">Class -09 | Comprehension And Tense/Mixed Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6348645552112/6348645552112.m3u8', 'Class-10 | Comprehension And Tense/Mixed Practice');return false;">Class-10 | Comprehension And Tense/Mixed Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6348714706112/6348714706112.m3u8', 'Class-11 | Comprehension Practice');return false;">Class-11 | Comprehension Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6348871793112/6348871793112.m3u8', 'Class-12 | Comprehension Practice');return false;">Class-12 | Comprehension Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6348953836112/6348953836112.m3u8', 'Class-13 | Modals/Conditionals Practice');return false;">Class-13 | Modals/Conditionals Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6349158052112/6349158052112.m3u8', 'Class-14 | Modals/Conditionals Practice');return false;">Class-14 | Modals/Conditionals Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6349214836112/6349214836112.m3u8', 'Class-15 | Comprehension & Modals/Conditionals Practice');return false;">Class-15 | Comprehension & Modals/Conditionals Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6349285512112/6349285512112.m3u8', 'Class-16 | Comprehension Practice');return false;">Class-16 | Comprehension Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6349356261112/6349356261112.m3u8', 'Class-17 | Verb Practice');return false;">Class-17 | Verb Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6349436324112/6349436324112.m3u8', 'Class-18 | Verb Practice');return false;">Class-18 | Verb Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6349709705112/6349709705112.m3u8', 'Class-19 | Verb Practice');return false;">Class-19 | Verb Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6349782613112/6349782613112.m3u8', 'Class-20 | Verb Practice');return false;">Class-20 | Verb Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6349839225112/6349839225112.m3u8', 'Class-21 | Practice Verb Advance/Non Finite Verbs');return false;">Class-21 | Practice Verb Advance/Non Finite Verbs</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6349910696112/6349910696112.m3u8', 'Class- 22 | Practice Verb Advance/Non Finite Verbs');return false;">Class- 22 | Practice Verb Advance/Non Finite Verbs</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6350056203112/6350056203112.m3u8', 'Class- 23 | Practice Verb Advance/Non Finite Verbs');return false;">Class- 23 | Practice Verb Advance/Non Finite Verbs</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6350116453112/6350116453112.m3u8', 'Class- 24 | Comprehension Practice');return false;">Class- 24 | Comprehension Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6350175169112/6350175169112.m3u8', 'Class- 25 | Comprehension Practice');return false;">Class- 25 | Comprehension Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6350295409112/6350295409112.m3u8', 'Class- 26 | Comprehension Practice');return false;">Class- 26 | Comprehension Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6350490708112/6350490708112.m3u8', 'Class- 27 | Voice Practice');return false;">Class- 27 | Voice Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6350543027112/6350543027112.m3u8', 'Class- 28 | Voice Practice');return false;">Class- 28 | Voice Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6350604623112/6350604623112.m3u8', 'Class- 29 | Voice Practice');return false;">Class- 29 | Voice Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6350666117112/6350666117112.m3u8', 'Class- 30 | Voice Practice');return false;">Class- 30 | Voice Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6350737581112/6350737581112.m3u8', 'Class- 31 | Comprehension Practice');return false;">Class- 31 | Comprehension Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6350942192112/6350942192112.m3u8', 'Class- 32 | Comprehension Practice');return false;">Class- 32 | Comprehension Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6350999253112/6350999253112.m3u8', 'Class- 33 | Comprehension Practice');return false;">Class- 33 | Comprehension Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6351069437112/6351069437112.m3u8', 'Class- 34 | Comprehension Practice');return false;">Class- 34 | Comprehension Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6351140715112/6351140715112.m3u8', 'Class- 35 | Comprehension Practice');return false;">Class- 35 | Comprehension Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6351206920112/6351206920112.m3u8', 'Class- 36 | Comprehension Practice');return false;">Class- 36 | Comprehension Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6351386831112/6351386831112.m3u8', 'Class- 37 | Comprehension Practice');return false;">Class- 37 | Comprehension Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6351563117112/6351563117112.m3u8', 'Class- 38 | Comprehension Practice');return false;">Class- 38 | Comprehension Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6351724556112/6351724556112.m3u8', 'Class- 39 | Comprehension Practice');return false;">Class- 39 | Comprehension Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6351796596112/6351796596112.m3u8', 'Class- 40 | Comprehension Practice');return false;">Class- 40 | Comprehension Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6351964532112/6351964532112.m3u8', 'Class- 41 | Comprehension Practice');return false;">Class- 41 | Comprehension Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6352026481112/6352026481112.m3u8', 'Class- 42 | Narration Practice Class');return false;">Class- 42 | Narration Practice Class</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6352118149112/6352118149112.m3u8', 'Class- 43 | Narration Practice Class');return false;">Class- 43 | Narration Practice Class</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6352175568112/6352175568112.m3u8', 'Class- 44 | Conjunction Practice Class');return false;">Class- 44 | Conjunction Practice Class</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6352235321112/6352235321112.m3u8', 'Class- 45 | Conjunction Practice Class');return false;">Class- 45 | Conjunction Practice Class</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6352404757112/6352404757112.m3u8', 'Class- 46 | Comprehension Practice Class');return false;">Class- 46 | Comprehension Practice Class</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6352457155112/6352457155112.m3u8', 'Class- 47 | Comprehension Practice Class');return false;">Class- 47 | Comprehension Practice Class</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6352585645112/6352585645112.m3u8', 'Class- 48 | Comprehension Practice Class');return false;">Class- 48 | Comprehension Practice Class</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6352650241112/6352650241112.m3u8', 'Class- 49 | Comprehension Practice Class');return false;">Class- 49 | Comprehension Practice Class</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6352829347112/6352829347112.m3u8', 'Class- 50 | Slang And Superfluous');return false;">Class- 50 | Slang And Superfluous</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6352891322112/6352891322112.m3u8', 'Class- 51 | Adverb Practice');return false;">Class- 51 | Adverb Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6352946294112/6352946294112.m3u8', 'Class- 52 | Special Announcement');return false;">Class- 52 | Special Announcement</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6353004416112/6353004416112.m3u8', 'Class- 53 | Common Errors');return false;">Class- 53 | Common Errors</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6353081059112/6353081059112.m3u8', 'Class- 54 | Common Errors');return false;">Class- 54 | Common Errors</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6358418239112/6358418239112.m3u8', 'Class- 55 | Common Errors');return false;">Class- 55 | Common Errors</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6353357682112/6353357682112.m3u8', 'Class- 56 | Common Errors Mixed Practice');return false;">Class- 56 | Common Errors Mixed Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6353551098112/6353551098112.m3u8', 'Class- 57 | Common Errors Mixed Practice');return false;">Class- 57 | Common Errors Mixed Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6353498610112/6353498610112.m3u8', 'Class- 58 | Common Errors Mixed Practice');return false;">Class- 58 | Common Errors Mixed Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6353751388112/6353751388112.m3u8', 'Class- 59 | Common Errors Mixed Practice');return false;">Class- 59 | Common Errors Mixed Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6353802066112/6353802066112.m3u8', 'Class- 60 | Fill In The Blanks Practice');return false;">Class- 60 | Fill In The Blanks Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6353865606112/6353865606112.m3u8', 'Class- 61 | Fill In The Blanks Practice');return false;">Class- 61 | Fill In The Blanks Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6354204623112/6354204623112.m3u8', 'Class- 62 | Fill In The Blanks Practice');return false;">Class- 62 | Fill In The Blanks Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6354285440112/6354285440112.m3u8', 'Class- 63 | Fill In The Blanks Practice');return false;">Class- 63 | Fill In The Blanks Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6354423229112/6354423229112.m3u8', 'Class- 64 | Sentence Improvement Practice');return false;">Class- 64 | Sentence Improvement Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6354501740112/6354501740112.m3u8', 'Class- 65 | Sentence Improvement Practice');return false;">Class- 65 | Sentence Improvement Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6354728197112/6354728197112.m3u8', 'Class- 66 | Mock Test');return false;">Class- 66 | Mock Test</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6354856587112/6354856587112.m3u8', 'Class- 67 | Mock Test');return false;">Class- 67 | Mock Test</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6354925034112/6354925034112.m3u8', 'Class- 68 | Mock Test');return false;">Class- 68 | Mock Test</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6355219360112/6355219360112.m3u8', 'Class- 69 | Mock Test');return false;">Class- 69 | Mock Test</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6355281946112/6355281946112.m3u8', 'Class- 70 | Mock Test');return false;">Class- 70 | Mock Test</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6355349199112/6355349199112.m3u8', 'Class- 71 | Mock Test');return false;">Class- 71 | Mock Test</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6355590944112/6355590944112.m3u8', 'Class- 72 | Preposition Practice');return false;">Class- 72 | Preposition Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6355650958112/6355650958112.m3u8', 'Class- 73 | Preposition Practice');return false;">Class- 73 | Preposition Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6355701971112/6355701971112.m3u8', 'Class- 74 | Preposition Practice');return false;">Class- 74 | Preposition Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6355758357112/6355758357112.m3u8', 'Class- 75 | Preposition Practice');return false;">Class- 75 | Preposition Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6355821548112/6355821548112.m3u8', 'Class- 76 | Preposition Practice');return false;">Class- 76 | Preposition Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6356135654112/6356135654112.m3u8', 'Class- 77 | Preposition Practice');return false;">Class- 77 | Preposition Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6356271917112/6356271917112.m3u8', 'Class-78 | Preposition Practice');return false;">Class-78 | Preposition Practice</a>
+                        </div>
+                    </div>
+                    <div class="topic-block">
+                        <div class="topic-title" onclick="toggleTopic('videos-topic-2', this)">
+                            <span class="topic-arrow">▶</span>
+                            <span class="topic-name">Eng (VOD)</span>
+                            <span class="topic-count">(72)</span>
+                        </div>
+                        <div class="topic-content" id="videos-topic-2" style="display:none;">
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6339378701112/6339378701112.m3u8', 'Class -01 | Introduction | Noun');return false;">Class -01 | Introduction | Noun</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6339441351112/6339441351112.m3u8', 'Class -02 | Vocab & Noun');return false;">Class -02 | Vocab & Noun</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6339515987112/6339515987112.m3u8', 'Class -03 | Noun');return false;">Class -03 | Noun</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6339701918112/6339701918112.m3u8', 'Class -04 | Noun');return false;">Class -04 | Noun</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6339828342112/6339828342112.m3u8', 'Class -05 | Pronoun Practice');return false;">Class -05 | Pronoun Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6339894001112/6339894001112.m3u8', 'Class -06 | Pronoun Practice');return false;">Class -06 | Pronoun Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6339963404112/6339963404112.m3u8', 'Class -07 | Pronoun Practice');return false;">Class -07 | Pronoun Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6340198020112/6340198020112.m3u8', 'Class-08 | Phrasal Verbs');return false;">Class-08 | Phrasal Verbs</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6340263151112/6340263151112.m3u8', 'Class-09 | Phrasal Verbs');return false;">Class-09 | Phrasal Verbs</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6340597721112/6340597721112.m3u8', 'Class-10 | Para jumbles');return false;">Class-10 | Para jumbles</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6340597046112/6340597046112.m3u8', 'Class-11 | Para jumbles');return false;">Class-11 | Para jumbles</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6340583028112/6340583028112.m3u8', 'Class-12  | Para jumbles');return false;">Class-12  | Para jumbles</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6340643932112/6340643932112.m3u8', 'Class-13 | Para jumbles');return false;">Class-13 | Para jumbles</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6340709181112/6340709181112.m3u8', 'Class-14 | Para jumbles');return false;">Class-14 | Para jumbles</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6340776772112/6340776772112.m3u8', 'Class-15 | Para jumbles');return false;">Class-15 | Para jumbles</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6340841669112/6340841669112.m3u8', 'Class-16 | Para jumbles');return false;">Class-16 | Para jumbles</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6341209688112/6341209688112.m3u8', 'Class-17 | Cloze Test');return false;">Class-17 | Cloze Test</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6341280391112/6341280391112.m3u8', 'Class-18 | Comprehension class');return false;">Class-18 | Comprehension class</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6341462775112/6341462775112.m3u8', 'Class-19 | Comprehension class');return false;">Class-19 | Comprehension class</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6341532026112/6341532026112.m3u8', 'Class-20 | Comprehension Class');return false;">Class-20 | Comprehension Class</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6341593368112/6341593368112.m3u8', 'Class-21 | Comprehension class');return false;">Class-21 | Comprehension class</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6341702559112/6341702559112.m3u8', 'Class-22 | Comprehension class');return false;">Class-22 | Comprehension class</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6341815769112/6341815769112.m3u8', 'Class-23 | Comprehension class');return false;">Class-23 | Comprehension class</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6341889960112/6341889960112.m3u8', 'Class-24 | Comprehension class');return false;">Class-24 | Comprehension class</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6341966189112/6341966189112.m3u8', 'Class-25 | Comprehension class');return false;">Class-25 | Comprehension class</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6342035948112/6342035948112.m3u8', 'Class-26 | Comprehension class');return false;">Class-26 | Comprehension class</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6342312161112/6342312161112.m3u8', 'Class-27 | Comprehension class');return false;">Class-27 | Comprehension class</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6342369498112/6342369498112.m3u8', 'Class-28 | Comprehension class');return false;">Class-28 | Comprehension class</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6342434302112/6342434302112.m3u8', 'Class-29 | Comprehension class');return false;">Class-29 | Comprehension class</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6342495456112/6342495456112.m3u8', 'Class-30 | Voice Practice');return false;">Class-30 | Voice Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6342563186112/6342563186112.m3u8', 'Class-31 | Voice Practice');return false;">Class-31 | Voice Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6342753157112/6342753157112.m3u8', 'Class-32 |  Practice Class');return false;">Class-32 |  Practice Class</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6342944797112/6342944797112.m3u8', 'Class-33 | Tense Practice');return false;">Class-33 | Tense Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6342925631112/6342925631112.m3u8', 'Class-34 | Tense Practice');return false;">Class-34 | Tense Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6343435283112/6343435283112.m3u8', 'Class-35 | Tense Practice');return false;">Class-35 | Tense Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6343435962112/6343435962112.m3u8', 'Class-36 | Tense Practice');return false;">Class-36 | Tense Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6343423943112/6343423943112.m3u8', 'Class-37 | Narration Practice');return false;">Class-37 | Narration Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6343492215112/6343492215112.m3u8', 'Class-38  | Subject verb Agreement Practice');return false;">Class-38  | Subject verb Agreement Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6343571173112/6343571173112.m3u8', 'Class-39 | Subject verb Agreement Practice');return false;">Class-39 | Subject verb Agreement Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6343636298112/6343636298112.m3u8', 'Class-40 |  Q.Tag & Slang & Superfluous');return false;">Class-40 |  Q.Tag & Slang & Superfluous</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6343697840112/6343697840112.m3u8', 'Class-41 | Q.Tag & Slang & Superfluous');return false;">Class-41 | Q.Tag & Slang & Superfluous</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6344161631112/6344161631112.m3u8', 'Class-42 | Conjunction Practice');return false;">Class-42 | Conjunction Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/vod_non_drm_ios/4476191/1751950824_3787164128058696/1751950769097_542377096441885300_video_VOD.m3u8', 'Class-43 | Conjunction Practice');return false;">Class-43 | Conjunction Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6343938864112/6343938864112.m3u8', 'Class-44 | Modal Verbs');return false;">Class-44 | Modal Verbs</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/vod_non_drm_ios/4476193/1751950825_8338809124977705/1751950777429_448381482619941500_video_VOD.m3u8', 'Class-45 | Modal Verbs');return false;">Class-45 | Modal Verbs</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6344144625112/6344144625112.m3u8', 'Class-46 | Adverb Practice');return false;">Class-46 | Adverb Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6344190106112/6344190106112.m3u8', 'Class-47 | Adverb Practice');return false;">Class-47 | Adverb Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6344238637112/6344238637112.m3u8', 'Class-48 | Verb Practice');return false;">Class-48 | Verb Practice</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6344295141112/6344295141112.m3u8', 'Class-49 |  Verb Advance');return false;">Class-49 |  Verb Advance</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6344518586112/6344518586112.m3u8', 'Class-50 | Verb Advance');return false;">Class-50 | Verb Advance</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6344588095112/6344588095112.m3u8', 'Class-52 | Articles');return false;">Class-52 | Articles</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6344654436112/6344654436112.m3u8', 'Class-53 | Preposition');return false;">Class-53 | Preposition</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6344719822112/6344719822112.m3u8', 'Class-54 | Preposition');return false;">Class-54 | Preposition</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6344906218112/6344906218112.m3u8', 'Class-55 | Preposition');return false;">Class-55 | Preposition</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6345328953112/6345328953112.m3u8', 'Class-56 | Mixed Practice Sessions');return false;">Class-56 | Mixed Practice Sessions</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/vod_non_drm_ios/4476195/1751950848_7784852209587777/1751950819975_807555686507743100_video_VOD.m3u8', 'Class-57 | Mixed Practice Sessions');return false;">Class-57 | Mixed Practice Sessions</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6345449076112/6345449076112.m3u8', 'Class-58 | Mixed Practice Sessions');return false;">Class-58 | Mixed Practice Sessions</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6345522735112/6345522735112.m3u8', 'Class-59 | Mixed Practice Sessions');return false;">Class-59 | Mixed Practice Sessions</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6345792618112/6345792618112.m3u8', 'Class-60 | Mixed Practice Sessions');return false;">Class-60 | Mixed Practice Sessions</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6345847472112/6345847472112.m3u8', 'Class-61 | Mixed Practice Sessions');return false;">Class-61 | Mixed Practice Sessions</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6345907123112/6345907123112.m3u8', 'Class-62 | Mixed Practice Sessions');return false;">Class-62 | Mixed Practice Sessions</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6345972851112/6345972851112.m3u8', 'Class-63 | Mixed Practice Sessions');return false;">Class-63 | Mixed Practice Sessions</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6346037883112/6346037883112.m3u8', 'Class-64 | Mixed Practice Sessions');return false;">Class-64 | Mixed Practice Sessions</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6346255488112/6346255488112.m3u8', 'Class-65 | Mixed Practice Sessions');return false;">Class-65 | Mixed Practice Sessions</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6346323687112/6346323687112.m3u8', 'Class-66 | Mixed Practice Sessions');return false;">Class-66 | Mixed Practice Sessions</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6346382698112/6346382698112.m3u8', 'Class-67 | Mixed Practice Sessions');return false;">Class-67 | Mixed Practice Sessions</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6346456296112/6346456296112.m3u8', 'Class-68 | Mixed Practice Sessions');return false;">Class-68 | Mixed Practice Sessions</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6346522405112/6346522405112.m3u8', 'Class-69 | Mixed Practice Sessions');return false;">Class-69 | Mixed Practice Sessions</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6346707957112/6346707957112.m3u8', 'Class-70 | Mixed Practice Sessions');return false;">Class-70 | Mixed Practice Sessions</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6346768569112/6346768569112.m3u8', 'Class-71 | Mixed Practice Sessions');return false;">Class-71 | Mixed Practice Sessions</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6346841369112/6346841369112.m3u8', 'Class-72 | Mixed Practice Sessions');return false;">Class-72 | Mixed Practice Sessions</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6346978267112/6346978267112.m3u8', 'Class-73 | Mixed Practice Sessions');return false;">Class-73 | Mixed Practice Sessions</a>
+                        </div>
+                    </div>
+                    <div class="topic-block">
+                        <div class="topic-title" onclick="toggleTopic('videos-topic-3', this)">
+                            <span class="topic-arrow">▶</span>
+                            <span class="topic-name">Vocab Class</span>
+                            <span class="topic-count">(17)</span>
+                        </div>
+                        <div class="topic-content" id="videos-topic-3" style="display:none;">
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6343173424112/6343173424112.m3u8', 'Vocab Class-01');return false;">Vocab Class-01</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6343956342112/6343956342112.m3u8', 'Vocab Class-02');return false;">Vocab Class-02</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6345019157112/6345019157112.m3u8', 'Vocab Class-03');return false;">Vocab Class-03</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6345085759112/6345085759112.m3u8', 'Vocab Class-04');return false;">Vocab Class-04</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6345153871112/6345153871112.m3u8', 'Vocab Class-05');return false;">Vocab Class-05</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6345328915112/6345328915112.m3u8', 'Vocab Class-06');return false;">Vocab Class-06</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6345393477112/6345393477112.m3u8', 'Vocab Class-07');return false;">Vocab Class-07</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6345458784112/6345458784112.m3u8', 'Vocab Class-08');return false;">Vocab Class-08</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6345536537112/6345536537112.m3u8', 'Vocab Class-09');return false;">Vocab Class-09</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6345803781112/6345803781112.m3u8', 'Vocab Class-10');return false;">Vocab Class-10</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6345858299112/6345858299112.m3u8', 'Vocab Class-11');return false;">Vocab Class-11</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6345916199112/6345916199112.m3u8', 'Vocab Class-12');return false;">Vocab Class-12</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6346263983112/6346263983112.m3u8', 'Vocab Class-13');return false;">Vocab Class-13</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6346333731112/6346333731112.m3u8', 'Vocab Class-14');return false;">Vocab Class-14</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6348189295112/6348189295112.m3u8', 'Vocab Class-15');return false;">Vocab Class-15</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://www.youtube.com/watch?v=_1JTJYUQ6U8', 'Vocab Class-16');return false;">Vocab Class-16</a>
+                            <a href="#" class="list-item" onclick="playVideo('https://d14v4v80cpjht7.cloudfront.net/file_library/videos/migration/brightcove/6348315949112/6348315949112.m3u8', 'Vocab Class-17');return false;">Vocab Class-17</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="pdfs-tab" class="tab-content">
+                <div class="list-box">
+                    <div class="topic-block">
+                        <div class="topic-title" onclick="toggleTopic('pdfs-topic-1', this)">
+                            <span class="topic-arrow">▶</span>
+                            <span class="topic-name">Notes</span>
+                            <span class="topic-count">(72)</span>
+                        </div>
+                        <div class="topic-content" id="pdfs-topic-1" style="display:none;">
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/66826c80bf0f3_2024 Preposition Errors Jaideep Sir.pdf', '2024 Preposition Errors');return false;">2024 Preposition Errors</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/66826c615c70c_Fixed Prepositions Jaideep Sir.pdf', 'Fixed Prepositions');return false;">Fixed Prepositions</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/66697892a86ca_SSC CGL MAINS 2023.pdf', 'SSC CGL MAINS 2023');return false;">SSC CGL MAINS 2023</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/6669787973adc_SSC CGL PRE 2023.pdf', 'SSC CGL PRE 2023');return false;">SSC CGL PRE 2023</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/66459186d7bb3_2024 ADVERB DETECTING ERRORS.pdf', '2024 Adverb Detecting Errors');return false;">2024 Adverb Detecting Errors</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/663c5e4975c4a_2024 CONJUCTION DETECTING ERRORS_compressed.pdf', '2024 Conjuction detecting errors');return false;">2024 Conjuction detecting errors</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/663a03a699cd9_Comprehension Class 22 Jaideep Sir.pdf', 'Comprehension Class-22');return false;">Comprehension Class-22</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/663a038fc3db7_Comprehension Class 21 Jaideep Sir...pdf', 'Comprehension Class-21');return false;">Comprehension Class-21</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/6633637ee7745_2024 NARRATION Change PYQ Jaideep Sir (1).pdf', '2024 Narration Change PYQ');return false;">2024 Narration Change PYQ</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/66336353b6a77_2024 NARRATION ERRORS Jaideep Sir.pdf', '2024 Narration Errors');return false;">2024 Narration Errors</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/66335b4814489_2024 NARRATION CHANGE Class Work Jaideep Sir.pdf', '2024 Narration Change Class Work');return false;">2024 Narration Change Class Work</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/662a4bc93199b_Unseen Passage.pdf', 'Unseen Passage');return false;">Unseen Passage</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/662a4bbc44b53_TIPS to solve a Passage.pdf', 'TIPS to solve a Passage');return false;">TIPS to solve a Passage</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/6628c74d9ed32_Comprehension Class 20 Jaideep Sir.pdf', 'Comprehension Class-20');return false;">Comprehension Class-20</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/66263e6cea9f4_2024 VOICE Change PYQ Jaideep Sir (1).pdf', '2024 Voice Change PYQ');return false;">2024 Voice Change PYQ</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/66263e52d61df_2024 VOICE CHANGE Class Work Jaideep Sir (1).pdf', '2024 Voice Change Class Work');return false;">2024 Voice Change Class Work</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/66263e2926d4c_2024 VOICE ERRORS Jaideep Sir (1).pdf', '2024 Voice Errors');return false;">2024 Voice Errors</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/66263e178b419_Comprehension Class 19 Jaideep Sir.pdf', 'Comprehension Class-19');return false;">Comprehension Class-19</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/66220aa3d4d62_Comprehension Class 18 Jaideep Sir.pdf', 'Comprehension Class-18');return false;">Comprehension Class-18</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/66220b23e67f0_Comprehension Class 17 Jaideep Sir (1).pdf', 'Comprehension Class-17');return false;">Comprehension Class-17</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/66220b1107ac4_Comprehension Class 16 Jaideep Sir (1).pdf', 'Comprehension Class-16');return false;">Comprehension Class-16</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/661e03f4c0b97_Comprehension Class 15 Jaideep Sir.pdf', 'Comprehension Class-15');return false;">Comprehension Class-15</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/661cbbccb0c66_Comprehension Class 14 Jaideep Sir_compressed.pdf', 'Comprehension Class-14');return false;">Comprehension Class-14</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/661cbbace5397_Comprehension Class 13 Jaideep Sir_compressed.pdf', 'Comprehension Class-13');return false;">Comprehension Class-13</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/660f820138a18_Comprehension Class 12 Jaideep Sir-1.pdf', 'Comprehension Class-12');return false;">Comprehension Class-12</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/660f81efa80bb_Comprehension Class 11 Jaideep Sir.pdf', 'Comprehension Class-11');return false;">Comprehension Class-11</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/660f81dabedce_Comprehension Class 10 Jaideep Sir.pdf', 'Comprehension Class-10');return false;">Comprehension Class-10</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/66067f66045e9_Verb 2024 Practice Batch.pdf', 'Verb 2024 Practice Batch');return false;">Verb 2024 Practice Batch</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/6604fb592d392_2024 Non- Finite Verbs Improvements_compressed.pdf', '2024 Non- Finite Verbs Improvements');return false;">2024 Non- Finite Verbs Improvements</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/6604fb2505e14_2024 Non- Finite Verbs Fillups_compressed.pdf', '2024 Non- Finite Verbs Fillups');return false;">2024 Non- Finite Verbs Fillups</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/6604fad410095_2024 Non- Finite Verbs Errors Jaideep Sir_compressed.pdf', '2024 Non- Finite Verbs Errors');return false;">2024 Non- Finite Verbs Errors</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/65fabaea176da_Comprehension Class 09 Jaideep Sir.pdf', 'Comprehension Class-09');return false;">Comprehension Class-09</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/65f948c0177a0_Modals & conditionals Practice Batch 2024 Jaideep Sir.pdf', 'Modals & Conditionals Practice');return false;">Modals & Conditionals Practice</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/65f9489b831a2_Comprehension Class 08 Jaideep Sir.pdf', 'Comprehension Class-08');return false;">Comprehension Class-08</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/65f280ae55bbb_Comprehension Class 07 Jaideep Sir.pdf', 'Comprehension Class-07');return false;">Comprehension Class-07</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/65efdb045340a_Comprehension Class 06 Jaideep Sir.pdf', 'Comprehension Class-06');return false;">Comprehension Class-06</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/65ef42635c798_Comprehension Class 05 Jaideep Sir.pdf', 'Comprehension Class-05');return false;">Comprehension Class-05</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/65ea9b07e8c8c_Comprehension Class 04 Jaideep Sir.pdf', 'Comprehension Class-4');return false;">Comprehension Class-4</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/65e7ed0d572aa_Tense Practice Batch 2024 Jaideep Sir.pdf', 'Tense Practice');return false;">Tense Practice</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/65e7ecdb50d35_Comprehension Class 02 Jaideep Sir.pdf', 'Comprehension Class-2');return false;">Comprehension Class-2</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/65e6683377c14_Comprehension Class 01 Jaideep Sir.pdf', 'Comprehension Class -1');return false;">Comprehension Class -1</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/65d43722150d0_Para Jumbles Level-04.pdf', 'Para Jumble Level-4');return false;">Para Jumble Level-4</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/65d436ff63ead_Para Jumbles Level-03.pdf', 'Para Jumble Level-3');return false;">Para Jumble Level-3</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/65d436d8bbf30_Para Jumbles Level-02.pdf', 'Para Jumble Level-2');return false;">Para Jumble Level-2</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/65d436bb89be6_Para Jumbles Level-01.pdf', 'Para Jumble Level-1');return false;">Para Jumble Level-1</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/65c207fb0fc81_SSC CGL MAINS 2023.pdf', 'SSC Cgl Mains 2023');return false;">SSC Cgl Mains 2023</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/65c207d0dfbe2_SSC CHSL PRE - 2023.pdf', 'SSC Chal Pre 2023');return false;">SSC Chal Pre 2023</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/65c2079f3f028_SSC CGL PRE 2023.pdf', 'SSC Cgl Pre 2023');return false;">SSC Cgl Pre 2023</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/65bc90a20ab3a_SSC CHSL PRE - 2023.pdf', 'SSC Chal Pre 2023');return false;">SSC Chal Pre 2023</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/659f79d622bf8_Preposition Detecting Errors.pdf', 'Proposition detecting Error');return false;">Proposition detecting Error</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/659f7920c2723_Preposition (Self Study) (1).pdf', 'Preparation (Self Study)');return false;">Preparation (Self Study)</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/659e1f32ad6c6_The Non- Finite Verbs detecting errors.pdf', 'Non - Finite Verbs Detecting Error');return false;">Non - Finite Verbs Detecting Error</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/659e1eb15b9bd_Articles Error Practice pdf.pdf', 'Article Error Practice');return false;">Article Error Practice</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/659e1e761d3d2_The Non-Finite Verbs Fill In The Blanks.pdf', 'Non - Finite Verbs Fill in the blanks');return false;">Non - Finite Verbs Fill in the blanks</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/659e1e34c9c58_Articles in Set Expressions.pdf', 'Articles In Set Expression');return false;">Articles In Set Expression</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/659e1ded3ce9b_The Non- Finite Verbs Improvements.pdf', 'Non - Finite Verbs Improvement');return false;">Non - Finite Verbs Improvement</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/65967fc67cb8e_Verb Detecting Errors.pdf', 'Verb Detecting Error');return false;">Verb Detecting Error</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/65967f73ee74e_Adverb Fill In The Blanks.pdf', 'Adverb Fill in the blanks');return false;">Adverb Fill in the blanks</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/65967f3dc55ad_Adverb Sentence Improvements.pdf', 'Adverb Sentence Improvement');return false;">Adverb Sentence Improvement</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/65967e1679b05_Adverb Detecting Errors.pdf', 'Adverb detecting Error');return false;">Adverb detecting Error</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/65967dce8d86c_Form of verbs......pdf', 'Form of Verb');return false;">Form of Verb</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/658c15a5a2a4a_Slang and Superfluous PRACTICE BATCH.pdf', 'Slang and Superfluous Practice');return false;">Slang and Superfluous Practice</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/658c157d85093_Q.TAG PRACTICE BATCH.pdf', 'Question Tag Practice');return false;">Question Tag Practice</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/658c153174dbc_NARRATION PRACTICE BATCH.pdf', 'Narration Practice');return false;">Narration Practice</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/658c1506df4e2_NARRATION CHANGE PRACTICE BATCH.pdf', 'Narration Change Practice');return false;">Narration Change Practice</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/658c14ccd3501_MODALS PRACTICE BATCH.pdf', 'Modals');return false;">Modals</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/658c14961013c_CONJUCTION PRACTICE BATCH.pdf', 'Conjuction Practice');return false;">Conjuction Practice</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/658c14629b208_VOICE PRACTICE BATCH.pdf', 'Voice Practice');return false;">Voice Practice</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/658c1408dcbf4_VOICE CHANGE PRACTICE BATCH.pdf', 'Voice Change');return false;">Voice Change</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/658c13cf43510_Subject Verb Agreement PRACTICE BATCH.pdf', 'Subject Verb Agreement');return false;">Subject Verb Agreement</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/65d73b0770231_Subject verb Agreement Error.pdf', '19 Dec 2023 Subject verb Agreement Error Practice Sheet');return false;">19 Dec 2023 Subject verb Agreement Error Practice Sheet</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/657aa702a00c1_TENSE 2024 PRACTICE BATCH.pdf', 'Tense 2024 Practice');return false;">Tense 2024 Practice</a>
+                        </div>
+                    </div>
+                    <div class="topic-block">
+                        <div class="topic-title" onclick="toggleTopic('pdfs-topic-2', this)">
+                            <span class="topic-arrow">▶</span>
+                            <span class="topic-name">Vocab Batch on app</span>
+                            <span class="topic-count">(18)</span>
+                        </div>
+                        <div class="topic-content" id="pdfs-topic-2" style="display:none;">
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/65e9b3df7384e_Comprehension Class 03 Jaideep Sir.pdf', 'Comprehension Class-3');return false;">Comprehension Class-3</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/65e8cb27ded50_VOCAB CLASS 17 ON APP.pdf', 'VOCAB CLASS 17 ON APP');return false;">VOCAB CLASS 17 ON APP</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/65e8caa7f2a40_VOCAB CLASS 16 ON APP.pdf', 'VOCAB CLASS 16 ON APP');return false;">VOCAB CLASS 16 ON APP</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/65e8ca0a9107f_VOCAB CLASS 15 ON APP.pdf', 'VOCAB CLASS 15 ON APP');return false;">VOCAB CLASS 15 ON APP</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/65e8c97c5f971_VOCAB CLASS 14 ON APP.pdf', 'VOCAB CLASS 14 ON APP');return false;">VOCAB CLASS 14 ON APP</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/65e8c49abc7de_VOCAB CLASS 13 ON APP.pdf', 'VOCAB CLASS 13 ON APP');return false;">VOCAB CLASS 13 ON APP</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/65e8c41bc90ed_ONE WORD SUBSTITUTION TEST.pdf', 'VOCAB CLASS 12 ON APP');return false;">VOCAB CLASS 12 ON APP</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/65e8c394b3018_VOCAB CLASS 11.pdf', 'VOCAB CLASS 11 ON APP');return false;">VOCAB CLASS 11 ON APP</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/65e8c319b4829_VOCAB CLASS 10.pdf', 'VOCAB CLASS 10 ON APP');return false;">VOCAB CLASS 10 ON APP</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/65e8c29ad360e_VOCAB CLASS -9.pdf', 'VOCAB CLASS 9 ON APP');return false;">VOCAB CLASS 9 ON APP</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/65e8c2394889c_VOCAB CLASS -8.pdf', 'VOCAB CLASS 8 ON APP');return false;">VOCAB CLASS 8 ON APP</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/65e8c1cd9427e_VOCAB CLASS 7.pdf', 'VOCAB CLASS 7 ON APP');return false;">VOCAB CLASS 7 ON APP</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/65e8c1603e067_VOCAB CLASS 6.pdf', 'VOCAB CLASS 6 ON APP');return false;">VOCAB CLASS 6 ON APP</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/65e8c0e24a2cb_VOCAB CLASS 5.pdf', 'VOCAB CLASS 5 ON APP');return false;">VOCAB CLASS 5 ON APP</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/65e8c049a32b1_VOCAB CLASS 4_compressed.pdf', 'VOCAB CLASS 4 ON APP');return false;">VOCAB CLASS 4 ON APP</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/65e86820c3cec_VOCAB CLASS 3 ON APP.pdf', 'VOCAB CLASS 3 ON APP');return false;">VOCAB CLASS 3 ON APP</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/65e867b6796c7_VOCAB CLASS 2 ON APP.pdf', 'VOCAB CLASS 2 ON APP');return false;">VOCAB CLASS 2 ON APP</a>
+                            <a href="#" class="list-item" onclick="openPDF('https://cwmediabkt99.crwilladmin.com/92013a99927c4842b0a70fbd6f064a95:crwilladmin/class-attachment/65e86779c3fa8_VOCAB CLASS 1 ON APP.pdf', 'VOCAB CLASS 1 ON APP');return false;">VOCAB CLASS 1 ON APP</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="others-tab" class="tab-content">
+                <div class="list-box">
+                    <div class="no-items">No others found</div>
+                </div>
+            </div>
+        </div>
+        <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
+        <script>
+            // Toggle topic function
+            function toggleTopic(topicId, element) {
+                const content = document.getElementById(topicId);
+                const arrow = element.querySelector('.topic-arrow');
+
+                if (content.style.display === 'none' || content.style.display === '') {
+                    content.style.display = 'block';
+                    arrow.textContent = '▼';
+                } else {
+                    content.style.display = 'none';
+                    arrow.textContent = '▶';
+                }
+            }
+
+            // Theme toggle
+            function toggleTheme() {
+                document.body.classList.toggle('dark-mode');
+                const themeBtn = document.querySelector('.theme-toggle');
+                themeBtn.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+                localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+            }
+            if (localStorage.getItem('theme') === 'dark') {
+                document.body.classList.add('dark-mode');
+                document.querySelector('.theme-toggle').textContent = '☀️';
+            }
+
+            function showTab(tabName) {
+                document.querySelectorAll('.tab-content').forEach(tab => {
+                    tab.classList.remove('active');
+                }
+                );
+                document.getElementById(tabName + '-tab').classList.add('active');
+                document.querySelectorAll('.tab-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                }
+                );
+                document.querySelector('.tab-btn[onclick="showTab(\'' + tabName + '\')"]').classList.add('active');
+            }
+
+            function filterItems() {
+                const searchTerm = document.querySelector('.search-bar').value.toLowerCase();
+                const activeTab = document.querySelector('.tab-content.active');
+                activeTab.querySelectorAll('.list-item').forEach(item => {
+                    const text = item.textContent.toLowerCase();
+                    if (text.includes(searchTerm)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                }
+                );
+            }
+
+            // VideoJS setup
+            var player = videojs('main-video-player', {
+                controls: true,
+                autoplay: false,
+                preload: 'auto',
+                fluid: true,
+                responsive: true,
+                playbackRates: [0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2]
+            });
+            player.on('loadedmetadata', function() {
+                updateDuration();
+                document.getElementById('video-duration').style.display = 'block';
+                updateQualityOptions();
+            });
+            player.on('timeupdate', updateDuration);
+
+            // Video duration
+            function updateDuration() {
+                var current = player.currentTime();
+                var total = player.duration();
+                document.getElementById('video-duration').innerText = formatTime(current) + " / " + formatTime(total);
+            }
+            function formatTime(s) {
+                if (isNaN(s))
+                    return "00:00";
+                var m = Math.floor(s / 60);
+                var sec = Math.floor(s % 60);
+                return (m < 10 ? "0" : "") + m + ":" + (sec < 10 ? "0" : "") + sec;
+            }
+
+            // Double tap seeking & keyboard shortcuts
+            let lastTap = 0;
+            player.el().addEventListener('touchstart', function(event) {
+                const currentTime = new Date().getTime();
+                const tapLength = currentTime - lastTap;
+                if (tapLength < 300 && tapLength > 0) {
+                    const rect = player.el().getBoundingClientRect();
+                    const x = event.touches[0].clientX - rect.left;
+                    if (x < rect.width / 2) {
+                        player.currentTime(Math.max(0, player.currentTime() - 10));
+                    } else {
+                        player.currentTime(Math.min(player.duration(), player.currentTime() + 10));
+                    }
+                }
+                lastTap = currentTime;
+            });
+            document.addEventListener('keydown', function(event) {
+                if (document.getElementById('main-video-player').style.display !== 'none') {
+                    if (event.key === 'ArrowLeft') {
+                        player.currentTime(Math.max(0, player.currentTime() - 10));
+                    } else if (event.key === 'ArrowRight') {
+                        player.currentTime(Math.min(player.duration(), player.currentTime() + 10));
+                    }
+                }
+            });
+
+            // Quality & speed controls
+            document.getElementById('video-speed').addEventListener('change', function() {
+                player.playbackRate(Number(this.value));
+            });
+            function updateQualityOptions() {
+                var qualitySelect = document.getElementById('video-quality');
+                if (!player.qualityLevels) {
+                    qualitySelect.style.display = 'none';
+                    return;
+                }
+                var levels = player.qualityLevels();
+                if (!levels || levels.length === 0) {
+                    qualitySelect.style.display = 'none';
+                    return;
+                }
+                qualitySelect.innerHTML = '<option value="">Auto</option>';
+                let uniqueRes = [];
+                for (let i = levels.length - 1; i >= 0; i--) {
+                    let l = levels[i];
+                    if (!uniqueRes.includes(l.height)) {
+                        uniqueRes.push(l.height);
+                        qualitySelect.innerHTML += `<option value="${l.height}">${l.height}p</option>`;
+                    }
+                }
+                qualitySelect.style.display = '';
+            }
+            document.getElementById('video-quality').addEventListener('change', function() {
+                var selected = this.value;
+                var levels = player.qualityLevels();
+                for (let i = 0; i < levels.length; i++) {
+                    if (selected === "" || !selected) {
+                        levels[i].enabled = true;
+                    } else {
+                        levels[i].enabled = (levels[i].height == selected);
+                    }
+                }
+            });
+            player.ready(function() {
+                if (player.qualityLevels) {
+                    player.qualityLevels().on('addqualitylevel', updateQualityOptions);
+                }
+            });
+
+            // YouTube video ID extraction (not used now, but kept for future)
+            function getYouTubeVideoId(url) {
+                url = url.replace('youtu.be/', 'youtube.com/watch?v=');
+                var regExp = /[?&]v=([^&#]*)/;
+                var match = url.match(regExp);
+                if (!match) {
+                    var embedExp = /youtube.com\/embed\/([^?&]+)/;
+                    match = url.match(embedExp);
+                }
+                return match && match[1] ? match[1] : null;
+            }
+
+            // Play video function
+            function playVideo(url, title) {
+                document.getElementById('video-title').textContent = title;
+                document.getElementById('video-duration').innerText = "00:00 / 00:00";
+
+                // Handle YouTube: open in new tab to avoid embed errors
+                if (url.includes('youtube.com') || url.includes('youtu.be')) {
+                    window.open(url, '_blank');
+                    document.getElementById('main-video-player').style.display = 'none';
+                    document.getElementById('youtube-player').style.display = 'none';
+                    document.getElementById('video-title').innerHTML = '▶️ <a href="' + url + '" target="_blank" style="color:#3b82f6;">YouTube video opened in new tab</a>';
+                    return;
+                }
+
+                document.getElementById('youtube-player').style.display = 'none';
+                document.getElementById('main-video-player').style.display = 'block';
+                document.getElementById('video-duration').style.display = 'block';
+                document.getElementById('video-quality').style.display = '';
+                var ext = url.split('?')[0].split('.').pop().toLowerCase();
+                if (ext == 'm3u8') {
+                    player.src({
+                        src: url,
+                        type: 'application/x-mpegURL'
+                    });
+                } else if (ext == 'mp4') {
+                    player.src({
+                        src: url,
+                        type: 'video/mp4'
+                    });
+                } else {
+                    player.src({
+                        src: url,
+                        type: 'video/mp4'
+                    });
+                }
+                player.play().catch(function(err) {
+                    console.log('Play error:', err);
+                });
+            }
+
+            // PDF Modal functions
+            function openPDF(url, title) {
+                document.getElementById('pdf-frame').src = url;
+                document.getElementById('download-pdf-btn').href = url;
+                document.getElementById('pdf-modal-title').innerText = title;
+                document.getElementById('pdf-modal').style.display = 'flex';
+            }
+            function closePDF() {
+                document.getElementById('pdf-modal').style.display = 'none';
+                document.getElementById('pdf-frame').src = '';
+            }
+
+            // Auto play first video
+            window.onload = function() {
+                var firstVideo = document.querySelector('#videos-tab .list-item');
+                if (firstVideo) {
+                    setTimeout(function() {
+                        firstVideo.click();
+                    }, 1000);
+                }
+            }
+            ;
+        </script>
+    </body>
+</html>

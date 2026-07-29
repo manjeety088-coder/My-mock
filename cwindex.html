@@ -86,6 +86,26 @@ header{position:fixed;top:0;left:0;right:0;height:64px;z-index:300;display:flex;
   </div>
 </header>
 
+<div id="waModal">
+  <div class="modal-card">
+    <div class="modal-pull"></div>
+    <button class="modal-close" onclick="closeWaModal()"><i class="fa-solid fa-xmark"></i></button>
+    <div class="modal-wa-ring"><i class="fa-brands fa-whatsapp"></i></div>
+    <div class="modal-title">Join WhatsApp Channel &#x1F3AF;</div>
+    <div class="modal-desc">FREE NOTES &amp; FREE COURSES<br>ON WHATSAPP</div>
+    <div class="modal-feats">
+      <div class="modal-feat"><i class="fa-solid fa-bolt fi-y"></i><span>Daily Updates &amp; Current Affairs</span></div>
+      <div class="modal-feat"><i class="fa-solid fa-file-pdf fi-g"></i><span>Free PDF Notes &amp; Practice Sets</span></div>
+      <div class="modal-feat"><i class="fa-solid fa-video fi-b"></i><span>Latest Lecture Links &amp; Batch Info</span></div>
+      <div class="modal-feat"><i class="fa-solid fa-trophy fi-p"></i><span>Result Notifications &amp; Tips</span></div>
+    </div>
+    <a href="https://whatsapp.com/channel/0029Vb97kwQ0Qeat3WrJ9Z2m" target="_blank" class="modal-join" onclick="closeWaModal()">
+      <i class="fa-brands fa-whatsapp"></i> Join WhatsApp Channel
+    </a>
+    <span class="modal-skip" onclick="closeWaModal()">Maybe later &rarr;</span>
+  </div>
+</div>
+
 <div class="wrap">
   <div class="sec">
     <div class="hero">
@@ -103,11 +123,18 @@ header{position:fixed;top:0;left:0;right:0;height:64px;z-index:300;display:flex;
     <div class="shead"><div class="shead-lbl"><i class="fa-solid fa-layer-group"></i> &nbsp;Active Batches</div><div class="shead-line"></div></div>
     
     <div class="grid">
-      <!-- LINK UPDATED TO sscpratham1.html -->
+      <!-- 1st Card: SSC Pratham -->
       <a href="sscpratham1.html" class="gcard">
         <div class="gcard-badge">LIVE</div>
         <div class="gcard-icon"><i class="fa-solid fa-graduation-cap"></i></div>
         <div class="gcard-name">SSC Pratham Batch-02</div>
+      </a>
+
+      <!-- 2nd Card: English Practice -->
+      <a href="englishpractice.html" class="gcard">
+        <div class="gcard-badge">NEW</div>
+        <div class="gcard-icon"><i class="fa-solid fa-book-open"></i></div>
+        <div class="gcard-name">English Practice</div>
       </a>
     </div>
 
@@ -133,6 +160,11 @@ header{position:fixed;top:0;left:0;right:0;height:64px;z-index:300;display:flex;
     const isDark = html.getAttribute('data-theme') === 'dark';
     html.setAttribute('data-theme', isDark ? 'light' : 'dark');
   });
+
+  // Modal Logic (if needed)
+  function closeWaModal() {
+    document.getElementById('waModal').classList.remove('visible');
+  }
 </script>
 </body>
 </html>
